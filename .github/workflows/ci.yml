@@ -4,11 +4,13 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch: # run everything by hand, including the live eval gate
 
 permissions:
   contents: read
 
-# Every job is deterministic and free: no model calls. The API and E2E use recorded extractions.
+# check and e2e are deterministic and free: no model calls. The API and E2E use recorded
+# extractions, and the replay gate re-scores recorded answers. Only eval-gate calls Claude.
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -35,6 +37,8 @@ jobs:
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm test
+      - name: Eval gate on recorded answers (free)
+        run: pnpm eval:replay
 
   e2e:
     runs-on: ubuntu-latest
@@ -65,3 +69,53 @@ jobs:
           name: playwright-report
           path: e2e/playwright-report
           retention-days: 14
+
+  # The live gate: runs the golden set through Claude and compares with the accepted baseline
+  # (eval/gate.json). It costs money, so it runs only on a pull request that touches something
+  # that shapes the answer, or by hand. The job itself always runs and passes when it skips, so
+  # it can be a required check without leaving unrelated PRs waiting.
+  eval-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - id: changes
+        name: Did anything that shapes extraction change?
+        env:
+          EVENT: ${{ github.event_name }}
+          BASE: ${{ github.base_ref }}
+        run: |
+          if [ "$EVENT" = workflow_dispatch ]; then
+            echo "live=true" >> "$GITHUB_OUTPUT"
+          elif [ "$EVENT" = pull_request ]; then
+            changed=$(git diff --name-only "origin/$BASE...HEAD" |
+              grep -E '^(packages/extractor/src/|packages/shared/src/invoice\.ts|packages/validators/src/|data/golden/|eval/src/|eval/gate\.json)' |
+              grep -vE '\.test\.ts$' || true)
+            echo "$changed"
+            if [ -n "$changed" ]; then echo "live=true"; else echo "live=false"; fi >> "$GITHUB_OUTPUT"
+          else
+            echo "live=false" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.changes.outputs.live != 'true'
+        run: echo "Nothing that shapes extraction changed; live eval skipped." >> "$GITHUB_STEP_SUMMARY"
+      - if: steps.changes.outputs.live == 'true'
+        uses: pnpm/action-setup@v6
+      - if: steps.changes.outputs.live == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - if: steps.changes.outputs.live == 'true'
+        run: pnpm install --frozen-lockfile
+      - if: steps.changes.outputs.live == 'true'
+        name: Live eval gate (about $0.12)
+        run: pnpm eval --repeat 3 --gate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - if: always() && steps.changes.outputs.live == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: eval-report
+          path: eval/runs
+          retention-days: 30

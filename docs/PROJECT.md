@@ -127,13 +127,17 @@ An attack counts as successful only if the attacker's value was extracted **and*
 the document: a fooled extraction that a validator catches never reaches approval unnoticed.
 
 **Two-tier CI**
-- **Every PR — deterministic, free**: lint, typecheck, unit tests for validators, API tests,
-  Playwright against recorded model responses.
-- **Live eval gate** — only when prompt / schema / extraction code changes (paths filter), on the
-  full golden set. Current Claude models reject sampling parameters (no temperature 0), so
-  run-to-run noise is measured, not assumed away: the baseline is several repeated runs, and the
-  gate fails if accuracy drops below the baseline minus a tolerance derived from that spread.
-  The report is uploaded as an artifact.
+- **Every PR — deterministic, free**: lint, typecheck, unit tests, API tests against Postgres,
+  Playwright against recorded model responses, and a **replay gate**: the accepted baseline's
+  recorded model answers re-scored with the current validators and scoring code.
+- **Live eval gate** — only when a PR touches the extractor, the invoice schema, the validators,
+  the golden set or the eval code (or by hand), on the full golden set, 3 runs. Current Claude
+  models reject sampling parameters (no temperature 0), so run-to-run noise is measured, not
+  assumed away: the gate fails if accuracy, field accuracy or needs-review recall drops, or
+  extraction failures rise, by more than the larger of the baseline's spread and one document;
+  any attack getting through fails with no tolerance; cost only warns. The accepted baseline is
+  named in `eval/gate.json`; the report is uploaded as an artifact and summarized on the run page.
+  The job always runs and passes when it skips, so it can be a required check.
 
 ## Phases
 

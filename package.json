@@ -15,7 +15,9 @@
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
     "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
-    "e2e": "pnpm --filter @tally/e2e e2e"
+    "e2e": "pnpm --filter @tally/e2e e2e",
+    "eval": "pnpm --filter @tally/eval eval",
+    "eval:replay": "pnpm --filter @tally/eval eval --replay --gate"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

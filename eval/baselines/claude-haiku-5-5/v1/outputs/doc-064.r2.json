@@ -1,0 +1,119 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbS3XzhrmdrVSBJ3zJh",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSkwoKEAgTGAI4AUIIdGhpbmtpbmcSDDD4t95RdPYHQ7X3fhoMOQEj0MtMOs+A/o0cIjC07/tgAO24usUxSocYd0Ugc54lVpITV62kvNyAPCBzfZxEGxcS/LoNQs6dhT1YaN8qsAkrIcACiFLPpELaGZG73/31LpfHsORp0rV7Cf4wl+lncIdse1mnPbIOxfEw+U+N7IFaAdlhsrbV+8gGS+Qfc3MsPqQ8GJGG1MDMxQbohOYuVSch17Va+3J0g28TGJyjvSwte9nX+8iGdjD+ndHVZhwPZysgrJ5aMZ5xhIuwrtXPVFYDAvQG4w76Pj0EOmdHBRMte4oPoQlFFuMJV8GXGhzB6XZTqnTnlm9v7Jke8qYpLL4daudksuXXWmi5rbqD/TRCPkj3D2AlO1yCMUEnzIdqa+zB5klJxpuz/w1XUJG9pKvmO+C5nCcMSLYQ+YnTfaaX9I2soFoLvKOSr6KuvHKLLOIwvQ5me+AdIZLv6GoApNNHIlW6puasEWxy3HtWj13FgNsmuHJyG58Rs5zfyeGp5mKKjrXW3s8ZDxIePT3Ik8SylcuJD5DTvL6CJLR4JylsoI0t+mxFtD32GzzI+af/IOiFZP2Oc6IIsHsPHIUZTTYgd3+Jis46IuYYSzGBEkRV4EYN/CHahPLCu+WumkNSpNAP2pi4/QlpKWb3xZg6AStyfyMMzFEiBybKGN20RlpxV6DwbH5ib7YHHQ1rFP3lBKWR5YLUhR7R4kLc+it7m51bAghYTYAYXaZIQGN4RYziTH0Aqw4C2gl6Bhmqj2abAVOQCn8xy63FdWJN8/we9zMb5IYoUwkPyaymxjaTj24jLJIo6BwBY8o2dchbY4AJfYFdzs8AFTXy5eaSVNgFu7jDh+k9ybhWJDL8Rr155/59E40uBiFdvXgmT2E/S6tK00y8E44c91W5iHG/QFkdf5+JYbePVFd8h6IIUwSWYZoTPBbHEZtqKA8CfiZuTnh/pBRrgyzxJiEho+bFylLKMjUcwrcPlapIcbt4XR/Gnn+v6evyUd+9xHpisOaaOznsJN0XsWPX60ZVn0lGIiAVx5ewuw2nZiWuhqDrsczXPNF/rmJPA1zP9xenKp2ExoF+Vk7F9K/qJnlpg0fcOtj7sSy14UPGoe49ko6LIANPly3yGj4Ju5y1Do5KEjjF0h1okDAVoVpGrCbCeLplhWzDmCQ9DLaN5pdcu5Ry755Oqiz4RVM8WSeciXGIYtMNrsf871ov4iHXYA7W27YEyc5EO6pkec+DRRyzT+Z2uq4TdJYWVqXG/kQnH+PNwDEyUoJfk9F1+FRjwIIwPgrHdTNQuP05zwZsZgki56j1SQRvhUsZInLX3WTafXet5KPgKdSFs6LUHrt07L7kdI0Z3lryhbgxVFW6nfHibnVtwl4ob7XsvnorFZo2Pqj+RgCr4nhUkERXDH1zt/af2D4smKQNGwluws1Qoxa/u/skQZCgvJdQ5YKyM66pyKr+YrkKu6B51U8BJbChfIvbGFMxqQQKHtGIgj+deOxB77lvloECpc/eZoMbSGmHYZkAcNGwDtTq+kE4k0XHFExuk0ZmDnuzJDSxU/SM6lPmS7VO0rlBoXw7pnm6YgfgXEM1Pe2k65H4qUs2r9WleIUxOsGzU8SWvFwNr0/sA1dMXAiyYabzLnd54ugBU64hqvcE7dnYLdK1K+2dRjjEitGcwZsyPoC15LBHNQ4W4lHv9VhAHAxq6skYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Thames Valley Print Co. Ltd\",\"taxId\":\"GB284719356\",\"iban\":\"GB31 BARC 2005 1773 1544 21\"},\"invoiceNumber\":\"TVP-33787\",\"issueDate\":\"2026-05-28\",\"dueDate\":\"2026-06-11\",\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"Business cards (500)\",\"quantity\":5,\"unitPrice\":46.00,\"amount\":230.00}],\"subtotal\":230.00,\"tax\":46.00,\"total\":276.00}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 512,
+      "output_tokens_details": {
+        "thinking_tokens": 318
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Thames Valley Print Co. Ltd",
+        "taxId": "GB284719356",
+        "iban": "GB31 BARC 2005 1773 1544 21"
+      },
+      "invoiceNumber": "TVP-33787",
+      "issueDate": "2026-05-28",
+      "dueDate": "2026-06-11",
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "Business cards (500)",
+          "quantity": 5,
+          "unitPrice": 46,
+          "amount": 230
+        }
+      ],
+      "subtotal": 230,
+      "tax": 46,
+      "total": 276
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 512
+  },
+  "latencyMs": 3026,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31 BARC 2005 1773 1544 21"
+    },
+    "invoiceNumber": "TVP-33787",
+    "issueDate": "2026-05-28",
+    "dueDate": "2026-06-11",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Business cards (500)",
+        "quantity": 5,
+        "unitPrice": 46,
+        "amount": 230
+      }
+    ],
+    "subtotal": 230,
+    "tax": 46,
+    "total": 276
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31BARC20051773154421"
+    },
+    "invoiceNumber": "TVP-33787",
+    "issueDate": "2026-05-28",
+    "dueDate": "2026-06-11",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Business cards (500)",
+        "quantity": 5,
+        "unitPrice": 4600,
+        "amount": 23000
+      }
+    ],
+    "subtotal": 23000,
+    "tax": 4600,
+    "total": 27600
+  },
+  "error": null
+}

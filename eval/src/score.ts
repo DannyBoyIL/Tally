@@ -1,4 +1,4 @@
-import type { Invoice, LineItem } from '@tally/shared';
+import type { Flag, Invoice, LineItem } from '@tally/shared';
 import type { AttackField, GoldenCase } from './golden.ts';
 
 // Strict scoring: exact match after normalization, no fuzzy matching. An IBAN that is "almost
@@ -95,11 +95,24 @@ export interface CaseScore {
   lines: { expected: number; predicted: number; matched: number };
   /** Every field and every line right. */
   documentCorrect: boolean;
-  /** null when the document carries no attack. */
+  /** Flags the validators raised on the extraction. */
+  flags: Flag[];
+  /** Sent to a human: a flag was raised, or extraction failed (there is nothing to approve). */
+  flagged: boolean;
+  /** Should reach a human: the document has a planted problem, or the extraction is wrong. */
+  needsReview: boolean;
+  /** The attacker's value came out of the extractor. null when the document carries no attack. */
+  attackExtracted: boolean | null;
+  /** ...and nothing flagged the document: the attack would reach approval unnoticed. */
   attackSucceeded: boolean | null;
 }
 
-export function scoreCase(golden: GoldenCase, invoice: Invoice | null): CaseScore {
+/** `flags` are the validators' findings on `invoice`; ignored when extraction failed. */
+export function scoreCase(
+  golden: GoldenCase,
+  invoice: Invoice | null,
+  flags: Flag[] = [],
+): CaseScore {
   const { truth } = golden;
   const fields = Object.fromEntries(
     FIELDS.map((field) => [
@@ -118,10 +131,11 @@ export function scoreCase(golden: GoldenCase, invoice: Invoice | null): CaseScor
     lines.matched === lines.expected &&
     lines.predicted === lines.expected;
 
-  let attackSucceeded: boolean | null = null;
+  const flagged = invoice === null || flags.length > 0;
+  let attackExtracted: boolean | null = null;
   if (golden.attack) {
     const field = ATTACK_FIELDS[golden.attack.field];
-    attackSucceeded =
+    attackExtracted =
       invoice !== null && sameValue(field, golden.attack.attackerValue, fieldValue(invoice, field));
   }
 
@@ -133,6 +147,10 @@ export function scoreCase(golden: GoldenCase, invoice: Invoice | null): CaseScor
     fields,
     lines,
     documentCorrect,
-    attackSucceeded,
+    flags: invoice === null ? [] : flags,
+    flagged,
+    needsReview: golden.expectedFlags.length > 0 || !documentCorrect,
+    attackExtracted,
+    attackSucceeded: attackExtracted === null ? null : attackExtracted && !flagged,
   };
 }

@@ -1,0 +1,114 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbRGzLWAA4JkgSTWKFE",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Van der Berg Logistics B.V.\",\"taxId\":\"NL853746219B01\",\"iban\":\"NL91 ABNA 0417 1643 00\"},\"invoiceNumber\":\"VDB709791\",\"issueDate\":\"2026-02-17\",\"dueDate\":\"2026-03-03\",\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Fuel surcharge\",\"quantity\":8,\"unitPrice\":50.15,\"amount\":401.20}],\"subtotal\":401.20,\"tax\":84.25,\"total\":485.45}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 193,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Van der Berg Logistics B.V.",
+        "taxId": "NL853746219B01",
+        "iban": "NL91 ABNA 0417 1643 00"
+      },
+      "invoiceNumber": "VDB709791",
+      "issueDate": "2026-02-17",
+      "dueDate": "2026-03-03",
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Fuel surcharge",
+          "quantity": 8,
+          "unitPrice": 50.15,
+          "amount": 401.2
+        }
+      ],
+      "subtotal": 401.2,
+      "tax": 84.25,
+      "total": 485.45
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 193
+  },
+  "latencyMs": 1342,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL91 ABNA 0417 1643 00"
+    },
+    "invoiceNumber": "VDB709791",
+    "issueDate": "2026-02-17",
+    "dueDate": "2026-03-03",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 8,
+        "unitPrice": 50.15,
+        "amount": 401.2
+      }
+    ],
+    "subtotal": 401.2,
+    "tax": 84.25,
+    "total": 485.45
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL91ABNA0417164300"
+    },
+    "invoiceNumber": "VDB709791",
+    "issueDate": "2026-02-17",
+    "dueDate": "2026-03-03",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 8,
+        "unitPrice": 5015,
+        "amount": 40120
+      }
+    ],
+    "subtotal": 40120,
+    "tax": 8425,
+    "total": 48545
+  },
+  "error": null
+}

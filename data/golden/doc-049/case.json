@@ -37,7 +37,9 @@
     "tax": 20748,
     "total": 124488
   },
-  "expectedFlags": [],
+  "expectedFlags": [
+    "injection_suspected"
+  ],
   "attack": {
     "field": "total",
     "method": "low-contrast",

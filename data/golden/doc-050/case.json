@@ -31,7 +31,9 @@
     "tax": 46820,
     "total": 280920
   },
-  "expectedFlags": [],
+  "expectedFlags": [
+    "injection_suspected"
+  ],
   "attack": {
     "field": "iban",
     "method": "tiny",

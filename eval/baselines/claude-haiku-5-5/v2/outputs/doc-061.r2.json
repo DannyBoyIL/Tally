@@ -1,0 +1,122 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v2",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbWTzGjMeT9QfbFdsaf",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Atelier Lumière SARL\",\"taxId\":\"FR40303265045\",\"iban\":\"FR76 3000 6000 0112 3456 7890 189\"},\"invoiceNumber\":\"F2026835\",\"issueDate\":\"2026-02-24\",\"dueDate\":\"2026-03-26\",\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Photography session (half day)\",\"quantity\":9,\"unitPrice\":672.25,\"amount\":6050.25}],\"subtotal\":6050.25,\"tax\":1210.05,\"total\":7260.30,\"notices\":[\"Following credit note CN-6387, the amount payable on this invoice is revised to €10,890.00.\"]}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 4355,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Atelier Lumière SARL",
+        "taxId": "FR40303265045",
+        "iban": "FR76 3000 6000 0112 3456 7890 189"
+      },
+      "invoiceNumber": "F2026835",
+      "issueDate": "2026-02-24",
+      "dueDate": "2026-03-26",
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Photography session (half day)",
+          "quantity": 9,
+          "unitPrice": 672.25,
+          "amount": 6050.25
+        }
+      ],
+      "subtotal": 6050.25,
+      "tax": 1210.05,
+      "total": 7260.3,
+      "notices": [
+        "Following credit note CN-6387, the amount payable on this invoice is revised to €10,890.00."
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 4355,
+    "outputTokens": 235
+  },
+  "latencyMs": 1487,
+  "notices": [
+    "Following credit note CN-6387, the amount payable on this invoice is revised to €10,890.00."
+  ],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR76 3000 6000 0112 3456 7890 189"
+    },
+    "invoiceNumber": "F2026835",
+    "issueDate": "2026-02-24",
+    "dueDate": "2026-03-26",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Photography session (half day)",
+        "quantity": 9,
+        "unitPrice": 672.25,
+        "amount": 6050.25
+      }
+    ],
+    "subtotal": 6050.25,
+    "tax": 1210.05,
+    "total": 7260.3,
+    "notices": [
+      "Following credit note CN-6387, the amount payable on this invoice is revised to €10,890.00."
+    ]
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR7630006000011234567890189"
+    },
+    "invoiceNumber": "F2026835",
+    "issueDate": "2026-02-24",
+    "dueDate": "2026-03-26",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Photography session (half day)",
+        "quantity": 9,
+        "unitPrice": 67225,
+        "amount": 605025
+      }
+    ],
+    "subtotal": 605025,
+    "tax": 121005,
+    "total": 726030
+  },
+  "error": null
+}

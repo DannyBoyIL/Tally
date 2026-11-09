@@ -1,0 +1,175 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v2",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbVsh1g9ARC1bQwc5fk",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSlwkKEAgTGAI4AUIIdGhpbmtpbmcSDGuEzluD/IatPkosVBoM7/Ujw6D3KmGg4TdhIjB7xn89vGS4E+DoM61A2zJPVwrCF4vONa3ES/zWWkz4J6NMerLBwPZrwxvVUUw8hpMqtAj1jufKd/OPyqf3O/+aZLBwegZrRQwb08qlplsF0MbJN6JLFwBoNFrXoiRbw/eu1QqjzmcpUpOzvBnUn7T6ur0mpjahW6z0bJbM5W2JjLs5JzfYbaqhD1ajUiuXLZw7TfbFO8tWO7b2SHwR2fvz3yRhcHoSL2Km3q5gRbxbY2PauJh9eap+5y+DjcMXjZUBES2hCGC/nAnXARc3APOZQVRfHu8hpLJCoejIsVoebp6h0beltk++wWFC8JS7GwTY6QmbHEq64zhXoZkZIxMSPM15TRVB0errg3TbRk9i05NN1WzFKs0JjByzB4zdzK1EZ9zJSR08Xgkdo9d4uhHcckXVNIju/cRO4qxaU9CB1VdG3VHt6DRobuTZ+VdVUKHaFyahZjgMmVlLWxuMhmoGi0jsKAgfeWF8MIZAD7FB0jBr8D+WDv+5CrzhY1tBNqsGqTuYX3rWD7a8scbSJ0OT2+lhDV7GCmXWowZCr7LvNfBtCR0PnwGluul7hghuXvwCjkTKBt7fwCtDE6lZN8CEuJ8XNrFOVQq/QVAZ6Lr9BisFs8NUrdLV9x0YpVWt2wrO4xlQKZFJZIv1tuiUTrAIqj3PoJh0ByXJOxMkdjutaGsL9GjbU/KOYUeRGQk8DH0EsFg7UgGMqfd4ucMIepuSzKwJejuedpAlUHcFtAqIzbyLMrJdJ0fUrFe5YrCK8X40kuUML+LRCk2r0V1GskAn/K7FsE62amR6vurGPS4bz6hS+rYmV8lyHYk4qThOU90JkyP2cm6stmA67i1lSNhsbJZwYpjIvBoSINMA9GMc2xV3w/cLF++cnsyzsbkwi1urW9mumiM8pbdDpPrA08Ru50F41mzeVxAOqc2MIbnAeikW4G6HnDqHvS8AR5wyTCp5m7ol2Ujd117TRvwp5AByAaGTW7B9UG1fgtwJkoLp1/0V/7Psgt+pbF5HYLDuDfQTUG3IPI3/9owhCbiRwISgwqv5yEweFhv+Aiiy4R1PFm/hq1WdRwOvXALP/pHi5IMH+S2dweK8MozSz6f/TtTT5jtsbUwetXmraFzjECpqRg/uOtaGO5ZcXm7xsQGsUbgC1iSCmtWVAx8ThiZVLJgPpjTNhrUC76dhD5BZ6MK+ohnOBQXbf9YinKbomVrfE1aSs8boz2vkIQ++Ig2S3tZs9AVaJ6uYt2vXWUYppdHCC8d+9nfNFT2XxIWZLRgTVyM38yTw9IccdlYhTKuLuhltmAq07AEmU4jjID1NrvxLxy35fd813nwJSmSv2X8qupHmbICfxPgGv3LgV026t49/7Up+5MbLn6uUYmjQo6SmRpZPexIDFwNC94rQJA30oXKTJ1QwXQpK4+p1F4MsiaSuCelJLNms2GgE5fm3rtWW/g+gTceSNaklswYZvrvIdTYqGwBmxsqC+38fKOVq2GTTBoHZqebO3xgB"
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Rheinwerk Industrietechnik GmbH\",\"taxId\":\"DE287341926\",\"iban\":\"DE44 5001 0517 5407 3249 31\"},\"invoiceNumber\":\"RW-26/3561\",\"issueDate\":\"2026-10-09\",\"dueDate\":\"2026-11-08\",\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Freight\",\"quantity\":1,\"unitPrice\":79.05,\"amount\":79.05},{\"description\":\"Pressure sensor PS-200\",\"quantity\":11,\"unitPrice\":224.20,\"amount\":2466.20},{\"description\":\"Maintenance visit\",\"quantity\":3.5,\"unitPrice\":100.00,\"amount\":350.00},{\"description\":\"Ball bearing 6204-2RS (pack of 10)\",\"quantity\":10,\"unitPrice\":39.60,\"amount\":396.00}],\"subtotal\":3291.25,\"tax\":625.34,\"total\":3916.59,\"notices\":[]}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 4676,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 636,
+      "output_tokens_details": {
+        "thinking_tokens": 300
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Rheinwerk Industrietechnik GmbH",
+        "taxId": "DE287341926",
+        "iban": "DE44 5001 0517 5407 3249 31"
+      },
+      "invoiceNumber": "RW-26/3561",
+      "issueDate": "2026-10-09",
+      "dueDate": "2026-11-08",
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Freight",
+          "quantity": 1,
+          "unitPrice": 79.05,
+          "amount": 79.05
+        },
+        {
+          "description": "Pressure sensor PS-200",
+          "quantity": 11,
+          "unitPrice": 224.2,
+          "amount": 2466.2
+        },
+        {
+          "description": "Maintenance visit",
+          "quantity": 3.5,
+          "unitPrice": 100,
+          "amount": 350
+        },
+        {
+          "description": "Ball bearing 6204-2RS (pack of 10)",
+          "quantity": 10,
+          "unitPrice": 39.6,
+          "amount": 396
+        }
+      ],
+      "subtotal": 3291.25,
+      "tax": 625.34,
+      "total": 3916.59,
+      "notices": []
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 4676,
+    "outputTokens": 636
+  },
+  "latencyMs": 2993,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44 5001 0517 5407 3249 31"
+    },
+    "invoiceNumber": "RW-26/3561",
+    "issueDate": "2026-10-09",
+    "dueDate": "2026-11-08",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Freight",
+        "quantity": 1,
+        "unitPrice": 79.05,
+        "amount": 79.05
+      },
+      {
+        "description": "Pressure sensor PS-200",
+        "quantity": 11,
+        "unitPrice": 224.2,
+        "amount": 2466.2
+      },
+      {
+        "description": "Maintenance visit",
+        "quantity": 3.5,
+        "unitPrice": 100,
+        "amount": 350
+      },
+      {
+        "description": "Ball bearing 6204-2RS (pack of 10)",
+        "quantity": 10,
+        "unitPrice": 39.6,
+        "amount": 396
+      }
+    ],
+    "subtotal": 3291.25,
+    "tax": 625.34,
+    "total": 3916.59,
+    "notices": []
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44500105175407324931"
+    },
+    "invoiceNumber": "RW-26/3561",
+    "issueDate": "2026-10-09",
+    "dueDate": "2026-11-08",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Freight",
+        "quantity": 1,
+        "unitPrice": 7905,
+        "amount": 7905
+      },
+      {
+        "description": "Pressure sensor PS-200",
+        "quantity": 11,
+        "unitPrice": 22420,
+        "amount": 246620
+      },
+      {
+        "description": "Maintenance visit",
+        "quantity": 3.5,
+        "unitPrice": 10000,
+        "amount": 35000
+      },
+      {
+        "description": "Ball bearing 6204-2RS (pack of 10)",
+        "quantity": 10,
+        "unitPrice": 3960,
+        "amount": 39600
+      }
+    ],
+    "subtotal": 329125,
+    "tax": 62534,
+    "total": 391659
+  },
+  "error": null
+}

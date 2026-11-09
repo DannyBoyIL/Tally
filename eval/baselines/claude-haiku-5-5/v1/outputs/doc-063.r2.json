@@ -1,0 +1,137 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbS35T878FzCdBWHXif",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS/gkKEAgTGAI4AUIIdGhpbmtpbmcSDJaOE9Mt6P4Xl3kMTRoMTGdM0ss03rfJ0qMKIjBfe/MLr4NYxukC6HbLJ2W+lzBjmv5fL552tfGVfeAb+As/iuR0j4WkZNsR3VlATT4qmwnx6J+VQhLJMYDAPfGlwrzouyW7VOmfydPqEIN8tF/bQxLlRJOorD/bqf/q0wtdEuv69T+nruJ8iCZ65+jpLn+brBs5ipdgdefeoqDdjhhSfPnQUxeqUOFvSFNRCJH+we05REr+tzNq9s6CZeIHWl4ogaNZFedljRj1mb0uYS40p1ltZvzCtrj6fSdUhxu6kC2tV7CXF93luQO/jVqQKwq6Of+iG4tV4Ikid1audmxbkWpWe5uH0ELYgOrhULXFVpPGkWKqIkMP7k/6BlxDZi+sYF4Wi/KiubIB3DMkXNNaeAtK2UV+prF7Qn5pA2+HTwmLld3wnt0cIM+k/z3DxH44IWEHhcQsssWKTLdKx+GD1hBoMbzT2NxDUuYA3C9RPD1tSGma1a7BYxGQzKH/IuiMb7Y5aECWfLqrKOnJWrSRHru2BiCEvSKRQD3CFVubAx8hnsU/nRld/TXJeh60rj1l6tww5RfCj9L9ZGbUT0EIET4uvmiVluCSHewEe3t5+rInR4+idECfd85NCdSARhpHUZUjXVC2FBcr2SkeGrlCYdlg5s8akhA0sPRkq4ltErJmLgmr8PeJq3iF0rNpNttaRPGwMV8UlF1LVuDTmpBR1qMb8jegFoaEhJMhbeUGsnapers21+hdFqd6RyMnGVWX/6LmPUxy0qbjLqOKVdz43jobEtniBbEhh166xhvRWBkLzuwi5mjYSZ8DzqSMF5X0RXi0ECykdgaWX2hf/GCCj4XuKU31J+vCGoKEWGlxlK7LjU1VsYPV0+8DfDwVcR5jSdHm91ZbMByG4N3rcJLR8tDXY5KHb0cPB3BXNLCDa08eKNdLZ0MacMtFfZ3HYFmGWuIniKuu4tJlA14CX8aBUmKRnAQWgDu5wcdBFxpPZ0VQ/e8/sTiLlK6rd11H/wjv8zOjP11KiLzpGR7lV1624B/8IAuJehn/gvHCEXzwgUa31hYqlp0AiLcF6uQRdXtoh2bzaaZ+j67CyZ45d6Z1FxqHDz+HVl2botGqTznEKrAuoWZ1vgEUSW/3DOwZC8PUd01wigbu04PRP17h6GGe+QP70EM8atgn9Nh+elViOyPIokvhiwL/J9k78tpzFvdsYPtMBB2H+6kTIPQlHCDw5k23sujNo7j7yzlE5LIzXfnki2fJp0Ed/wcUcMC0gVq+VNBEb5zQGbFHAZXsN8CEG+j8RNEv1ml1oFWP0a10aPl86ZCkk+ts2BGQUXuYM8sw5135QS9evxIw+eM2yjNNTZQ2HtBmeMxSTzxuyQP9X1wI+Cq1aC6V/LeuCzoNgS2A7LjOkFtN2HTnYwTe3UlOZLkL+kJzjmwjgA5JwcGB9UXdrooRgWf9vzZ7XFhyoaXisZXr8VyY9DZDbNAKPXjQypaKFkbYJNt6KjIjWFlREVicSrfXHI3m/LWAyUjnfWggC3Deaf/HPDmeixdFpNK/ojKiQHyQr8k0hkZ8ANNjrImKB2m0HyOzgRFetTfUwxVvrO4akq3sH5z5gSxhUFOq92hSj6ZkGogkx0uaIAQ+VbtEUC6Ohty278FRHCUDoRW0osItiUE0xnO8aXMYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Rheinwerk Industrietechnik GmbH\",\"taxId\":\"DE287341926\",\"iban\":\"DE44 5001 0517 5407 3249 31\"},\"invoiceNumber\":\"RW-26/1022\",\"issueDate\":\"2026-09-29\",\"dueDate\":\"2026-11-13\",\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Hydraulic hose assembly\",\"quantity\":8,\"unitPrice\":105.85,\"amount\":846.80},{\"description\":\"Ball bearing 6204-2RS (pack of 10)\",\"quantity\":6,\"unitPrice\":39.15,\"amount\":234.90}],\"subtotal\":1081.70,\"tax\":205.52,\"total\":1287.22}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 567,
+      "output_tokens_details": {
+        "thinking_tokens": 313
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Rheinwerk Industrietechnik GmbH",
+        "taxId": "DE287341926",
+        "iban": "DE44 5001 0517 5407 3249 31"
+      },
+      "invoiceNumber": "RW-26/1022",
+      "issueDate": "2026-09-29",
+      "dueDate": "2026-11-13",
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Hydraulic hose assembly",
+          "quantity": 8,
+          "unitPrice": 105.85,
+          "amount": 846.8
+        },
+        {
+          "description": "Ball bearing 6204-2RS (pack of 10)",
+          "quantity": 6,
+          "unitPrice": 39.15,
+          "amount": 234.9
+        }
+      ],
+      "subtotal": 1081.7,
+      "tax": 205.52,
+      "total": 1287.22
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 567
+  },
+  "latencyMs": 3496,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44 5001 0517 5407 3249 31"
+    },
+    "invoiceNumber": "RW-26/1022",
+    "issueDate": "2026-09-29",
+    "dueDate": "2026-11-13",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Hydraulic hose assembly",
+        "quantity": 8,
+        "unitPrice": 105.85,
+        "amount": 846.8
+      },
+      {
+        "description": "Ball bearing 6204-2RS (pack of 10)",
+        "quantity": 6,
+        "unitPrice": 39.15,
+        "amount": 234.9
+      }
+    ],
+    "subtotal": 1081.7,
+    "tax": 205.52,
+    "total": 1287.22
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44500105175407324931"
+    },
+    "invoiceNumber": "RW-26/1022",
+    "issueDate": "2026-09-29",
+    "dueDate": "2026-11-13",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Hydraulic hose assembly",
+        "quantity": 8,
+        "unitPrice": 10585,
+        "amount": 84680
+      },
+      {
+        "description": "Ball bearing 6204-2RS (pack of 10)",
+        "quantity": 6,
+        "unitPrice": 3915,
+        "amount": 23490
+      }
+    ],
+    "subtotal": 108170,
+    "tax": 20552,
+    "total": 128722
+  },
+  "error": null
+}

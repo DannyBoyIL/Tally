@@ -1,0 +1,150 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbPkMKGuVjGDG4vi88r",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Kestrel IT Consulting Ltd\",\"taxId\":\"GB603118274\",\"iban\":\"GB50 LOYD 3096 3441 8502 67\"},\"invoiceNumber\":\"K-2026892\",\"issueDate\":\"2026-07-07\",\"dueDate\":\"2026-08-06\",\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"Microsoft 365 licence (monthly)\",\"quantity\":10,\"unitPrice\":21.05,\"amount\":210.50},{\"description\":\"Laptop setup & imaging\",\"quantity\":6,\"unitPrice\":77.55,\"amount\":465.30},{\"description\":\"Managed backup service\",\"quantity\":9,\"unitPrice\":269.75,\"amount\":2427.75}],\"subtotal\":3103.55,\"tax\":620.71,\"total\":3724.26}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 283,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Kestrel IT Consulting Ltd",
+        "taxId": "GB603118274",
+        "iban": "GB50 LOYD 3096 3441 8502 67"
+      },
+      "invoiceNumber": "K-2026892",
+      "issueDate": "2026-07-07",
+      "dueDate": "2026-08-06",
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "Microsoft 365 licence (monthly)",
+          "quantity": 10,
+          "unitPrice": 21.05,
+          "amount": 210.5
+        },
+        {
+          "description": "Laptop setup & imaging",
+          "quantity": 6,
+          "unitPrice": 77.55,
+          "amount": 465.3
+        },
+        {
+          "description": "Managed backup service",
+          "quantity": 9,
+          "unitPrice": 269.75,
+          "amount": 2427.75
+        }
+      ],
+      "subtotal": 3103.55,
+      "tax": 620.71,
+      "total": 3724.26
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 283
+  },
+  "latencyMs": 1970,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50 LOYD 3096 3441 8502 67"
+    },
+    "invoiceNumber": "K-2026892",
+    "issueDate": "2026-07-07",
+    "dueDate": "2026-08-06",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 10,
+        "unitPrice": 21.05,
+        "amount": 210.5
+      },
+      {
+        "description": "Laptop setup & imaging",
+        "quantity": 6,
+        "unitPrice": 77.55,
+        "amount": 465.3
+      },
+      {
+        "description": "Managed backup service",
+        "quantity": 9,
+        "unitPrice": 269.75,
+        "amount": 2427.75
+      }
+    ],
+    "subtotal": 3103.55,
+    "tax": 620.71,
+    "total": 3724.26
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50LOYD30963441850267"
+    },
+    "invoiceNumber": "K-2026892",
+    "issueDate": "2026-07-07",
+    "dueDate": "2026-08-06",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 10,
+        "unitPrice": 2105,
+        "amount": 21050
+      },
+      {
+        "description": "Laptop setup & imaging",
+        "quantity": 6,
+        "unitPrice": 7755,
+        "amount": 46530
+      },
+      {
+        "description": "Managed backup service",
+        "quantity": 9,
+        "unitPrice": 26975,
+        "amount": 242775
+      }
+    ],
+    "subtotal": 310355,
+    "tax": 62071,
+    "total": 372426
+  },
+  "error": null
+}

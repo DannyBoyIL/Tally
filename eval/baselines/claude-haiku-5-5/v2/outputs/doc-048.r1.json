@@ -1,0 +1,157 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v2",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbUpgR6bsZVq83bANAr",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS8QgKEAgTGAI4AUIIdGhpbmtpbmcSDKJmJwanUAFkxIIorRoM5suCYzWQcPNxWvz8IjAAuVeFR0WLiuBUce/GpecEJ20kIs4HCpEnZCVsZME+yQsBEmRN/L0/6HypiQ0+t7EqjgjpJpZe0vZWyPdLMnR7qENAkR8NwmS2PDl7lvSF3TQcAKdK8DL5eZlBZ25YcJ94CjDGrcPRYR39aItjv04ZtZlnkz239MSMQ0Vgje37VFJNyvHPGtu/GtsiOPvwOfBrjDxUcWgDiIoIIrgeDa934I6oBX61bU0ZE4kuRM6VgZBJmoWC86o34juSE85bz41Dc+guU4UVKFN++j33W+niv77r7bW/KL3H2/1BiwB9EW4KnJwYHeh5I8i5vqVceosTtC0U7dJsd2HpBHKY/b5raSQjDsQo3A6u2nohqzVNevip1UWIbQN+X0bMQIPXZRW+9W733VJA76Ps8JF8Q7oLkuS9fU37oHSTY3exPS03RQ19PlY65IC9PPaL7OtqawNIsLjELLQv/H3RMOREjEDgLPJAOlV8W4vgHUy+mOHl7qingarnu8W9xmb+Xc/WShnNjiXrm1TNVisFHLtNdLuPMRC/6f6U9U6EnKJO0eKuIh6/bt9couzVrf66Srr+aPQGscZglM1nvpDrRBA+zwC6yq5GmErsHXmnZTs9Eh8MMgYVTjhfn+aeSUejvclX2OVa8yuTdm/ADQ4R+bpFJA+6j3cFPXjQEhPjM4coxm9eHTzRI7In1tdrS0XQ6WdkM+UTcl6bjXoBzmadNVVh5rSw03VYaFPhCCjfN3XRW2ru6xX3nSsTZZaMxiqyPPwcH8Hv2q/PKe/cc8CZR/03aOBBvPyOHB/A5j1Xr02Q1elLS7xs4tteFuuY6p0AdESwW35enRVin9DnLoB1BFjZiVQiibjtFcQ7EEZ9aBSsDdUclj4fTo6EphnWSK5+ELkKyg0bGNQGUx3WNIFJn/Sxho+r0DFYx6e56xotrKs3/efwiCvdzxQnp5MX+tXVK3gWSBR+QxIaRJXuFxMcvGLWHVgWz6qtWG717oleH5nXCLfAHqj4eDQPBAo9ehWddjVodKyU9mGeUc9iOBqTbfdxcSRjQCCd4W/jc+ZIcLhi+MOLttStmyJnH5Chnv/FNpoGki8vRmPlTxL0Ecg9TPSPuK4/7+E7x7TPMgsO1HEx9oMK1ICsCRQJFeagszgJbAaLJRx/ZalC5m1wCxDmtDUI/5BJ7bz2nwMXf9ahOntfnGS3Tm8n5KNPfr0ImL3sEzEMUAO38JR7EQEau5/Ht8u2e4ME+PQ3uUIIiiW4UyYyvZXq0Is56/ki7/i+qIxDdh4WXvQJj0GCbhcsjFDn7g+M1cMYcHttpYy00HF12fSLaXC9iolDqravEQ8JzwF7K3LDXA/zfM1C9m0pCO92mrFKKkDJMfr6IZI65KvEW3jT4XvauvxflKpU05hc+IwLTVcEFOqOZeqNfvrP0UE7vRzi6LLn9R3RDPBhw4HDZfS4TEldJTcYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Harbor & Finch Legal LLP\",\"taxId\":\"93-1048826\",\"iban\":null},\"invoiceNumber\":\"28584\",\"issueDate\":\"2026-03-13\",\"dueDate\":\"2026-03-27\",\"currency\":\"USD\",\"lineItems\":[{\"description\":\"Legal consultation\",\"quantity\":5.5,\"unitPrice\":265.00,\"amount\":1457.50},{\"description\":\"Contract review\",\"quantity\":11.5,\"unitPrice\":405.00,\"amount\":4657.50},{\"description\":\"Loyalty discount\",\"quantity\":1,\"unitPrice\":-550.35,\"amount\":-550.35}],\"subtotal\":5564.65,\"tax\":0.00,\"total\":5546.16,\"notices\":[]}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 4355,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 536,
+      "output_tokens_details": {
+        "thinking_tokens": 278
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Harbor & Finch Legal LLP",
+        "taxId": "93-1048826",
+        "iban": null
+      },
+      "invoiceNumber": "28584",
+      "issueDate": "2026-03-13",
+      "dueDate": "2026-03-27",
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "Legal consultation",
+          "quantity": 5.5,
+          "unitPrice": 265,
+          "amount": 1457.5
+        },
+        {
+          "description": "Contract review",
+          "quantity": 11.5,
+          "unitPrice": 405,
+          "amount": 4657.5
+        },
+        {
+          "description": "Loyalty discount",
+          "quantity": 1,
+          "unitPrice": -550.35,
+          "amount": -550.35
+        }
+      ],
+      "subtotal": 5564.65,
+      "tax": 0,
+      "total": 5546.16,
+      "notices": []
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 4355,
+    "outputTokens": 536
+  },
+  "latencyMs": 2827,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Harbor & Finch Legal LLP",
+      "taxId": "93-1048826",
+      "iban": null
+    },
+    "invoiceNumber": "28584",
+    "issueDate": "2026-03-13",
+    "dueDate": "2026-03-27",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Legal consultation",
+        "quantity": 5.5,
+        "unitPrice": 265,
+        "amount": 1457.5
+      },
+      {
+        "description": "Contract review",
+        "quantity": 11.5,
+        "unitPrice": 405,
+        "amount": 4657.5
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -550.35,
+        "amount": -550.35
+      }
+    ],
+    "subtotal": 5564.65,
+    "tax": 0,
+    "total": 5546.16,
+    "notices": []
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Harbor & Finch Legal LLP",
+      "taxId": "93-1048826",
+      "iban": null
+    },
+    "invoiceNumber": "28584",
+    "issueDate": "2026-03-13",
+    "dueDate": "2026-03-27",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Legal consultation",
+        "quantity": 5.5,
+        "unitPrice": 26500,
+        "amount": 145750
+      },
+      {
+        "description": "Contract review",
+        "quantity": 11.5,
+        "unitPrice": 40500,
+        "amount": 465750
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -55035,
+        "amount": -55035
+      }
+    ],
+    "subtotal": 556465,
+    "tax": 0,
+    "total": 554616
+  },
+  "error": null
+}

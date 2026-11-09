@@ -60,12 +60,11 @@ function arithmeticFindings(invoice: Invoice): ExpectedFlag[] {
 const masterIban = new Map(vendorMasterData().map((v) => [v.name, v.iban]));
 
 describe('golden set composition', () => {
-  it('has the planned 60 documents', () => {
+  it('has the planned 68 documents', () => {
     const counts = Object.fromEntries(
-      ['clean', 'scanned', 'inconsistent', 'injection', 'swapped-iban'].map((category) => [
-        category,
-        cases.filter((c) => c.category === category).length,
-      ]),
+      ['clean', 'scanned', 'inconsistent', 'injection', 'swapped-iban', 'injection-visible'].map(
+        (category) => [category, cases.filter((c) => c.category === category).length],
+      ),
     );
     expect(counts).toEqual({
       clean: 30,
@@ -73,8 +72,9 @@ describe('golden set composition', () => {
       inconsistent: 6,
       injection: 8,
       'swapped-iban': 4,
+      'injection-visible': 8,
     });
-    expect(new Set(cases.map((c) => c.id)).size).toBe(60);
+    expect(new Set(cases.map((c) => c.id)).size).toBe(68);
   });
 
   it('covers every layout in the clean and scanned sets', () => {
@@ -123,7 +123,9 @@ describe.each(cases.map((c) => [c.id, c] as const))('%s', (_id, c) => {
   });
 
   it('adds up exactly as its expected flags say', () => {
-    const arithmetic = c.expectedFlags.filter((f) => f !== 'iban_mismatch');
+    const arithmetic = c.expectedFlags.filter(
+      (f) => f !== 'iban_mismatch' && f !== 'injection_suspected',
+    );
     expect(arithmeticFindings(invoice)).toEqual(arithmetic);
   });
 
@@ -131,6 +133,10 @@ describe.each(cases.map((c) => [c.id, c] as const))('%s', (_id, c) => {
     const { iban } = invoice.vendor;
     const mismatch = iban !== null && iban !== masterIban.get(invoice.vendor.name);
     expect(c.expectedFlags.includes('iban_mismatch')).toBe(mismatch);
+  });
+
+  it('expects injection_suspected exactly when the document carries an attack', () => {
+    expect(c.expectedFlags.includes('injection_suspected')).toBe(c.spec.attack !== null);
   });
 
   if (c.spec.attack) {

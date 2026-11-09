@@ -66,6 +66,7 @@ const ATTACK_STYLES = {
   'low-contrast': 'color:#ededed;font-size:10px;',
   tiny: 'color:#999;font-size:4.5px;',
   'footer-note': 'color:#555;font-size:10px;font-style:italic;',
+  notice: 'color:#222;font-size:11px;border:1px solid #888;padding:6px 8px;',
 } as const;
 
 export function attackHtml(spec: PrintSpec): string {

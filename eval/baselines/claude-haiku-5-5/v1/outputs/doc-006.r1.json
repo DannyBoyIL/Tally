@@ -1,0 +1,168 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbPTcG6kfNjdUrMnaDe",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Brightline Cloud Services\",\"taxId\":\"47-5530218\",\"iban\":null},\"invoiceNumber\":\"BL-746801\",\"issueDate\":\"2026-04-27\",\"dueDate\":\"2026-05-27\",\"currency\":\"USD\",\"lineItems\":[{\"description\":\"API overage (per 10k calls)\",\"quantity\":7,\"unitPrice\":2.25,\"amount\":15.75},{\"description\":\"Onboarding workshop\",\"quantity\":7,\"unitPrice\":769.90,\"amount\":5389.30},{\"description\":\"Cloud hosting, Standard plan (monthly)\",\"quantity\":8,\"unitPrice\":242.40,\"amount\":1939.20},{\"description\":\"Additional storage (100 GB)\",\"quantity\":6,\"unitPrice\":24.75,\"amount\":148.50}],\"subtotal\":7492.75,\"tax\":0.00,\"total\":7492.75}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 306,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Brightline Cloud Services",
+        "taxId": "47-5530218",
+        "iban": null
+      },
+      "invoiceNumber": "BL-746801",
+      "issueDate": "2026-04-27",
+      "dueDate": "2026-05-27",
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "API overage (per 10k calls)",
+          "quantity": 7,
+          "unitPrice": 2.25,
+          "amount": 15.75
+        },
+        {
+          "description": "Onboarding workshop",
+          "quantity": 7,
+          "unitPrice": 769.9,
+          "amount": 5389.3
+        },
+        {
+          "description": "Cloud hosting, Standard plan (monthly)",
+          "quantity": 8,
+          "unitPrice": 242.4,
+          "amount": 1939.2
+        },
+        {
+          "description": "Additional storage (100 GB)",
+          "quantity": 6,
+          "unitPrice": 24.75,
+          "amount": 148.5
+        }
+      ],
+      "subtotal": 7492.75,
+      "tax": 0,
+      "total": 7492.75
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 306
+  },
+  "latencyMs": 1922,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-746801",
+    "issueDate": "2026-04-27",
+    "dueDate": "2026-05-27",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "API overage (per 10k calls)",
+        "quantity": 7,
+        "unitPrice": 2.25,
+        "amount": 15.75
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 7,
+        "unitPrice": 769.9,
+        "amount": 5389.3
+      },
+      {
+        "description": "Cloud hosting, Standard plan (monthly)",
+        "quantity": 8,
+        "unitPrice": 242.4,
+        "amount": 1939.2
+      },
+      {
+        "description": "Additional storage (100 GB)",
+        "quantity": 6,
+        "unitPrice": 24.75,
+        "amount": 148.5
+      }
+    ],
+    "subtotal": 7492.75,
+    "tax": 0,
+    "total": 7492.75
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-746801",
+    "issueDate": "2026-04-27",
+    "dueDate": "2026-05-27",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "API overage (per 10k calls)",
+        "quantity": 7,
+        "unitPrice": 225,
+        "amount": 1575
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 7,
+        "unitPrice": 76990,
+        "amount": 538930
+      },
+      {
+        "description": "Cloud hosting, Standard plan (monthly)",
+        "quantity": 8,
+        "unitPrice": 24240,
+        "amount": 193920
+      },
+      {
+        "description": "Additional storage (100 GB)",
+        "quantity": 6,
+        "unitPrice": 2475,
+        "amount": 14850
+      }
+    ],
+    "subtotal": 749275,
+    "tax": 0,
+    "total": 749275
+  },
+  "error": null
+}

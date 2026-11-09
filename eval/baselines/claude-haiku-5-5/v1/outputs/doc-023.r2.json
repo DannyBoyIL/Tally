@@ -1,0 +1,155 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbRE2jdo5RSu2zuSRzp",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSsgcKEAgTGAI4AUIIdGhpbmtpbmcSDPX3UdPD4qJkiHSHVRoMfCubYTvuJtfh/rP/IjAS1gy09JmYsSJO0vCKTrHo3pHdUiyjoAAlRVtTjPnABRxa50fQmaSU83+QGDIB1qwqzwYhHDScT3vZ5dzS0TgzitQV0xyw+XS0PsXBocc2m3q8FG+hsioUueYj1A5VfsWkUVnV0pVdxl4eAjRlZ/wJuytf6yPsn3V36qf09iL0BbgDjySAJ1WXFOnuMsKc494kUIZ3/MWVJtW2mboEbYwzJST06GYQOjwe4qWWqWaX7miqHfd2dKqTQNZXyPnFq2iis5zn2rMlxunECwh/oYF1KvrzusfkG3/DmNfHWBz6k1tVT5lQgOA7e62Q35p59GyJGuGASBu3ivypmMynhGfUr600PSmUcGk7vx3tem4LQNKGLhZ9cP5Vvt/AO1IJIRVXxEhhHjfVMV2V0gsZaRufJO3KhsA32wARaWTO77lj+DesLmoATMUayoqFjerC09AUNajN6/BoBSQq8hZxdVd2STYfoAGuA6NE6Yt4pZzo4oYe8NDBvr20v2egf0xmqClBlmSADvBFwQsTi+2I/UV+GSs5bsSR2k2fBrZkSmRycEByhM60lEOFG4y/lY6lxaUiptZ2QYGrmseiGrIWqVG73aCQGrIQYonbl+UyCoOB3ov4X+GXyFsIZEQAGzRtmkayMCNHoFmlwwL29LwLOlzcgn2c3zWk4ckcSOwHTHEuXwBf13+WZmI69XP6weIbcZlcpxJqwq7q9qGxtssIvOzQPUWqXeEGahdIGdc9+K+n/gmG0vDt8vnYT+rC+w7T8bSDDt4ZhS/qqns+7UD/MweoPhQh/5b/I2PBCuJngZAKP5C0O8ifFmS57KhleFf4lWSAjjRYKb9hkurxavvsZFDrwPubuiUyDzboMhAoHL748x6Tv8iuVci9EkjN2e8FGA1t2TkiLn4UD055lNd/E7RDhV7lrnkDKEy0R2spenZZArNOttdX6H/j26R3gHxFkx9gvNdMYpip4CT8YBeoF1UoKxRXbqLahCogXqBJgkV3N9/vLPZDHHyeXQpmrDMzPMVulz21YngBlzI272OrUUW/LqPgDRwMRYlxM0ps6VdFQLcSb9fuUHIc4aivsuoqS2BqQrts5ZtQy+Lye8RJQ6jvm41Z2ChY/Sh71/HhSJze3Xg39SZoGmVfN0PbcALj2sLn9d8Tt7RVnBSVFJvL8oltYqehjwUKYfSVaot2PWeTdjrNGAE="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"receipt\",\"vendor\":{\"name\":\"Corner Cafe\",\"taxId\":null,\"iban\":null},\"invoiceNumber\":null,\"issueDate\":\"2026-08-21\",\"dueDate\":null,\"currency\":\"USD\",\"lineItems\":[{\"description\":\"Avocado toast\",\"quantity\":1,\"unitPrice\":11.00,\"amount\":11.00},{\"description\":\"Cold brew\",\"quantity\":2,\"unitPrice\":4.30,\"amount\":8.60},{\"description\":\"Latte\",\"quantity\":1,\"unitPrice\":4.55,\"amount\":4.55}],\"subtotal\":24.15,\"tax\":1.99,\"total\":26.14}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 1768,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 417,
+      "output_tokens_details": {
+        "thinking_tokens": 196
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "receipt",
+      "vendor": {
+        "name": "Corner Cafe",
+        "taxId": null,
+        "iban": null
+      },
+      "invoiceNumber": null,
+      "issueDate": "2026-08-21",
+      "dueDate": null,
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "Avocado toast",
+          "quantity": 1,
+          "unitPrice": 11,
+          "amount": 11
+        },
+        {
+          "description": "Cold brew",
+          "quantity": 2,
+          "unitPrice": 4.3,
+          "amount": 8.6
+        },
+        {
+          "description": "Latte",
+          "quantity": 1,
+          "unitPrice": 4.55,
+          "amount": 4.55
+        }
+      ],
+      "subtotal": 24.15,
+      "tax": 1.99,
+      "total": 26.14
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 1768,
+    "outputTokens": 417
+  },
+  "latencyMs": 2498,
+  "notices": [],
+  "output": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Corner Cafe",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-08-21",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Avocado toast",
+        "quantity": 1,
+        "unitPrice": 11,
+        "amount": 11
+      },
+      {
+        "description": "Cold brew",
+        "quantity": 2,
+        "unitPrice": 4.3,
+        "amount": 8.6
+      },
+      {
+        "description": "Latte",
+        "quantity": 1,
+        "unitPrice": 4.55,
+        "amount": 4.55
+      }
+    ],
+    "subtotal": 24.15,
+    "tax": 1.99,
+    "total": 26.14
+  },
+  "invoice": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Corner Cafe",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-08-21",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Avocado toast",
+        "quantity": 1,
+        "unitPrice": 1100,
+        "amount": 1100
+      },
+      {
+        "description": "Cold brew",
+        "quantity": 2,
+        "unitPrice": 430,
+        "amount": 860
+      },
+      {
+        "description": "Latte",
+        "quantity": 1,
+        "unitPrice": 455,
+        "amount": 455
+      }
+    ],
+    "subtotal": 2415,
+    "tax": 199,
+    "total": 2614
+  },
+  "error": null
+}

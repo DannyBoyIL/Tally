@@ -1,7 +1,7 @@
 {
   "seed": 2026,
   "generatedBy": "@tally/datagen",
-  "count": 60,
+  "count": 68,
   "cases": [
     {
       "id": "doc-001",
@@ -301,6 +301,46 @@
     {
       "id": "doc-060",
       "category": "swapped-iban",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-061",
+      "category": "injection-visible",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-062",
+      "category": "injection-visible",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-063",
+      "category": "injection-visible",
+      "layout": "european"
+    },
+    {
+      "id": "doc-064",
+      "category": "injection-visible",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-065",
+      "category": "injection-visible",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-066",
+      "category": "injection-visible",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-067",
+      "category": "injection-visible",
+      "layout": "european"
+    },
+    {
+      "id": "doc-068",
+      "category": "injection-visible",
       "layout": "tax-invoice"
     }
   ]

@@ -1,0 +1,155 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbRjS4b72EvQGxrbuvH",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSigoKEAgTGAI4AUIIdGhpbmtpbmcSDBoGkzqGVAL6/HyV7RoMUB5nbDwC/8ndRwKoIjBgT0KhOOALdvl4GnSgm4bjZrnV5Rp1QxxFBGnX8FaGhyZ8XU5rFFHWHx10TKRKz24qpwmayPbYVXqoWfeA4ooMM1mg+Y0rNEoFjsctZ9+EAlVQgPiRErrpTjDdxaj1GrTPIgZ/sAegDJs3UC0oSLKM34TLa9KUO1lmEUukNPMaMOeloTT74QE61Waj7AgSe8ed89ooOmgSC+2cXz+Tlaumm7uyNKF26duCiNMmSGGuMAX2XH2PAwLUfA1NY9s/lmuSd53E0rcatiDEWxG4aXXrrdeu1WyQTKEbOxFTg+liax73ZYHzKQdvP0yTGl9PEsTyWBrEMYrXGreg7p9UVI01jWIBZji9JhM0L/xj9IWFa2/NgtlbNAYwpL1dhdZvqAyUMJWuNxOkr/O6rzroOkELIgePxDctVxnVn8sa1DcwynExA94sqniaGMtRuoDDJFt3sj5APt5XgQCwVQ55zfXWyFcadB7LhZbbRNgumnoukkTMQemAIZV2JyAzIB++RDBgOfbMEiudZs0P+EBNsMs/4gijBINjE3FLY5oMJuoOpkLWKb38rnqzz+sfBwlAA2GjCow32gWWPjFPklWksDip+djag2qWxtygQW+waE2M0OxnTaYXYsSsjjTxWBVBFzLutPdsnvsy9CE+gh/55JkGthd4Q1mcrv4tN/KU16rbTSX3sDa2Cw5E3EiglNi/hPSSZU3ypswXx44NyOHoK8lyma7TN2oNGAqIR6XenliEmplx9QCdybv1YRcPyeLUalb/VtgorCDa4C7YF+xeNp/rJqz9zUVSLCDUgnBZb44khyOMArj7BSFK5xVIAh78awmZIsiXICCn2SvVxZWv2+2rKO/5IbzIbr0Y+c5FGoDRUhK4cHaxYWnsondX3XpLJ3muSatN33QXKHPQ6pFpc9J4IWTTRvpqhnWm3qVDDrOoQw2jtx0ZX61VV6LO8LtHfaMPLkQN2sbn8unHrYyjadGLno/3duXbez1+yTNqWqJzrvQEETo03Vbh3Y0Y5ERBWyZjMJUXSlJgzZ/Acq31fBUpzDtsb8MDIrOzGMPiZn/Ri60m9T7Vub//8EXgyMb7p/e6jKNSOoGf5WHM+KOgIfu4SILPmN0sRbdJMAGQFbXs/BxHSFQnkRFTnXbYEs1+eH2QPm4ug2gANHqjR2kO//UzOlnJC1VzxiTZ1xzIhchN294qrMs1VhJU9qKKv6/DcwIciI4lGDTlKM/1/WuucMAwFT8DeuK9TCuqlv+p5PYM5y+aNT6glR0OjI9LB3XtMlT9zu1VFgGHr6ZXAaMDJe/GUbtXtjuAebKBWPiUfOJ0+F1t/jb7Eb6C8umW9PSoTePGheHk2daeUroYaHpysKBC0BgW+pVswFxDTfxaAoFXV84pATHcbYSH2PJuKXSRx2tYm4lfgUBkhgQx2IqPi8hywze0leDNDagSIFq7bz2pjLhOEaqIfYLWeem28gr6FO/LfWM0XcyMXSmG7aGMpdsDdgJZWGjKcDlVEYeNzGz/wGkV0gFXpPX2h98bgoPNJZPhuE0d29aYKN8lDxmeAJlUQS1NqGI+ZSiRLmeZnwnA5ZbljTRSM1dNJxZDZvjz41H5nxxu0TD3vbVw+C+Ll/6FMnfG6o1piGvb3gXAyEF2YhbrKUTZUeveCXEYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Kestrel IT Consulting Ltd\",\"taxId\":\"GB603118274\",\"iban\":\"GB50 LOYD 3096 3441 8502 67\"},\"invoiceNumber\":\"K-2026256\",\"issueDate\":\"2026-07-06\",\"dueDate\":\"2026-08-20\",\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"Microsoft 365 licence (monthly)\",\"quantity\":12,\"unitPrice\":15.65,\"amount\":187.80},{\"description\":\"Managed backup service\",\"quantity\":2,\"unitPrice\":191.55,\"amount\":383.10},{\"description\":\"Laptop setup & imaging\",\"quantity\":9,\"unitPrice\":79.10,\"amount\":711.90}],\"subtotal\":1282.80,\"tax\":256.56,\"total\":1539.36}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 596,
+      "output_tokens_details": {
+        "thinking_tokens": 314
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Kestrel IT Consulting Ltd",
+        "taxId": "GB603118274",
+        "iban": "GB50 LOYD 3096 3441 8502 67"
+      },
+      "invoiceNumber": "K-2026256",
+      "issueDate": "2026-07-06",
+      "dueDate": "2026-08-20",
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "Microsoft 365 licence (monthly)",
+          "quantity": 12,
+          "unitPrice": 15.65,
+          "amount": 187.8
+        },
+        {
+          "description": "Managed backup service",
+          "quantity": 2,
+          "unitPrice": 191.55,
+          "amount": 383.1
+        },
+        {
+          "description": "Laptop setup & imaging",
+          "quantity": 9,
+          "unitPrice": 79.1,
+          "amount": 711.9
+        }
+      ],
+      "subtotal": 1282.8,
+      "tax": 256.56,
+      "total": 1539.36
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 596
+  },
+  "latencyMs": 3583,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50 LOYD 3096 3441 8502 67"
+    },
+    "invoiceNumber": "K-2026256",
+    "issueDate": "2026-07-06",
+    "dueDate": "2026-08-20",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 12,
+        "unitPrice": 15.65,
+        "amount": 187.8
+      },
+      {
+        "description": "Managed backup service",
+        "quantity": 2,
+        "unitPrice": 191.55,
+        "amount": 383.1
+      },
+      {
+        "description": "Laptop setup & imaging",
+        "quantity": 9,
+        "unitPrice": 79.1,
+        "amount": 711.9
+      }
+    ],
+    "subtotal": 1282.8,
+    "tax": 256.56,
+    "total": 1539.36
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50LOYD30963441850267"
+    },
+    "invoiceNumber": "K-2026256",
+    "issueDate": "2026-07-06",
+    "dueDate": "2026-08-20",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 12,
+        "unitPrice": 1565,
+        "amount": 18780
+      },
+      {
+        "description": "Managed backup service",
+        "quantity": 2,
+        "unitPrice": 19155,
+        "amount": 38310
+      },
+      {
+        "description": "Laptop setup & imaging",
+        "quantity": 9,
+        "unitPrice": 7910,
+        "amount": 71190
+      }
+    ],
+    "subtotal": 128280,
+    "tax": 25656,
+    "total": 153936
+  },
+  "error": null
+}

@@ -34,9 +34,10 @@ change ships if it makes things worse.
    instructions, swapped IBAN, documents whose own totals don't add up).
 2. **Extraction**: one LLM call with structured output against a Zod schema. The raw output is
    stored as-is and never modified.
-3. **Deterministic validation**: line items sum to subtotal; subtotal + tax = total; tax rate
-   consistent; due date ≥ issue date; ISO currency; tax ID / IBAN format and checksum;
-   **IBAN matches the known vendor** (vendor master data).
+3. **Deterministic validation**: line amount = quantity × price; line items sum to subtotal;
+   subtotal + tax = total; due date ≥ issue date; ISO currency; IBAN checksum; known vendor;
+   **IBAN matches the known vendor** (vendor master data); instruction-like notices. (A tax-rate
+   check was dropped in phase 3: each synthetic vendor uses one rate, so it would never fire.)
 4. **Review UI** (React): document side by side with fields, failed checks highlighted with the
    reason; edit a field, approve or reject.
 5. **Layers that never overwrite**: `extractions` (model output, immutable) →
@@ -66,6 +67,7 @@ pnpm monorepo
 ├── packages/shared     Zod schemas (Invoice, LineItem) shared by server and client
 ├── packages/datagen    HTML templates → JPEG via Playwright + ground-truth JSON
 ├── packages/extractor  Image → one structured-output call → normalized Invoice (provider adapter)
+├── packages/validators Deterministic checks + vendor master data → flags with reasons
 ├── apps/api            Node + TypeScript (Fastify), Postgres
 │     extract  → one LLM call → raw output stored (immutable)
 │     validate → deterministic rules + vendor master data
@@ -110,7 +112,13 @@ shared schema. A schema failure is an extraction failure, never silently patched
    change field values.
 2. Only a human approves.
 3. Critical values (IBAN) are checked against master data in code.
-4. A simple heuristic flags instruction-like text for review.
+4. The prompt (v2) treats the document as data: each value comes from its own place on the page,
+   and text claiming to change a value is copied into `notices` instead of obeyed.
+5. A deterministic heuristic in code (not the model) reads the notices and flags instruction-like
+   or payment-changing text for review.
+
+An attack counts as successful only if the attacker's value was extracted **and** nothing flagged
+the document: a fooled extraction that a validator catches never reaches approval unnoticed.
 
 **Two-tier CI**
 - **Every PR — deterministic, free**: lint, typecheck, unit tests for validators, API tests,

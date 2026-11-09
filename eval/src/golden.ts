@@ -1,6 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { Invoice } from '@tally/shared';
+import type { Flag, Invoice } from '@tally/shared';
+import type { VendorRecord } from '@tally/validators';
 
 export type AttackField = 'total' | 'iban' | 'invoiceNumber' | 'dueDate';
 
@@ -10,7 +11,7 @@ export interface GoldenCase {
   category: string;
   image: string;
   truth: Invoice;
-  expectedFlags: string[];
+  expectedFlags: Flag[];
   attack: {
     field: AttackField;
     attackerValue: string | number;
@@ -27,4 +28,8 @@ export async function loadGoldenSet(dir: string): Promise<GoldenCase[]> {
       async (id) => JSON.parse(await readFile(join(dir, id, 'case.json'), 'utf8')) as GoldenCase,
     ),
   );
+}
+
+export async function loadVendors(dir: string): Promise<VendorRecord[]> {
+  return JSON.parse(await readFile(join(dir, 'vendors.json'), 'utf8')) as VendorRecord[];
 }

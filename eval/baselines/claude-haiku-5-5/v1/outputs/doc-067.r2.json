@@ -1,0 +1,137 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbS5P7UPZAV39kpTn82",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSugkKEAgTGAI4AUIIdGhpbmtpbmcSDHNah5lmxIQrTnokWhoMIX4E+KwsIjsU2R/YIjBwnFiHzGoAcAxRVwhE0cBHCfaGVKEh4ecRGR9GFsfaQRgy1v+6cSdhkO++lSeSpkMq1wj/ehQo8yuVjzurn8s48Dqgd4o4GcSB6qA+VC7ybzI/qhrHXf4zR0zPfGbH0r4EX3E/tTFo/3kk+Br7md4pKFhR7Qn0+dP/KaH7YKa1+ET3P3nl5ub6cmqXTVp7XhBG4uC0K13mE7ht7i2w8EtZt9U99v962QIaeoCuA8EC0oLhhzRfs5r3fmbC68D8F7Ipzt4i9wGR+58YgB3LJo47E2X2ThOKHXfBtTqSztx86M85TCqpuqUQKLWPd9yrhRx4/vWaUB5YmN+sAp/TlCIUsQHrKr1p3cW6FDRDurA4SdqSsJbiwyh8Gow1IUEx6yOK6Aihfp8l4ECyoWeDLbfp4HsVX23Mq9h3Y4fK/0L08ibDViDTXqnWI90mRpp1vI+3YuaJKgZhLXdpUx3LeykWokIMyMvr5DIcWW4Q3fzCsvG4Fyq6D08sdyN8DPgga5vEZPB4EmQUa9chzxGBFslEg+qf08UOjhOWeVsBXzrGjiAu6Ubo9Zc0dpKonT+immXy//S7TSVOmC4w9bYMMG9kG0SHVKwOvOZY9UqL0dn0XGIVvjU6L/IZH8xzv8TyOzltQs5lCqpiFb7xOzMM0lQkWDVVxDn/ZlRmQAjRJNoYF+Zh8rqJz8svXMt4v/8yRWDesuj1u3Q98IcnIRAH7WFB4GCCbwPg0jfzgO9K6+x5+3NHbY+jI5hqNSYk3sjanaBwCBCf1yn9SDupBz1HFN5W8fIyIfT3pOg/S61WMR61Pjl5ymCiitMBMuzIelB9qolMWD7HRhkbaCF40uO15PqfMS8I5y7TDC5A7O4pEPSrYWRuALg1zcUk4gPChSvAw7NfGMiEO+w/nHT9NjTnepE7J+Hb2OfevMKCbR7U1W6gpvTwLLpdx7PkFI1uSP1df74YaYzHnJ1OJ+ZbikTyaGVLmN3qfM0X24MtkWCerXnJ5N6ciYsVIsGJGJ7BYPBn7EOgZQxTEKRWVkUNpSrdVGYz+54cfgRowh6IM0lgg3yS5Ypfyv07oIJPLKPqfV06OKcYFtllVsWNgu/gVZp09yP3UdsJCcBMk+QDcDZqjyPGx6GlZrv2xS2nrj2CSk3AR7i9wsezpGqLGkZ5n2K3UC3Rq9zvOAF5bTrvJGl/LjV8wkEBzf1/X4JXycS756zLe8dwbjsafVzj9iEJqUQP+RdNMjlX+5NOa4fNEAKYgqs+28kJU6bIqv8edMX13nr1xozrfn5LDscaU2WTXQhNPbzoDJRSSvUquY/cTs7spaJiLPHG71Csct1j9kN0ufqVjDjDzB3o+gIMfgB9ofK9tAXOqRCJT1AAENaw72cE9URC7GuHTjoeY59hnlWFkbNr1mn2xgjO86c40nRDKEx6L2W4UA0vNi7PnZ4usTdcNapsktly9Jey4/4pLETkaieyfB8rfT41BW+II8cdYqcQUfXWjwLhAqCsyg0UEp98VRkYKb0+q8aubViyRQlrVnmOBa++sAcCqKUZkcMjGAE="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Atelier Lumière SARL\",\"taxId\":\"FR40303265045\",\"iban\":\"FR76 3000 6000 0112 3456 7890 189\"},\"invoiceNumber\":\"F2026270\",\"issueDate\":\"2026-08-31\",\"dueDate\":\"2026-09-14\",\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Fine art print 40×50 cm\",\"quantity\":11,\"unitPrice\":73.70,\"amount\":810.70},{\"description\":\"Loyalty discount\",\"quantity\":1,\"unitPrice\":-40.54,\"amount\":-40.54}],\"subtotal\":770.16,\"tax\":154.03,\"total\":924.19}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 532,
+      "output_tokens_details": {
+        "thinking_tokens": 296
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Atelier Lumière SARL",
+        "taxId": "FR40303265045",
+        "iban": "FR76 3000 6000 0112 3456 7890 189"
+      },
+      "invoiceNumber": "F2026270",
+      "issueDate": "2026-08-31",
+      "dueDate": "2026-09-14",
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Fine art print 40×50 cm",
+          "quantity": 11,
+          "unitPrice": 73.7,
+          "amount": 810.7
+        },
+        {
+          "description": "Loyalty discount",
+          "quantity": 1,
+          "unitPrice": -40.54,
+          "amount": -40.54
+        }
+      ],
+      "subtotal": 770.16,
+      "tax": 154.03,
+      "total": 924.19
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 532
+  },
+  "latencyMs": 2885,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR76 3000 6000 0112 3456 7890 189"
+    },
+    "invoiceNumber": "F2026270",
+    "issueDate": "2026-08-31",
+    "dueDate": "2026-09-14",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fine art print 40×50 cm",
+        "quantity": 11,
+        "unitPrice": 73.7,
+        "amount": 810.7
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -40.54,
+        "amount": -40.54
+      }
+    ],
+    "subtotal": 770.16,
+    "tax": 154.03,
+    "total": 924.19
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR7630006000011234567890189"
+    },
+    "invoiceNumber": "F2026270",
+    "issueDate": "2026-08-31",
+    "dueDate": "2026-09-14",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fine art print 40×50 cm",
+        "quantity": 11,
+        "unitPrice": 7370,
+        "amount": 81070
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -4054,
+        "amount": -4054
+      }
+    ],
+    "subtotal": 77016,
+    "tax": 15403,
+    "total": 92419
+  },
+  "error": null
+}

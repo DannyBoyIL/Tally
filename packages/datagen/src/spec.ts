@@ -14,7 +14,12 @@ export interface Labels {
 }
 
 export type AttackField = 'total' | 'iban' | 'invoiceNumber' | 'dueDate';
-export type AttackMethod = 'low-contrast' | 'tiny' | 'footer-note';
+/**
+ * Hidden methods address an automated reader and hide from humans. `notice` is visible and
+ * written like ordinary business text (credit note, bank change, AP reference, extended terms),
+ * the way real invoice fraud reads.
+ */
+export type AttackMethod = 'low-contrast' | 'tiny' | 'footer-note' | 'notice';
 
 /** Instruction-like text planted in the document to push one field to the attacker's value. */
 export interface Attack {

@@ -1,0 +1,155 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbQCyDPW2yhWZvdry2V",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSpAcKEAgTGAI4AUIIdGhpbmtpbmcSDHp6zRKdD4hrSfSi1xoMGi8ITd4RmFKxCUNQIjBhKX6k1+Fv0XMyR2U7EsSmJEVwJggppSAUe7QMh0FZozDmK9XkSH3DScDD6cgzmloqwQYMOG4hFjbOg0qBl0REhgh6E88UGNjuNCFgc4iNRzJoTcAZ1ZWfGZ/SUPHhTaKcAR9sooq55U4ejpxfN+Lo80tSBTihuWIBPpoTgf5IvMkvTiByuQ2y0sc+2SwSxetVqE+qTTUoDpxa5lHngG723NiQY0FIzgnpH0krYyZ855H71HuZhYjeBnpWl3ryWDud6pvHS6hYUPJuVucIgXLE7R1MfHolDJK3M89NIU6LFcml5xXoMTFZf59MN1M9UxsyxPs42y8DpvUfa6wK67APXR8SmgJ0NXrREEj5Wgw0TAwBbCPKOPN0F0QhfXyyhTAZc4Krl9bGCCKT7gFD2/LJNdzkIBxte2qzx+DZzQpXUtoi15KnjOnPdES76xRSoH8zsMq9hR11domETLCVIJ53jkytOFPF28zWW0Whn4Qhl9QlPplwd4sNZFBd9P9dO1RjyLTPg6RDUFgAGk8s3koexnnpBUvSTGk1lVnUGrSfD4eSfepkShpn77eblTMCRSocpmOsQpUlqHRN0Dk7KNAIWyZa2hAONaXeGVURBrKbBSlJSjk/y8NtGRKVo3lswp2WQKO7CiFSmtEtD4nBKS3iwu3Z7G0ueAHvqzf4LAWy3NgrXIoYqxbcPMy/i12PnSTavBIz0zgN26moaetpEvA5JjdebJEi7sYft85O5ry9WhmOdvmG+7glK5dKYs3ei+xCSWhbjdl8cxVS49qDKnnE+mLW+pwWG6+EYtxbdJnyyBw/BwZswWOGJ/Y357FbQ9MwMATdxI5fqsjMl23HbaW4uFrc+5493DIP6xMgK2HbTrr+j4pMs0OhpkkaHuCVYMS8/a7nu+pKJ8RTYAVIWmlaoHt4SP5JRxUJKbUhqyvqv2/5AXw5sq9FRS/dAMlLepAnKw2oLs8klZUJArvtCJ9h9C5rKZjifnSY4AePPYwUnjpVszy577aQUYMjiC6eZEVRoRxdptEuEa7QocxZyh9XNSVAstwv6hj+YV4MFJXbemcs1unm5d7Ex2qNkIt3NiUnc9FfzDnsw4JkxulIn406coyf+hZk1dhqOsaTHw9A3MgdUvF0krLYhYJvzPYbuGXVptdrOwixI4MOIV2t6bf2VnkmRBgB"
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"receipt\",\"vendor\":{\"name\":\"Corner Cafe\",\"taxId\":null,\"iban\":null},\"invoiceNumber\":null,\"issueDate\":\"2026-08-18\",\"dueDate\":null,\"currency\":\"USD\",\"lineItems\":[{\"description\":\"Croissant\",\"quantity\":2,\"unitPrice\":4.00,\"amount\":8.00},{\"description\":\"Avocado toast\",\"quantity\":3,\"unitPrice\":10.30,\"amount\":30.90},{\"description\":\"Blueberry muffin\",\"quantity\":3,\"unitPrice\":4.25,\"amount\":12.75}],\"subtotal\":51.65,\"tax\":4.26,\"total\":40.15}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 1806,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 412,
+      "output_tokens_details": {
+        "thinking_tokens": 187
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "receipt",
+      "vendor": {
+        "name": "Corner Cafe",
+        "taxId": null,
+        "iban": null
+      },
+      "invoiceNumber": null,
+      "issueDate": "2026-08-18",
+      "dueDate": null,
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "Croissant",
+          "quantity": 2,
+          "unitPrice": 4,
+          "amount": 8
+        },
+        {
+          "description": "Avocado toast",
+          "quantity": 3,
+          "unitPrice": 10.3,
+          "amount": 30.9
+        },
+        {
+          "description": "Blueberry muffin",
+          "quantity": 3,
+          "unitPrice": 4.25,
+          "amount": 12.75
+        }
+      ],
+      "subtotal": 51.65,
+      "tax": 4.26,
+      "total": 40.15
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 1806,
+    "outputTokens": 412
+  },
+  "latencyMs": 2359,
+  "notices": [],
+  "output": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Corner Cafe",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-08-18",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Croissant",
+        "quantity": 2,
+        "unitPrice": 4,
+        "amount": 8
+      },
+      {
+        "description": "Avocado toast",
+        "quantity": 3,
+        "unitPrice": 10.3,
+        "amount": 30.9
+      },
+      {
+        "description": "Blueberry muffin",
+        "quantity": 3,
+        "unitPrice": 4.25,
+        "amount": 12.75
+      }
+    ],
+    "subtotal": 51.65,
+    "tax": 4.26,
+    "total": 40.15
+  },
+  "invoice": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Corner Cafe",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-08-18",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Croissant",
+        "quantity": 2,
+        "unitPrice": 400,
+        "amount": 800
+      },
+      {
+        "description": "Avocado toast",
+        "quantity": 3,
+        "unitPrice": 1030,
+        "amount": 3090
+      },
+      {
+        "description": "Blueberry muffin",
+        "quantity": 3,
+        "unitPrice": 425,
+        "amount": 1275
+      }
+    ],
+    "subtotal": 5165,
+    "tax": 426,
+    "total": 4015
+  },
+  "error": null
+}

@@ -1,0 +1,186 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbR6yLDog1YxTbkKVFD",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"receipt\",\"vendor\":{\"name\":\"Bäckerei Sonnenschein\",\"taxId\":\"DE314927560\",\"iban\":null},\"invoiceNumber\":null,\"issueDate\":\"2026-01-20\",\"dueDate\":null,\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Apple strudel\",\"quantity\":3,\"unitPrice\":3.40,\"amount\":10.20},{\"description\":\"Filter coffee\",\"quantity\":3,\"unitPrice\":3.40,\"amount\":10.20},{\"description\":\"Pretzel\",\"quantity\":1,\"unitPrice\":1.25,\"amount\":1.25},{\"description\":\"Cheese roll\",\"quantity\":3,\"unitPrice\":2.60,\"amount\":7.80},{\"description\":\"Rye bread\",\"quantity\":2,\"unitPrice\":4.35,\"amount\":8.70}],\"subtotal\":38.15,\"tax\":2.67,\"total\":40.82}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 1901,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "receipt",
+      "vendor": {
+        "name": "Bäckerei Sonnenschein",
+        "taxId": "DE314927560",
+        "iban": null
+      },
+      "invoiceNumber": null,
+      "issueDate": "2026-01-20",
+      "dueDate": null,
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Apple strudel",
+          "quantity": 3,
+          "unitPrice": 3.4,
+          "amount": 10.2
+        },
+        {
+          "description": "Filter coffee",
+          "quantity": 3,
+          "unitPrice": 3.4,
+          "amount": 10.2
+        },
+        {
+          "description": "Pretzel",
+          "quantity": 1,
+          "unitPrice": 1.25,
+          "amount": 1.25
+        },
+        {
+          "description": "Cheese roll",
+          "quantity": 3,
+          "unitPrice": 2.6,
+          "amount": 7.8
+        },
+        {
+          "description": "Rye bread",
+          "quantity": 2,
+          "unitPrice": 4.35,
+          "amount": 8.7
+        }
+      ],
+      "subtotal": 38.15,
+      "tax": 2.67,
+      "total": 40.82
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 1901,
+    "outputTokens": 308
+  },
+  "latencyMs": 1759,
+  "notices": [],
+  "output": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Bäckerei Sonnenschein",
+      "taxId": "DE314927560",
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-01-20",
+    "dueDate": null,
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Apple strudel",
+        "quantity": 3,
+        "unitPrice": 3.4,
+        "amount": 10.2
+      },
+      {
+        "description": "Filter coffee",
+        "quantity": 3,
+        "unitPrice": 3.4,
+        "amount": 10.2
+      },
+      {
+        "description": "Pretzel",
+        "quantity": 1,
+        "unitPrice": 1.25,
+        "amount": 1.25
+      },
+      {
+        "description": "Cheese roll",
+        "quantity": 3,
+        "unitPrice": 2.6,
+        "amount": 7.8
+      },
+      {
+        "description": "Rye bread",
+        "quantity": 2,
+        "unitPrice": 4.35,
+        "amount": 8.7
+      }
+    ],
+    "subtotal": 38.15,
+    "tax": 2.67,
+    "total": 40.82
+  },
+  "invoice": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Bäckerei Sonnenschein",
+      "taxId": "DE314927560",
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-01-20",
+    "dueDate": null,
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Apple strudel",
+        "quantity": 3,
+        "unitPrice": 340,
+        "amount": 1020
+      },
+      {
+        "description": "Filter coffee",
+        "quantity": 3,
+        "unitPrice": 340,
+        "amount": 1020
+      },
+      {
+        "description": "Pretzel",
+        "quantity": 1,
+        "unitPrice": 125,
+        "amount": 125
+      },
+      {
+        "description": "Cheese roll",
+        "quantity": 3,
+        "unitPrice": 260,
+        "amount": 780
+      },
+      {
+        "description": "Rye bread",
+        "quantity": 2,
+        "unitPrice": 435,
+        "amount": 870
+      }
+    ],
+    "subtotal": 3815,
+    "tax": 267,
+    "total": 4082
+  },
+  "error": null
+}

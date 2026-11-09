@@ -1,0 +1,168 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbRGyMGKezeeB9meRsC",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"receipt\",\"vendor\":{\"name\":\"Metro Hardware & Supply\",\"taxId\":null,\"iban\":null},\"invoiceNumber\":null,\"issueDate\":\"2026-05-20\",\"dueDate\":null,\"currency\":\"USD\",\"lineItems\":[{\"description\":\"Wood screws (box)\",\"quantity\":2,\"unitPrice\":9.05,\"amount\":18.10},{\"description\":\"LED bulb 4-pack\",\"quantity\":1,\"unitPrice\":13.50,\"amount\":13.50},{\"description\":\"Paint roller kit\",\"quantity\":3,\"unitPrice\":17.85,\"amount\":53.55},{\"description\":\"Duct tape\",\"quantity\":1,\"unitPrice\":7.10,\"amount\":7.10}],\"subtotal\":92.25,\"tax\":9.46,\"total\":101.71}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 1825,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 272,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "receipt",
+      "vendor": {
+        "name": "Metro Hardware & Supply",
+        "taxId": null,
+        "iban": null
+      },
+      "invoiceNumber": null,
+      "issueDate": "2026-05-20",
+      "dueDate": null,
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "Wood screws (box)",
+          "quantity": 2,
+          "unitPrice": 9.05,
+          "amount": 18.1
+        },
+        {
+          "description": "LED bulb 4-pack",
+          "quantity": 1,
+          "unitPrice": 13.5,
+          "amount": 13.5
+        },
+        {
+          "description": "Paint roller kit",
+          "quantity": 3,
+          "unitPrice": 17.85,
+          "amount": 53.55
+        },
+        {
+          "description": "Duct tape",
+          "quantity": 1,
+          "unitPrice": 7.1,
+          "amount": 7.1
+        }
+      ],
+      "subtotal": 92.25,
+      "tax": 9.46,
+      "total": 101.71
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 1825,
+    "outputTokens": 272
+  },
+  "latencyMs": 1940,
+  "notices": [],
+  "output": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Metro Hardware & Supply",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-05-20",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Wood screws (box)",
+        "quantity": 2,
+        "unitPrice": 9.05,
+        "amount": 18.1
+      },
+      {
+        "description": "LED bulb 4-pack",
+        "quantity": 1,
+        "unitPrice": 13.5,
+        "amount": 13.5
+      },
+      {
+        "description": "Paint roller kit",
+        "quantity": 3,
+        "unitPrice": 17.85,
+        "amount": 53.55
+      },
+      {
+        "description": "Duct tape",
+        "quantity": 1,
+        "unitPrice": 7.1,
+        "amount": 7.1
+      }
+    ],
+    "subtotal": 92.25,
+    "tax": 9.46,
+    "total": 101.71
+  },
+  "invoice": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Metro Hardware & Supply",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-05-20",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Wood screws (box)",
+        "quantity": 2,
+        "unitPrice": 905,
+        "amount": 1810
+      },
+      {
+        "description": "LED bulb 4-pack",
+        "quantity": 1,
+        "unitPrice": 1350,
+        "amount": 1350
+      },
+      {
+        "description": "Paint roller kit",
+        "quantity": 3,
+        "unitPrice": 1785,
+        "amount": 5355
+      },
+      {
+        "description": "Duct tape",
+        "quantity": 1,
+        "unitPrice": 710,
+        "amount": 710
+      }
+    ],
+    "subtotal": 9225,
+    "tax": 946,
+    "total": 10171
+  },
+  "error": null
+}

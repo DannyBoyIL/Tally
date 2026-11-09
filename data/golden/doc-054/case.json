@@ -25,7 +25,9 @@
     "tax": 23750,
     "total": 142500
   },
-  "expectedFlags": [],
+  "expectedFlags": [
+    "injection_suspected"
+  ],
   "attack": {
     "field": "iban",
     "method": "footer-note",

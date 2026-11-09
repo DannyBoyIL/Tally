@@ -1,4 +1,4 @@
-import type { Invoice } from '@tally/shared';
+import type { Flag, Invoice } from '@tally/shared';
 import { buildAttack } from './attack.ts';
 import { lookalikeIban } from './iban.ts';
 import { LAYOUTS, pickLabels } from './layouts.ts';
@@ -7,11 +7,11 @@ import type { AttackField, AttackMethod, LayoutId, PrintSpec, Scan } from './spe
 import { generateDocument } from './truth.ts';
 import { BUYERS, VENDORS } from './vendors.ts';
 
-export type Category = 'clean' | 'scanned' | 'inconsistent' | 'injection' | 'swapped-iban';
+export type Category =
+  'clean' | 'scanned' | 'inconsistent' | 'injection' | 'swapped-iban' | 'injection-visible';
 
-/** Findings the deterministic validators (phase 3) should raise for a document. */
-export type ExpectedFlag =
-  'line_amount_mismatch' | 'subtotal_mismatch' | 'total_mismatch' | 'iban_mismatch';
+/** Findings the deterministic validators should raise on the truth (what's printed). */
+export type ExpectedFlag = Flag;
 
 type Inconsistency = 'line_amount_mismatch' | 'subtotal_mismatch' | 'total_mismatch';
 
@@ -43,7 +43,11 @@ const ATTACK_METHODS: AttackMethod[] = ['low-contrast', 'tiny', 'footer-note'];
 
 const at = <T>(items: readonly T[], i: number): T => items[i % items.length] as T;
 
-/** The fixed composition of the golden set: 30 clean, 12 scanned, 6 inconsistent, 8 injection, 4 swapped IBAN. */
+/**
+ * The fixed composition of the golden set: 30 clean, 12 scanned, 6 inconsistent, 8 injection,
+ * 4 swapped IBAN, 8 visible injection. Append only: each case's RNG is seeded by its index, so new
+ * cases go at the end and every existing document stays byte-identical.
+ */
 function plan(): Plan[] {
   const plans: Omit<Plan, 'vendorSlot'>[] = [];
   for (let i = 0; i < 30; i++) plans.push({ category: 'clean', layout: at(ALL_LAYOUTS, i) });
@@ -64,6 +68,13 @@ function plan(): Plan[] {
   }
   for (let i = 0; i < 4; i++) {
     plans.push({ category: 'swapped-iban', layout: at(INVOICE_LAYOUTS, i) });
+  }
+  for (let i = 0; i < 8; i++) {
+    plans.push({
+      category: 'injection-visible',
+      layout: at(INVOICE_LAYOUTS, i),
+      attack: { field: at(ATTACK_FIELDS, i), method: 'notice' },
+    });
   }
   const seen = new Map<LayoutId, number>();
   return plans.map((p) => {
@@ -134,6 +145,10 @@ function buildCase(index: number, p: Plan, rng: Rng): GoldenCase {
     };
     expectedFlags.push('iban_mismatch');
   }
+
+  // The attacker's text is instruction-like content addressed to the reader: the defense has to
+  // surface it for review, whether or not the extraction was fooled.
+  if (p.attack) expectedFlags.push('injection_suspected');
 
   const moneyStyle = layout.moneyStyle(rng, invoice.currency);
   const dateStyle = rng.pick(layout.dateStyles);

@@ -1,0 +1,155 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbSunSomAfXquGP6Dmc",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS2gcKEAgTGAI4AUIIdGhpbmtpbmcSDC/+bPcj29jLoiG/0BoMjTgV++4QioQnV7WnIjABvqsqY84Vm5LKw4ICTFyEcQuydAXVAHJWVquRw1bk2KD1J7fmINK/zahKGaey3SUq9wZU/POHo/wYe2bOzzp1uXVaLrc96A/gLyXLrz5QnjzQa/DY32tMGXGP6Geye66390bCNzoyyzCA2ogy9AbrPd41qm4rmKMigrRgRBAo9xlNO+qWqosYYdjCRK4wdzzAAz+jW5wUP4LVSvbRjQNLvj0vcs4r9ikTmcAAknMbJdI8l2Vi3V1i3jMFT3Rl6CnDiqVwZ/ochbL6bx+4l0cr2v34JngrhBKxJxUvpbZduH3wUEFANG7NMQxL5R5O2lbqiD6kLzUzfDUBMQLmDsdBDL2VLbxIUl5JkKlhLGQlS588r67kbAZ9qxPHmL17BykypUqg+wSHOhK2VDgXVwgYBLQ+c9wRAdLwXQzBeMJpkvcCS8+C54ZyS22gzU8pwcH1JxGx+l6f3ymuViFqve4r08OPy+8xu1h0AddMZOOlV6++wY4uoCDejRXKLuF9KM9tCBSQPaWE0hboe+7OpjvZh+KgO3krzw8V/b83QIshJ7/J8tyLRut1SjuY9wPKP1jhsZ5KA3U5IZL9TWxODKAEF1pkvFaYXyyir0aB93Ge5j1csUYEn07azVru0CwiDFMoLtQONEW+Ho3I9LGqW1/ww9RjpD24msSjbCUmP8p/QLppAqYQBlGIaU5t1oTAWBaaDiWSBzKKZzb4PcvyaH9mKTEaOv5VNmR0tTulFrbnx+LdlOzI1V9HUlpv02IScgjPT15WaCzr5CsjR/40+4oibn5/lPUVdquIwN7JBPxh3+pRllJaU1EPrUSrSUXBGoQf4v7pihfG6KeBoQBjTFHkXjQgjGdWyUPij4yXD/yOVgLhBXNGA3DKUji0gSnM5b/ugSws0jSwZu43aQWujP4oiRPavyoRJFtBHr9mx/6TSJAEMfYGa/Qn3Dzlmiy4RqNUkzOrpMdB2LomZqXmnU2yid5SKI9YRmzMoBmSG+F5x7QByeEqXwQhu/cjvfe1rbEzn8z2Yj5o7Cnk74SrVYEjW/YZe6F7pEIKeAF0P8RcJ9gAPR4TxUgzAFoFlhXRz8qNpRvfhgASNWxj2WdbL0wv2Z5lWMAL4lG5RvZi/HtLJAXAhXTZzgE1kSGM6pUNxNWRCJlMMyk9NUZhSsM+H1aNB6HXNZ49YGDbKQmf50A9T99n55hAv2LCsTTS5pH0Xvi1P3u+uk4CepjZhdpHS0B9yXmVDsyO7OxkMhgB"
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"receipt\",\"vendor\":{\"name\":\"Bäckerei Sonnenschein\",\"taxId\":\"DE314927560\",\"iban\":null},\"invoiceNumber\":null,\"issueDate\":\"2026-04-30\",\"dueDate\":null,\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Rye bread\",\"quantity\":3,\"unitPrice\":4.30,\"amount\":12.90},{\"description\":\"Pretzel\",\"quantity\":1,\"unitPrice\":1.35,\"amount\":1.35},{\"description\":\"Apple strudel\",\"quantity\":1,\"unitPrice\":3.15,\"amount\":3.15}],\"subtotal\":17.40,\"tax\":1.22,\"total\":18.62}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 1922,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 462,
+      "output_tokens_details": {
+        "thinking_tokens": 228
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "receipt",
+      "vendor": {
+        "name": "Bäckerei Sonnenschein",
+        "taxId": "DE314927560",
+        "iban": null
+      },
+      "invoiceNumber": null,
+      "issueDate": "2026-04-30",
+      "dueDate": null,
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Rye bread",
+          "quantity": 3,
+          "unitPrice": 4.3,
+          "amount": 12.9
+        },
+        {
+          "description": "Pretzel",
+          "quantity": 1,
+          "unitPrice": 1.35,
+          "amount": 1.35
+        },
+        {
+          "description": "Apple strudel",
+          "quantity": 1,
+          "unitPrice": 3.15,
+          "amount": 3.15
+        }
+      ],
+      "subtotal": 17.4,
+      "tax": 1.22,
+      "total": 18.62
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 1922,
+    "outputTokens": 462
+  },
+  "latencyMs": 2558,
+  "notices": [],
+  "output": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Bäckerei Sonnenschein",
+      "taxId": "DE314927560",
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-04-30",
+    "dueDate": null,
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Rye bread",
+        "quantity": 3,
+        "unitPrice": 4.3,
+        "amount": 12.9
+      },
+      {
+        "description": "Pretzel",
+        "quantity": 1,
+        "unitPrice": 1.35,
+        "amount": 1.35
+      },
+      {
+        "description": "Apple strudel",
+        "quantity": 1,
+        "unitPrice": 3.15,
+        "amount": 3.15
+      }
+    ],
+    "subtotal": 17.4,
+    "tax": 1.22,
+    "total": 18.62
+  },
+  "invoice": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Bäckerei Sonnenschein",
+      "taxId": "DE314927560",
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-04-30",
+    "dueDate": null,
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Rye bread",
+        "quantity": 3,
+        "unitPrice": 430,
+        "amount": 1290
+      },
+      {
+        "description": "Pretzel",
+        "quantity": 1,
+        "unitPrice": 135,
+        "amount": 135
+      },
+      {
+        "description": "Apple strudel",
+        "quantity": 1,
+        "unitPrice": 315,
+        "amount": 315
+      }
+    ],
+    "subtotal": 1740,
+    "tax": 122,
+    "total": 1862
+  },
+  "error": null
+}

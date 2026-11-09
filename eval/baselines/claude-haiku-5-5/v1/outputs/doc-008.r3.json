@@ -1,0 +1,155 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbSJ7LBLsLnCUXaDe5R",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSpAcKEAgTGAI4AUIIdGhpbmtpbmcSDH32bomANHGVZXvkmBoMN+tD5aIBurANGI4zIjBCFvayfEGGpzyWEJmJ7KOPuPl2oon8NT3JQjnEabML963SW28LI9hyuzKpR04jwtQqwQZ22sanjUGgUNEWxH18gLLG8rsd7jIoTJAf/ce+Osd4byF8204DlyLbaaZfw5I+TPc1tzpuePrieALRSCb7WkQnOGpfaCHMCg3tpBJxa6YBOtO3h3mRRhNWEIW4gguDlJsoLx0cDWQMw1AMYTjftHHZCH6mdUdmh+uUU14F3Wxf5M5KxSp0C84Vy//Wajf1C1ZuQaXQeGj7pjLV+FuwQKG/5aDdMHHoco5PgShcWQ4Z3WPPSAMLI1/wVj/jEMqsV+Yb5z3pUfb4BEzJcHkXFA1343p/GVTF9xDql1ZBPMU0Co5Egk0YrzWmvxiqMDlcUagtxBnjtD2PuM9XIFFNocEGIV0nrR2PPmdE4PRFuNtrkIPelIeCiP0v928kH6lM2dcN+J28wlJj2FqaUewFFSDDSHkbjAJV5ZEIWgng37w7AAsXqw8CU79sBOzOxeVGVkAWSLp4ZGfsskB0WE7mASsDQjTrWAJhhZe6RqEemKwsUcvNEWmjS6QNrxHYiE+WHVIx87BiEDuqrPsgfcz2TDGub9YwmiGTtgVwN/RV2gWIMdphAA1reX7gQlXvyTIhWXaXk/E8yQxIq9lm8+VkP38VafmchDA0IdZI9QzFtM0pMS9jJrrwk2l8PbkIfIENu5yztZByQeGFDePLo22uOTBPH6iW0xHpmL16D+843EwlkHOa9lFcUpWrMtgBR4XpyJcYvvBHQpe4gaqQQTk+/2Aag6MCw9EpDORukwm6DK9noeuTrf3GPyd+vskOdOuBKBo1q8/m62Eupwxs5/nJE1XNoaKnQCuEpmuzW7IYVmQAi7Rh78p9wmZnWU3oBT1gvRnhgtKfp+foecBHGO3OWbAVe4g2LSUW/53v7cvJVHIDzv8L3X0Rv1oBmBrl4xrv6ZZhWWwcXcNIzbqSni23jJ6co3itmTdmsbu+8rr77gzWIUOnx4wbSrqIEha2ZILN4SwMMMl7eWPzSaIU7Ml2hOEpuAIggKvv80zTSDlUoosVRHjrRJwJk+Pr2i0w7p/BvrHNRFsnqfPWm++Ez0Q7FbmwAYfnAyaUE11m8/AC1aVmcy0xqOo+5hVHjQi2QH5eDm2qTBkIVNPDJ7TUeyVE83Zk4xgB"
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"receipt\",\"vendor\":{\"name\":\"Metro Hardware & Supply\",\"taxId\":null,\"iban\":null},\"invoiceNumber\":null,\"issueDate\":\"2026-06-16\",\"dueDate\":null,\"currency\":\"USD\",\"lineItems\":[{\"description\":\"Paint roller kit\",\"quantity\":3,\"unitPrice\":17.20,\"amount\":51.60},{\"description\":\"Wood screws (box)\",\"quantity\":1,\"unitPrice\":9.75,\"amount\":9.75},{\"description\":\"LED bulb 4-pack\",\"quantity\":2,\"unitPrice\":14.20,\"amount\":28.40}],\"subtotal\":89.75,\"tax\":9.20,\"total\":98.95}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 1787,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 421,
+      "output_tokens_details": {
+        "thinking_tokens": 185
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "receipt",
+      "vendor": {
+        "name": "Metro Hardware & Supply",
+        "taxId": null,
+        "iban": null
+      },
+      "invoiceNumber": null,
+      "issueDate": "2026-06-16",
+      "dueDate": null,
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "Paint roller kit",
+          "quantity": 3,
+          "unitPrice": 17.2,
+          "amount": 51.6
+        },
+        {
+          "description": "Wood screws (box)",
+          "quantity": 1,
+          "unitPrice": 9.75,
+          "amount": 9.75
+        },
+        {
+          "description": "LED bulb 4-pack",
+          "quantity": 2,
+          "unitPrice": 14.2,
+          "amount": 28.4
+        }
+      ],
+      "subtotal": 89.75,
+      "tax": 9.2,
+      "total": 98.95
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 1787,
+    "outputTokens": 421
+  },
+  "latencyMs": 1936,
+  "notices": [],
+  "output": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Metro Hardware & Supply",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-06-16",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Paint roller kit",
+        "quantity": 3,
+        "unitPrice": 17.2,
+        "amount": 51.6
+      },
+      {
+        "description": "Wood screws (box)",
+        "quantity": 1,
+        "unitPrice": 9.75,
+        "amount": 9.75
+      },
+      {
+        "description": "LED bulb 4-pack",
+        "quantity": 2,
+        "unitPrice": 14.2,
+        "amount": 28.4
+      }
+    ],
+    "subtotal": 89.75,
+    "tax": 9.2,
+    "total": 98.95
+  },
+  "invoice": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Metro Hardware & Supply",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-06-16",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Paint roller kit",
+        "quantity": 3,
+        "unitPrice": 1720,
+        "amount": 5160
+      },
+      {
+        "description": "Wood screws (box)",
+        "quantity": 1,
+        "unitPrice": 975,
+        "amount": 975
+      },
+      {
+        "description": "LED bulb 4-pack",
+        "quantity": 2,
+        "unitPrice": 1420,
+        "amount": 2840
+      }
+    ],
+    "subtotal": 8975,
+    "tax": 920,
+    "total": 9895
+  },
+  "error": null
+}

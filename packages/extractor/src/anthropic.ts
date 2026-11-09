@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
-import { LlmInvoice, toInvoice } from './llm-schema.ts';
-import { PROMPT_VERSION, SYSTEM_PROMPT, USER_PROMPT } from './prompt.ts';
+import { toInvoice, type LlmOutput } from './llm-schema.ts';
+import { LATEST_PROMPT_VERSION, PROMPTS, USER_PROMPT, type PromptVersion } from './prompt.ts';
 import {
   FatalExtractionError,
   type DocumentImage,
@@ -15,6 +15,7 @@ export interface AnthropicExtractorOptions {
   /** Any current Claude model ID; Haiku for iteration, Sonnet/Opus for the final numbers. */
   model: string;
   effort?: Effort;
+  promptVersion?: PromptVersion;
   /** Passed explicitly so the caller decides where the key comes from (never read implicitly). */
   apiKey?: string;
   /** Injected in tests. */
@@ -27,14 +28,16 @@ const FATAL_STATUSES = new Set([401, 403, 404]);
 export function createAnthropicExtractor({
   model,
   effort = 'low',
+  promptVersion = LATEST_PROMPT_VERSION,
   apiKey,
   client = new Anthropic({ apiKey }),
 }: AnthropicExtractorOptions): Extractor {
   return {
     model,
-    promptVersion: PROMPT_VERSION,
+    promptVersion,
     async extract(image: DocumentImage): Promise<ExtractionResult> {
-      const base = { model, promptVersion: PROMPT_VERSION };
+      const base = { model, promptVersion };
+      const prompt = PROMPTS[promptVersion];
       const started = performance.now();
       let response;
       try {
@@ -43,8 +46,8 @@ export function createAnthropicExtractor({
         response = await client.messages.parse({
           model,
           max_tokens: 16000,
-          system: SYSTEM_PROMPT,
-          output_config: { effort, format: zodOutputFormat(LlmInvoice) },
+          system: prompt.system,
+          output_config: { effort, format: zodOutputFormat(prompt.schema) },
           messages: [
             {
               role: 'user',
@@ -73,6 +76,7 @@ export function createAnthropicExtractor({
           ...base,
           raw: null,
           output: null,
+          notices: [],
           invoice: null,
           error:
             error instanceof Anthropic.APIError
@@ -89,7 +93,14 @@ export function createAnthropicExtractor({
         inputTokens: response.usage.input_tokens,
         outputTokens: response.usage.output_tokens,
       };
-      const common = { ...base, raw: response, stopReason: response.stop_reason, usage, latencyMs };
+      const common = {
+        ...base,
+        raw: response,
+        stopReason: response.stop_reason,
+        usage,
+        latencyMs,
+        notices: [] as string[],
+      };
 
       if (response.stop_reason !== 'end_turn') {
         return {
@@ -99,14 +110,16 @@ export function createAnthropicExtractor({
           error: `stop_reason: ${response.stop_reason}`,
         };
       }
-      const output = response.parsed_output;
+      const output: LlmOutput | null = response.parsed_output;
       if (!output) {
         return { ...common, output: null, invoice: null, error: 'unparseable output' };
       }
+      // Notices survive a schema failure: a document that fails to parse can still be suspicious.
+      const notices = output.notices ?? [];
       const conversion = toInvoice(output);
       return conversion.ok
-        ? { ...common, output, invoice: conversion.invoice, error: null }
-        : { ...common, output, invoice: null, error: conversion.error };
+        ? { ...common, output, notices, invoice: conversion.invoice, error: null }
+        : { ...common, output, notices, invoice: null, error: conversion.error };
     },
   };
 }

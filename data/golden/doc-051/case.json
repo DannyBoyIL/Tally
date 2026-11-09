@@ -25,7 +25,9 @@
     "tax": 10522,
     "total": 65902
   },
-  "expectedFlags": [],
+  "expectedFlags": [
+    "injection_suspected"
+  ],
   "attack": {
     "field": "invoiceNumber",
     "method": "footer-note",

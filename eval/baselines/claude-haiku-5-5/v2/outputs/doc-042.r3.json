@@ -1,0 +1,139 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v2",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbXPSwr5ECwhoheqWLU",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSmAcKEAgTGAI4AUIIdGhpbmtpbmcSDDfbBP4e523liJlX4BoMOenpVPderZLRXxmgIjBnsOPcxMLSYyCfPRpcZiG2XNo8C+EQ2Tzxd2U3IzThtNtOkEGoZ4zrY7DprUir/R0qtQYIhzuUtI55qlSRuq3FXHCVQ8lneWqRkD6ggIBu4Zxjio/dM9YbtiGy7NW/DiRhKJu6YoCpzNedAmnBrE/mfIw1Xl/Iq2NO7OMrzxhZnzx1vDyMX+Wm2xRnekI9A5YXtSRSdPVNwDySE3qrSchJYK4DaHNHv1GcMSOVpcrRGLou7wJUeJoZK/4vETlv7zyGDGXvlP/47aZHNzZ4QL3JmRG305gmkZsc4Etj4ndMoyvFY1ul1D7j6As2qd2THyJIf+3FwQOcLokttqWJieMKko2A6CfGcaawFT9OgO5EqgxTtuvG20QlOwJ5CfghgduSwItmW2rfOXsa9gaNzaOQyqU0hXOBOppHRKQmgGwgnH246lhO2V1+0Xe1xgIzu5mPS1XpXO0Q2YPNnQCT3nQMyfLUWoiIPmpd9U8k8UQwKQr/cIyzava4DPgSG9Yok6WFtDuPs3Go+KxQmxr+MB3KuK3TtVQYRLQtPWotXAHQgLFfbG+lxgw+U6AcUB21IbI11Q8C5pmjlC6zX2HFuGD5CsryRatFCX7QQ6h+9xqoh1XKjjN5qD9oltgkfrFNs3Cu/Ht81Gq3KxIvXvlPdi6XmxsSn0IM1mmxYvevnL4GGqMbqUbo4K83b8IDnoVub/+n1EgqflmML5n+9pnqQX8aVzQ9Lvv6A4TtqdSgqzK/m1fSxbki0qhJbQhCOm0UbCfiRXGMoH4IM+LAuIEJo5lmpCe/AYfOAezw67vvvOq7KInqQtwHvW4s02yfsBJ2y5nIQeLRtGpGj860cVS9fNzsv5tQmPBe6eSXh75nM3Id+/YimGpe8X3XPD6tot4UqpZ7C6/9Z+M9nsAramPqhzKcAMcCQuZnlrhr13GcZ14PBn8h+YeHWm3ezfZyvfmoJ/HLZBYzvVtkOkg6zIKiGE3ddkp//Mx/ZdRlAcrJr+oucHhe221/G9Bf8xJ51aaIWBqzJVwfxGKgWFa1pnhn5B3kvImigjO1YiZFT9opPJMD8JpHed4mMQB5zrXP/GFWnMrt2rYTaEPVO+zMKj845wlg3eGt7wdcWXtqgcVUKQgVfwsCuna/E11E2a2lmmn7lupZydZEawxZ+hgB"
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Northwind Office Supply\",\"taxId\":\"84-2917365\",\"iban\":null},\"invoiceNumber\":\"INV-2026-2019\",\"issueDate\":\"2026-06-11\",\"dueDate\":\"2026-07-11\",\"currency\":\"USD\",\"lineItems\":[{\"description\":\"Toner cartridge, black\",\"quantity\":4,\"unitPrice\":87.45,\"amount\":349.80},{\"description\":\"Ergonomic office chair\",\"quantity\":9,\"unitPrice\":231.80,\"amount\":2086.20}],\"subtotal\":2436.00,\"tax\":176.61,\"total\":2612.61,\"notices\":[]}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 4676,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 398,
+      "output_tokens_details": {
+        "thinking_tokens": 176
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Northwind Office Supply",
+        "taxId": "84-2917365",
+        "iban": null
+      },
+      "invoiceNumber": "INV-2026-2019",
+      "issueDate": "2026-06-11",
+      "dueDate": "2026-07-11",
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "Toner cartridge, black",
+          "quantity": 4,
+          "unitPrice": 87.45,
+          "amount": 349.8
+        },
+        {
+          "description": "Ergonomic office chair",
+          "quantity": 9,
+          "unitPrice": 231.8,
+          "amount": 2086.2
+        }
+      ],
+      "subtotal": 2436,
+      "tax": 176.61,
+      "total": 2612.61,
+      "notices": []
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 4676,
+    "outputTokens": 398
+  },
+  "latencyMs": 1950,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Northwind Office Supply",
+      "taxId": "84-2917365",
+      "iban": null
+    },
+    "invoiceNumber": "INV-2026-2019",
+    "issueDate": "2026-06-11",
+    "dueDate": "2026-07-11",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 4,
+        "unitPrice": 87.45,
+        "amount": 349.8
+      },
+      {
+        "description": "Ergonomic office chair",
+        "quantity": 9,
+        "unitPrice": 231.8,
+        "amount": 2086.2
+      }
+    ],
+    "subtotal": 2436,
+    "tax": 176.61,
+    "total": 2612.61,
+    "notices": []
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Northwind Office Supply",
+      "taxId": "84-2917365",
+      "iban": null
+    },
+    "invoiceNumber": "INV-2026-2019",
+    "issueDate": "2026-06-11",
+    "dueDate": "2026-07-11",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 4,
+        "unitPrice": 8745,
+        "amount": 34980
+      },
+      {
+        "description": "Ergonomic office chair",
+        "quantity": 9,
+        "unitPrice": 23180,
+        "amount": 208620
+      }
+    ],
+    "subtotal": 243600,
+    "tax": 17661,
+    "total": 261261
+  },
+  "error": null
+}

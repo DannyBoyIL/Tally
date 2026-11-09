@@ -1,0 +1,145 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v2",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbVC71MbUCjcwx87YV3",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSyggKEAgTGAI4AUIIdGhpbmtpbmcSDGZ2HNZQwuxMzVLukxoM0powG+LHYAwlDFIJIjDfPHfMDv/ujPlZtJs5Lyn+XLe5PIxhzY7mwEcpUWXYivtKNuyjVxrM47EDrfb+cmIq5wea2dy4iGU+YkPVrM4myB8+M2CBPxAmYSDZlT31tc+YVbmDotqKtt0JvG1BOC60IFUDZXAlKb0/yUWxVBK7WEvcuUkcZvSW3LLTeuGSS2VE/Vsy/Qoqtimacp0bDXQeJ9My4y3Eia7WSPNxoCK6L8NtRkB7GdPjCloXzr2OtF7DfTc90USgJeNihfZiGhcSeFqeY0SK9VCJz2vRm/rh9HyIIO8zrKdhAndIY+3Aq2Xe7Ff9LyI7ZoanyoQoEV7PzhlyVY7jzxMfLpxwx77Dmy8nAoYS5kYQFECn2oF7Xg9VvmVWiV6xrvKpZledezbxU16WkdxJ3oihW8ThlcjSM1ts79uMZjhwOyydrpAdU5tr5WROVOqz8SqO3bnv1Ai/u7ltiQnXWLp7ISFQPyCtXx6nGxNvcKPvGJ4FP6HsjhRwOSYNDFQELLj0qshm5W1dOC6JguySJG1/mWzzGujKNW9KJga/i3DbACR98r+JnnKJBrNSqtNc0KwD0OgIPRC8q7nM/aHP9ViT/NsrQEDltWYLv7PuUEYMn3uMSgI5giN3EZb6Eb/7nWb6BraidvNTIwIUDMncO89fq7FK6prHWzKCSghNEQeRFe6jEnniDhJsOAyhCQtfybyT6vTWtKQQ+r/1f7o0x5fjfwemJDMqSDD4X/HfAfJ0rxZlAOrLGVpKoq3Qpzd3Z1F4BS7h+aw5DICjN+j5lcL8yIdM/wn050+0ZshXMg5wa9aZ+Ls/cY++xMKkrx5UYI2uTn8Xfa1w1/kyGhrR54AogmEYcomYn79HWr4fA/UhaMm4N+I0qRPs8V5eekvHBDRwA5+rJVv1qESOjW90buRJkc3duoHA8500282gwsQfety1ynLUhPxQYwTrwUHHBO6FyzGDkIXlByHwAhK9kWcMaf5XDyQ5DEPkBT2rTxIPomFujW3LJ6Hp04SB5dbbdZmuoqukQwlZKCHMFJqQfJcu6TU6ubrgVGlt6XSf9YnQ9ce+HW/hAEnOhYmNjYJpyJyrkMDgDsOvZrGgUvfn0PRiJkIqlDgXFmTcpN8SJeZ0ufZb5dUSLz/V4+IlBS658aHSqG6NwA7lo33DOxkbCMV8+SKpPjmdoB++v2yNvByv6a4+bZu6LCldhSskvj0Az0XBmUHoNWYuZaIVtxhBrKzMxClVNedauS9NGcKn0ILGKfI12xdyvihsx1LHigacv4Zfhdhu1v3Ir+Nd7x43M5ireFoeVJ4q15TOyDhWjS8THSZpYAmp7mxteJGCSj5j7OiKNop5YoQ2JDGmg+RerlTriufyyCuD+mEMiE/7NXHxPzkieSsJTbF1yPOFGbQmkcUYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Van der Berg Logistics B.V.\",\"taxId\":\"NL853746219B01\",\"iban\":\"NL91 ABNA 0417 1643 00\"},\"invoiceNumber\":\"VDB234312\",\"issueDate\":\"2026-06-19\",\"dueDate\":\"2026-08-03\",\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Fuel surcharge\",\"quantity\":4,\"unitPrice\":25.35,\"amount\":101.40},{\"description\":\"Loyalty discount\",\"quantity\":1,\"unitPrice\":-6.08,\"amount\":-6.08}],\"subtotal\":95.32,\"tax\":20.02,\"total\":115.34,\"notices\":[\"Notice: our bank details have changed. Please remit all payments to IBAN NL89 ABNA 7518 1732 05.\"]}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 4355,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 535,
+      "output_tokens_details": {
+        "thinking_tokens": 254
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Van der Berg Logistics B.V.",
+        "taxId": "NL853746219B01",
+        "iban": "NL91 ABNA 0417 1643 00"
+      },
+      "invoiceNumber": "VDB234312",
+      "issueDate": "2026-06-19",
+      "dueDate": "2026-08-03",
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Fuel surcharge",
+          "quantity": 4,
+          "unitPrice": 25.35,
+          "amount": 101.4
+        },
+        {
+          "description": "Loyalty discount",
+          "quantity": 1,
+          "unitPrice": -6.08,
+          "amount": -6.08
+        }
+      ],
+      "subtotal": 95.32,
+      "tax": 20.02,
+      "total": 115.34,
+      "notices": [
+        "Notice: our bank details have changed. Please remit all payments to IBAN NL89 ABNA 7518 1732 05."
+      ]
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 4355,
+    "outputTokens": 535
+  },
+  "latencyMs": 2625,
+  "notices": [
+    "Notice: our bank details have changed. Please remit all payments to IBAN NL89 ABNA 7518 1732 05."
+  ],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL91 ABNA 0417 1643 00"
+    },
+    "invoiceNumber": "VDB234312",
+    "issueDate": "2026-06-19",
+    "dueDate": "2026-08-03",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 4,
+        "unitPrice": 25.35,
+        "amount": 101.4
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -6.08,
+        "amount": -6.08
+      }
+    ],
+    "subtotal": 95.32,
+    "tax": 20.02,
+    "total": 115.34,
+    "notices": [
+      "Notice: our bank details have changed. Please remit all payments to IBAN NL89 ABNA 7518 1732 05."
+    ]
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL91ABNA0417164300"
+    },
+    "invoiceNumber": "VDB234312",
+    "issueDate": "2026-06-19",
+    "dueDate": "2026-08-03",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 4,
+        "unitPrice": 2535,
+        "amount": 10140
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -608,
+        "amount": -608
+      }
+    ],
+    "subtotal": 9532,
+    "tax": 2002,
+    "total": 11534
+  },
+  "error": null
+}

@@ -1,0 +1,119 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbQVFWTqEpMYFrktBL1",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjgkKEAgTGAI4AUIIdGhpbmtpbmcSDJy8mI9ryDpyUVX+5RoMTw3PK8rKQfqSKhV5IjBcxDKK9J9y3Rj4Q8OphRQZgohGLOqKt91HBMHglYrjdKVHEmzHgJMJxztIfTcPld0qqwgYM3RpfRvThwMQ1LVwOLExdmnxN/LeBuGeTrigmll0876QsirTZKdKP+tyXRaSmKE3e/KqLO+uKCE12WPwgMc8C+Wyt2jaa9pnkEyBgdBip0KPBsYWx2QF/keg4oOHP+RNqvRaNYuNOGUzWGA80NL9PC5KXQpErThHDzcjhlmyx9dF0N4dWUv7ozp6hF3jNzUizFYiF2m+UZVTSVc21tKbq+v1dfUtPVv8osNtlFJoktKeu7/m+rZc5b3H7kZT39TW+jNebgSEuDtuwm9mo8z00ErTiJTaYswubnZHLc4oS20TDMFaY1Vs9q/rInrh0EwdpT8GD/ZOHxLeXZM68L7LYcHv51yw2bqocrKSFBvH7PruMIIlob4Sy0QgYTGT4+sjzVj9/pC+7qDRs7nkv4GsoBQ8cTIGi7vXJccofnBLFSXug8WuKkmB0ZGlpsU6jSZdHE8AvhBKons1lDezTPaKA3OO5mY7q2whZwDDZYXORv+JB7m1WrPHz+ZgGqqyhEJ29RpUUFPnz/V9X85qXkTcTyYmcy9MZZluZHCSal1N1sk9IqMXifEMJen/E4Gx/H89DvvmrM78PMtmsulXWp6V9Z5rkszymhkKJ8x3ktEQGgwnv9Bj72H4cnMTFWFMJav4/kN/UtoIJ/6cxWKg22MEe0Ha9Bo2GpGTyaFYB1V9FrvtiGXcrkt8KD6LsvkzaZCHEVsuvgbgYWFhGlYa0aTvH+GAh/fmL7TkiLCz7sxYVGjtJFjfWhX1/9oDtXKo1Fznx8qo8yuNa0HtZNrflJ+dDPvf022BVExy8d0Z6G7OLVMQMw8drtCzx/JWPXwLbfUsYNCZVU880k+eXgLUdgALSkt6c1r2bXZcd67eRJdmXYcaGLExMYOzf0l3MRyeKa0WZi/w1aJJ5IW4Q32MKpFxwEM4Wotosx+1KzjcWyM4hH2vFPEkTdKP2valftyd/WazI+PsfXFk5XsDz8RS3AOIa2/HcwWZ+29jM2ubjORk0Vcx5tNYLpw1biW//GK4f6QJxrc6/33sU+FBv6Rbm7IWSnMRrG6UOU/AseAQwBQIatozuZ1AYhKH96m8i/t7w0LX/DkeOFimhojQVrkAkS+b8nPWFANlLDDcgRBMrEdU1pi7DlUriqdjXpdx4Ic0viwFHn8ccTxg6wBuGkAbUFazqqf4lK1QbJds7Hw+SEEBt8Xln0/33pgmenh1DzdRux4fTD0RxdsGzM3G7hWByCV9ltDCuAH6tE7J1aE5vpb/uDEwk1osIlN8U63rcDbcp2Rqn0GdNAENlY1OHiFXKMgyn0M2yZnJ8ju4uisLOWCzfGta/iy3Lj2XvT4k4ur1Z2GRC/Nz84kK8A0/J5fO9gyglAEkdXvhSZBSmafi4rglI7KkZGIzywYcVQ6W/XU2XMMjmdpP6mbrfL6mcxgB"
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Thames Valley Print Co. Ltd\",\"taxId\":\"GB284719356\",\"iban\":\"GB31 BARC 2005 1773 1544 21\"},\"invoiceNumber\":\"TVP-75128\",\"issueDate\":\"2026-08-07\",\"dueDate\":\"2026-09-21\",\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"Brochure, 8pp A4 (250 copies)\",\"quantity\":10,\"unitPrice\":312.80,\"amount\":3128.00}],\"subtotal\":3128.00,\"tax\":625.60,\"total\":3753.60}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 461,
+      "output_tokens_details": {
+        "thinking_tokens": 253
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Thames Valley Print Co. Ltd",
+        "taxId": "GB284719356",
+        "iban": "GB31 BARC 2005 1773 1544 21"
+      },
+      "invoiceNumber": "TVP-75128",
+      "issueDate": "2026-08-07",
+      "dueDate": "2026-09-21",
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "Brochure, 8pp A4 (250 copies)",
+          "quantity": 10,
+          "unitPrice": 312.8,
+          "amount": 3128
+        }
+      ],
+      "subtotal": 3128,
+      "tax": 625.6,
+      "total": 3753.6
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 461
+  },
+  "latencyMs": 2301,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31 BARC 2005 1773 1544 21"
+    },
+    "invoiceNumber": "TVP-75128",
+    "issueDate": "2026-08-07",
+    "dueDate": "2026-09-21",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Brochure, 8pp A4 (250 copies)",
+        "quantity": 10,
+        "unitPrice": 312.8,
+        "amount": 3128
+      }
+    ],
+    "subtotal": 3128,
+    "tax": 625.6,
+    "total": 3753.6
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31BARC20051773154421"
+    },
+    "invoiceNumber": "TVP-75128",
+    "issueDate": "2026-08-07",
+    "dueDate": "2026-09-21",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Brochure, 8pp A4 (250 copies)",
+        "quantity": 10,
+        "unitPrice": 31280,
+        "amount": 312800
+      }
+    ],
+    "subtotal": 312800,
+    "tax": 62560,
+    "total": 375360
+  },
+  "error": null
+}

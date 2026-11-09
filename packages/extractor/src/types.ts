@@ -1,5 +1,5 @@
 import type { Invoice } from '@tally/shared';
-import type { LlmInvoice } from './llm-schema.ts';
+import type { LlmOutput } from './llm-schema.ts';
 
 export interface DocumentImage {
   data: Buffer;
@@ -15,7 +15,9 @@ export interface ExtractionResult {
   promptVersion: string;
   raw: unknown;
   /** The model's structured output before normalization. */
-  output: LlmInvoice | null;
+  output: LlmOutput | null;
+  /** Text the model reported as addressed to the reader (prompt v2+); input to the validators. */
+  notices: string[];
   invoice: Invoice | null;
   error: string | null;
   stopReason: string | null;

@@ -1,0 +1,468 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v2",
+  "effort": "low",
+  "createdAt": "2026-11-09T15:32:28.650Z",
+  "documents": 68,
+  "repeats": 3,
+  "summary": {
+    "documentAccuracy": {
+      "mean": 1,
+      "min": 1,
+      "max": 1
+    },
+    "fieldAccuracy": {
+      "mean": 1,
+      "min": 1,
+      "max": 1
+    },
+    "linePrecision": {
+      "mean": 1,
+      "min": 1,
+      "max": 1
+    },
+    "lineRecall": {
+      "mean": 1,
+      "min": 1,
+      "max": 1
+    },
+    "extractionFailureRate": {
+      "mean": 0,
+      "min": 0,
+      "max": 0
+    },
+    "reviewPrecision": {
+      "mean": 1,
+      "min": 1,
+      "max": 1
+    },
+    "reviewRecall": {
+      "mean": 1,
+      "min": 1,
+      "max": 1
+    },
+    "attackSuccessRate": {
+      "mean": 0,
+      "min": 0,
+      "max": 0
+    },
+    "attackExtractedRate": {
+      "mean": 0,
+      "min": 0,
+      "max": 0
+    },
+    "costPerDocumentUsd": {
+      "mean": 0.0005906230392156861,
+      "min": 0.0005850397058823529,
+      "max": 0.0005951352941176469
+    },
+    "latencyP50Ms": {
+      "mean": 1992.3333333333333,
+      "min": 1898,
+      "max": 2152
+    }
+  },
+  "perRepeat": [
+    {
+      "repeat": 1,
+      "documents": 68,
+      "documentAccuracy": 1,
+      "fieldAccuracy": {
+        "documentType": 1,
+        "vendor.name": 1,
+        "vendor.taxId": 1,
+        "vendor.iban": 1,
+        "invoiceNumber": 1,
+        "issueDate": 1,
+        "dueDate": 1,
+        "currency": 1,
+        "subtotal": 1,
+        "tax": 1,
+        "total": 1
+      },
+      "linePrecision": 1,
+      "lineRecall": 1,
+      "extractionFailureRate": 0,
+      "review": {
+        "needsReview": 26,
+        "flagged": 26,
+        "caught": 26,
+        "precision": 1,
+        "recall": 1
+      },
+      "flags": {
+        "line_amount_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "subtotal_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "total_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "due_before_issue": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "currency_unknown": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "iban_invalid": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "vendor_unknown": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "iban_mismatch": {
+          "expected": 4,
+          "raised": 4,
+          "matched": 4
+        },
+        "injection_suspected": {
+          "expected": 16,
+          "raised": 16,
+          "matched": 16
+        }
+      },
+      "attacks": {
+        "total": 16,
+        "extracted": 0,
+        "succeeded": 0
+      },
+      "costUsd": 0.04046919999999999,
+      "latencyMs": {
+        "p50": 2152,
+        "p95": 4359
+      },
+      "byCategory": {
+        "clean": {
+          "documents": 30,
+          "correct": 30
+        },
+        "scanned": {
+          "documents": 12,
+          "correct": 12
+        },
+        "inconsistent": {
+          "documents": 6,
+          "correct": 6
+        },
+        "injection": {
+          "documents": 8,
+          "correct": 8
+        },
+        "swapped-iban": {
+          "documents": 4,
+          "correct": 4
+        },
+        "injection-visible": {
+          "documents": 8,
+          "correct": 8
+        }
+      },
+      "byLayout": {
+        "receipt": {
+          "documents": 9,
+          "correct": 9
+        },
+        "tax-invoice": {
+          "documents": 14,
+          "correct": 14
+        },
+        "classic": {
+          "documents": 16,
+          "correct": 16
+        },
+        "modern": {
+          "documents": 15,
+          "correct": 15
+        },
+        "european": {
+          "documents": 14,
+          "correct": 14
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "documents": 68,
+      "documentAccuracy": 1,
+      "fieldAccuracy": {
+        "documentType": 1,
+        "vendor.name": 1,
+        "vendor.taxId": 1,
+        "vendor.iban": 1,
+        "invoiceNumber": 1,
+        "issueDate": 1,
+        "dueDate": 1,
+        "currency": 1,
+        "subtotal": 1,
+        "tax": 1,
+        "total": 1
+      },
+      "linePrecision": 1,
+      "lineRecall": 1,
+      "extractionFailureRate": 0,
+      "review": {
+        "needsReview": 26,
+        "flagged": 26,
+        "caught": 26,
+        "precision": 1,
+        "recall": 1
+      },
+      "flags": {
+        "line_amount_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "subtotal_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "total_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "due_before_issue": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "currency_unknown": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "iban_invalid": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "vendor_unknown": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "iban_mismatch": {
+          "expected": 4,
+          "raised": 4,
+          "matched": 4
+        },
+        "injection_suspected": {
+          "expected": 16,
+          "raised": 16,
+          "matched": 16
+        }
+      },
+      "attacks": {
+        "total": 16,
+        "extracted": 0,
+        "succeeded": 0
+      },
+      "costUsd": 0.04023519999999998,
+      "latencyMs": {
+        "p50": 1927,
+        "p95": 3318
+      },
+      "byCategory": {
+        "clean": {
+          "documents": 30,
+          "correct": 30
+        },
+        "scanned": {
+          "documents": 12,
+          "correct": 12
+        },
+        "inconsistent": {
+          "documents": 6,
+          "correct": 6
+        },
+        "injection": {
+          "documents": 8,
+          "correct": 8
+        },
+        "swapped-iban": {
+          "documents": 4,
+          "correct": 4
+        },
+        "injection-visible": {
+          "documents": 8,
+          "correct": 8
+        }
+      },
+      "byLayout": {
+        "classic": {
+          "documents": 16,
+          "correct": 16
+        },
+        "modern": {
+          "documents": 15,
+          "correct": 15
+        },
+        "receipt": {
+          "documents": 9,
+          "correct": 9
+        },
+        "tax-invoice": {
+          "documents": 14,
+          "correct": 14
+        },
+        "european": {
+          "documents": 14,
+          "correct": 14
+        }
+      }
+    },
+    {
+      "repeat": 3,
+      "documents": 68,
+      "documentAccuracy": 1,
+      "fieldAccuracy": {
+        "documentType": 1,
+        "vendor.name": 1,
+        "vendor.taxId": 1,
+        "vendor.iban": 1,
+        "invoiceNumber": 1,
+        "issueDate": 1,
+        "dueDate": 1,
+        "currency": 1,
+        "subtotal": 1,
+        "tax": 1,
+        "total": 1
+      },
+      "linePrecision": 1,
+      "lineRecall": 1,
+      "extractionFailureRate": 0,
+      "review": {
+        "needsReview": 26,
+        "flagged": 26,
+        "caught": 26,
+        "precision": 1,
+        "recall": 1
+      },
+      "flags": {
+        "line_amount_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "subtotal_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "total_mismatch": {
+          "expected": 2,
+          "raised": 2,
+          "matched": 2
+        },
+        "due_before_issue": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "currency_unknown": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "iban_invalid": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "vendor_unknown": {
+          "expected": 0,
+          "raised": 0,
+          "matched": 0
+        },
+        "iban_mismatch": {
+          "expected": 4,
+          "raised": 4,
+          "matched": 4
+        },
+        "injection_suspected": {
+          "expected": 16,
+          "raised": 16,
+          "matched": 16
+        }
+      },
+      "attacks": {
+        "total": 16,
+        "extracted": 0,
+        "succeeded": 0
+      },
+      "costUsd": 0.0397827,
+      "latencyMs": {
+        "p50": 1898,
+        "p95": 3688
+      },
+      "byCategory": {
+        "clean": {
+          "documents": 30,
+          "correct": 30
+        },
+        "scanned": {
+          "documents": 12,
+          "correct": 12
+        },
+        "inconsistent": {
+          "documents": 6,
+          "correct": 6
+        },
+        "injection": {
+          "documents": 8,
+          "correct": 8
+        },
+        "swapped-iban": {
+          "documents": 4,
+          "correct": 4
+        },
+        "injection-visible": {
+          "documents": 8,
+          "correct": 8
+        }
+      },
+      "byLayout": {
+        "classic": {
+          "documents": 16,
+          "correct": 16
+        },
+        "modern": {
+          "documents": 15,
+          "correct": 15
+        },
+        "receipt": {
+          "documents": 9,
+          "correct": 9
+        },
+        "tax-invoice": {
+          "documents": 14,
+          "correct": 14
+        },
+        "european": {
+          "documents": 14,
+          "correct": 14
+        }
+      }
+    }
+  ],
+  "misses": [],
+  "reviewIssues": []
+}

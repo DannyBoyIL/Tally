@@ -1,0 +1,137 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsbSyYuJKjmTnXbhQ1jn",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSvwcKEAgTGAI4AUIIdGhpbmtpbmcSDJrBY6ZtJPWfFcCzZBoMAVYO8ELEN6sOvG7YIjBskgP3adbflG2ysGCDbv472MmigUpwnzuIXHLVVtvBZeRN8J+U7Udm6ZwJ2pXSB5Eq3AbVhjXNvQ+1HswxjmKXlVF6vs99d9/FI5wt1eFpZ4JpvMeXDQh7gzeo3CEAyiMJW54sq5f1T+UX7INV9/kTeFKoxvM/K8U3ZUG3EhNIIsRY1uM0XSkF8fUVcZX4ljMV187pwRs4hrseYRoIWvnIDrDCT4NRCSM9+zT/VFiHk65c7oglZ1vtTb0KwK50KASXHmfy6gxKNgH6uhRjp8HuQpORWVi4p+nQpiESrrG/r5deQdVn7o9eTPiJa2YSRStI1wuQuu5/hGmJmhMMyO2UV3W6W4tB5ICoE1rQsp2g+dDAeUAa1FoMs6IcxOm2Z9ccbdukLQvk0UjbWjrjJvyEDn+fdZJ0G+rpljfzG/K/02JF4E+V1yyAgKV0zlhRUEf37K+Ze8UT5QOT/HdUk2SI8eOcJDMf9mBOBRG7FUADEdk08CTwmssxoyre8tOBKJpc5SoqhdoHlfXrnRmc5ytyMWCsNvrOzCUjEmSOsYESUgw2kIyPdVYRV5G/Y1ryqXEkEMoiiIJ/F/LeRfYmWWvU5KKhl0b0A9aC03v6bc2sidnehAe5Yq2hoJWV/r89txGXRNjtLlnJpmb68TX1aUWAc+iqDDFieIBGEqPrdmHyQOXaYXexV+5N+Lkj3OQl/9yMOcE09c2EW8zEQw9wLr4qWKKYoaGaNZxgr1/82zT/3hu1/ahjDbZ+EtWnP2UpEBz/QC1VD4riPP0uHvsys0uqO+shvppsApyr4qCDkU1K3LrxFCvg8A/YLPy8N4LNy+oZMGP7N3+AoAYmW2KLvnz0AXxYzRJVuvCBLtURie4N0pBA6tcEdljwN+kko+Z5gb3Jm1/E9frQ4jMIfgbsocE2eotpfBcRpxfxtbhaEtvvpdZ1Ki2Btg3NYVZXFUuLePbSDbGBTgpAM7InrhIKaAcdPHmSNxJv25mmTGpvuf4AgArpFRKBrPadD/SCRUEWesyiyDot37U6XcGT4L13/cb9WgzFwdpLWaynEVlzstuWkCV2Pabon2vOeezoPGhQIz9J+EAGJv9kD1sIHiNNIArl/rcRTlo6hXG6/vuWLASRI4NwIsIj6s0i3pVk0HhrsbHw5gnVEhfn+CKRWh6ybPAElJ2MMWzRJ481qp/cHDwynjdWd7Gw14ZmywlfxQ5Z3RgB"
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Brightline Cloud Services\",\"taxId\":\"47-5530218\",\"iban\":null},\"invoiceNumber\":\"BL-295116\",\"issueDate\":\"2026-07-09\",\"dueDate\":\"2026-07-23\",\"currency\":\"USD\",\"lineItems\":[{\"description\":\"Cloud hosting, Standard plan (monthly)\",\"quantity\":11,\"unitPrice\":178.55,\"amount\":1964.05},{\"description\":\"Onboarding workshop\",\"quantity\":8,\"unitPrice\":1389.00,\"amount\":11135.82}],\"subtotal\":13099.87,\"tax\":0.00,\"total\":13099.87}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 424,
+      "output_tokens_details": {
+        "thinking_tokens": 201
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Brightline Cloud Services",
+        "taxId": "47-5530218",
+        "iban": null
+      },
+      "invoiceNumber": "BL-295116",
+      "issueDate": "2026-07-09",
+      "dueDate": "2026-07-23",
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "Cloud hosting, Standard plan (monthly)",
+          "quantity": 11,
+          "unitPrice": 178.55,
+          "amount": 1964.05
+        },
+        {
+          "description": "Onboarding workshop",
+          "quantity": 8,
+          "unitPrice": 1389,
+          "amount": 11135.82
+        }
+      ],
+      "subtotal": 13099.87,
+      "tax": 0,
+      "total": 13099.87
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 424
+  },
+  "latencyMs": 2500,
+  "notices": [],
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-295116",
+    "issueDate": "2026-07-09",
+    "dueDate": "2026-07-23",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Cloud hosting, Standard plan (monthly)",
+        "quantity": 11,
+        "unitPrice": 178.55,
+        "amount": 1964.05
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 8,
+        "unitPrice": 1389,
+        "amount": 11135.82
+      }
+    ],
+    "subtotal": 13099.87,
+    "tax": 0,
+    "total": 13099.87
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-295116",
+    "issueDate": "2026-07-09",
+    "dueDate": "2026-07-23",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Cloud hosting, Standard plan (monthly)",
+        "quantity": 11,
+        "unitPrice": 17855,
+        "amount": 196405
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 8,
+        "unitPrice": 138900,
+        "amount": 1113582
+      }
+    ],
+    "subtotal": 1309987,
+    "tax": 0,
+    "total": 1309987
+  },
+  "error": null
+}

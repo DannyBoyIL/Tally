@@ -1,0 +1,63 @@
+{
+  "id": "doc-006",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-746801",
+    "issueDate": "2026-04-27",
+    "dueDate": "2026-05-27",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "API overage (per 10k calls)",
+        "quantity": 7,
+        "unitPrice": 225,
+        "amount": 1575
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 7,
+        "unitPrice": 76990,
+        "amount": 538930
+      },
+      {
+        "description": "Cloud hosting, Standard plan (monthly)",
+        "quantity": 8,
+        "unitPrice": 24240,
+        "amount": 193920
+      },
+      {
+        "description": "Additional storage (100 GB)",
+        "quantity": 6,
+        "unitPrice": 2475,
+        "amount": 14850
+      }
+    ],
+    "subtotal": 749275,
+    "tax": 0,
+    "total": 749275
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "classic",
+    "vendorId": "brightline",
+    "moneyStyle": "symbol",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Date",
+      "dueDate": "Due Date",
+      "subtotal": "Subtotal",
+      "tax": "Tax",
+      "total": "Amount Due"
+    },
+    "scan": null
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "doc-059",
+  "category": "swapped-iban",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL57ABNA3588692044"
+    },
+    "invoiceNumber": "VDB335962",
+    "issueDate": "2026-09-11",
+    "dueDate": "2026-09-25",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Pallet storage (per week)",
+        "quantity": 11,
+        "unitPrice": 720,
+        "amount": 7920
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": 4,
+        "unitPrice": 7255,
+        "amount": 29020
+      },
+      {
+        "description": "Handling fee",
+        "quantity": 4,
+        "unitPrice": 3105,
+        "amount": 12420
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": 9,
+        "unitPrice": 14710,
+        "amount": 132390
+      }
+    ],
+    "subtotal": 181750,
+    "tax": 38168,
+    "total": 219918
+  },
+  "expectedFlags": [
+    "iban_mismatch"
+  ],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "van-der-berg",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Invoice date",
+      "dueDate": "Due",
+      "subtotal": "Subtotal",
+      "tax": "VAT",
+      "total": "Gross total"
+    },
+    "scan": null
+  }
+}

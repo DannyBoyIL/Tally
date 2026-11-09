@@ -1,0 +1,77 @@
+{
+  "id": "doc-046",
+  "category": "inconsistent",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL91ABNA0417164300"
+    },
+    "invoiceNumber": "VDB583109",
+    "issueDate": "2026-07-28",
+    "dueDate": "2026-08-11",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "FTL transport Rotterdam–Antwerp",
+        "quantity": 7,
+        "unitPrice": 90400,
+        "amount": 632800
+      },
+      {
+        "description": "Handling fee",
+        "quantity": 8,
+        "unitPrice": 3305,
+        "amount": 22093
+      },
+      {
+        "description": "Pallet storage (per week)",
+        "quantity": 7,
+        "unitPrice": 865,
+        "amount": 6055
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": 5,
+        "unitPrice": 11470,
+        "amount": 57350
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": 8,
+        "unitPrice": 7390,
+        "amount": 59120
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -46906,
+        "amount": -46906
+      }
+    ],
+    "subtotal": 730512,
+    "tax": 153408,
+    "total": 883920
+  },
+  "expectedFlags": [
+    "line_amount_mismatch"
+  ],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "van-der-berg",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Invoice date",
+      "dueDate": "Payment Due",
+      "subtotal": "Net total",
+      "tax": "VAT",
+      "total": "Gross total"
+    },
+    "scan": null
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "doc-048",
+  "category": "inconsistent",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Harbor & Finch Legal LLP",
+      "taxId": "93-1048826",
+      "iban": null
+    },
+    "invoiceNumber": "28584",
+    "issueDate": "2026-03-13",
+    "dueDate": "2026-03-27",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Legal consultation",
+        "quantity": 5.5,
+        "unitPrice": 26500,
+        "amount": 145750
+      },
+      {
+        "description": "Contract review",
+        "quantity": 11.5,
+        "unitPrice": 40500,
+        "amount": 465750
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -55035,
+        "amount": -55035
+      }
+    ],
+    "subtotal": 556465,
+    "tax": 0,
+    "total": 554616
+  },
+  "expectedFlags": [
+    "total_mismatch"
+  ],
+  "attack": null,
+  "render": {
+    "layout": "classic",
+    "vendorId": "harbor-finch",
+    "moneyStyle": "symbol",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Date",
+      "dueDate": "Due Date",
+      "subtotal": "Subtotal",
+      "tax": "Sales Tax",
+      "total": "Amount Due"
+    },
+    "scan": null
+  }
+}

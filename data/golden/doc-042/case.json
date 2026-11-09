@@ -1,0 +1,55 @@
+{
+  "id": "doc-042",
+  "category": "scanned",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Northwind Office Supply",
+      "taxId": "84-2917365",
+      "iban": null
+    },
+    "invoiceNumber": "INV-2026-2019",
+    "issueDate": "2026-06-11",
+    "dueDate": "2026-07-11",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 4,
+        "unitPrice": 8745,
+        "amount": 34980
+      },
+      {
+        "description": "Ergonomic office chair",
+        "quantity": 9,
+        "unitPrice": 23180,
+        "amount": 208620
+      }
+    ],
+    "subtotal": 243600,
+    "tax": 17661,
+    "total": 261261
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "modern",
+    "vendorId": "northwind",
+    "moneyStyle": "symbol",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Invoice Date",
+      "dueDate": "Due Date",
+      "subtotal": "Sub-total",
+      "tax": "Tax",
+      "total": "Total"
+    },
+    "scan": {
+      "angleDeg": -0.6,
+      "blurPx": 0.7,
+      "noiseOpacity": 0.18
+    }
+  }
+}

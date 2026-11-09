@@ -1,0 +1,67 @@
+{
+  "id": "doc-034",
+  "category": "scanned",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44500105175407324931"
+    },
+    "invoiceNumber": "RW-26/3561",
+    "issueDate": "2026-10-09",
+    "dueDate": "2026-11-08",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Freight",
+        "quantity": 1,
+        "unitPrice": 7905,
+        "amount": 7905
+      },
+      {
+        "description": "Pressure sensor PS-200",
+        "quantity": 11,
+        "unitPrice": 22420,
+        "amount": 246620
+      },
+      {
+        "description": "Maintenance visit",
+        "quantity": 3.5,
+        "unitPrice": 10000,
+        "amount": 35000
+      },
+      {
+        "description": "Ball bearing 6204-2RS (pack of 10)",
+        "quantity": 10,
+        "unitPrice": 3960,
+        "amount": 39600
+      }
+    ],
+    "subtotal": 329125,
+    "tax": 62534,
+    "total": 391659
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "rheinwerk",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Date",
+      "dueDate": "Payment Due",
+      "subtotal": "Subtotal",
+      "tax": "VAT",
+      "total": "Gross total"
+    },
+    "scan": {
+      "angleDeg": -0.4,
+      "blurPx": 0.5,
+      "noiseOpacity": 0.25
+    }
+  }
+}

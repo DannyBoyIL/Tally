@@ -1,0 +1,49 @@
+{
+  "id": "doc-040",
+  "category": "scanned",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50LOYD30963441850267"
+    },
+    "invoiceNumber": "K-2026754",
+    "issueDate": "2026-02-07",
+    "dueDate": "2026-02-21",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "On-site support",
+        "quantity": 7,
+        "unitPrice": 7500,
+        "amount": 52500
+      }
+    ],
+    "subtotal": 52500,
+    "tax": 10500,
+    "total": 63000
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "tax-invoice",
+    "vendorId": "kestrel-it",
+    "moneyStyle": "symbol",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Issue Date",
+      "dueDate": "Due Date",
+      "subtotal": "Net",
+      "tax": "VAT",
+      "total": "Amount Due"
+    },
+    "scan": {
+      "angleDeg": 1.8,
+      "blurPx": 0.3,
+      "noiseOpacity": 0.15
+    }
+  }
+}

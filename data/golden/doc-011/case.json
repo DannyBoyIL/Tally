@@ -1,0 +1,51 @@
+{
+  "id": "doc-011",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Harbor & Finch Legal LLP",
+      "taxId": "93-1048826",
+      "iban": null
+    },
+    "invoiceNumber": "24427",
+    "issueDate": "2026-08-05",
+    "dueDate": "2026-09-19",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Contract review",
+        "quantity": 12.5,
+        "unitPrice": 40500,
+        "amount": 506250
+      },
+      {
+        "description": "Corporate filing fee",
+        "quantity": 5,
+        "unitPrice": 39105,
+        "amount": 195525
+      }
+    ],
+    "subtotal": 701775,
+    "tax": 0,
+    "total": 701775
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "classic",
+    "vendorId": "harbor-finch",
+    "moneyStyle": "symbol",
+    "dateStyle": "long",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Invoice Date",
+      "dueDate": "Payment Due",
+      "subtotal": "Subtotal",
+      "tax": "Tax",
+      "total": "Total"
+    },
+    "scan": null
+  }
+}

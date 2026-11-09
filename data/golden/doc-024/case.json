@@ -1,0 +1,57 @@
+{
+  "id": "doc-024",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR7630006000011234567890189"
+    },
+    "invoiceNumber": "F2026212",
+    "issueDate": "2026-03-13",
+    "dueDate": "2026-04-27",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Photography session (half day)",
+        "quantity": 6,
+        "unitPrice": 70210,
+        "amount": 421260
+      },
+      {
+        "description": "Fine art print 40×50 cm",
+        "quantity": 5,
+        "unitPrice": 11495,
+        "amount": 57475
+      },
+      {
+        "description": "Travel expenses",
+        "quantity": 6,
+        "unitPrice": 12315,
+        "amount": 73890
+      }
+    ],
+    "subtotal": 552625,
+    "tax": 110525,
+    "total": 663150
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "atelier-lumiere",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Invoice date",
+      "dueDate": "Due Date",
+      "subtotal": "Subtotal",
+      "tax": "VAT",
+      "total": "Total"
+    },
+    "scan": null
+  }
+}

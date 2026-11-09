@@ -1,0 +1,57 @@
+{
+  "id": "doc-014",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL91ABNA0417164300"
+    },
+    "invoiceNumber": "VDB728078",
+    "issueDate": "2026-03-27",
+    "dueDate": "2026-04-26",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "FTL transport Rotterdam–Antwerp",
+        "quantity": 5,
+        "unitPrice": 89150,
+        "amount": 445750
+      },
+      {
+        "description": "Pallet storage (per week)",
+        "quantity": 7,
+        "unitPrice": 595,
+        "amount": 4165
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": 8,
+        "unitPrice": 11760,
+        "amount": 94080
+      }
+    ],
+    "subtotal": 543995,
+    "tax": 114239,
+    "total": 658234
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "van-der-berg",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Date",
+      "dueDate": "Due",
+      "subtotal": "Net total",
+      "tax": "VAT",
+      "total": "Gross total"
+    },
+    "scan": null
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "doc-043",
+  "category": "inconsistent",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-295116",
+    "issueDate": "2026-07-09",
+    "dueDate": "2026-07-23",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Cloud hosting, Standard plan (monthly)",
+        "quantity": 11,
+        "unitPrice": 17855,
+        "amount": 196405
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 8,
+        "unitPrice": 138900,
+        "amount": 1113582
+      }
+    ],
+    "subtotal": 1309987,
+    "tax": 0,
+    "total": 1309987
+  },
+  "expectedFlags": [
+    "line_amount_mismatch"
+  ],
+  "attack": null,
+  "render": {
+    "layout": "classic",
+    "vendorId": "brightline",
+    "moneyStyle": "symbol",
+    "dateStyle": "long",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Date",
+      "dueDate": "Due",
+      "subtotal": "Sub-total",
+      "tax": "Tax",
+      "total": "Balance Due"
+    },
+    "scan": null
+  }
+}

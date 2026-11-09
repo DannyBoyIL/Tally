@@ -1,0 +1,45 @@
+{
+  "id": "doc-009",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR7630006000011234567890189"
+    },
+    "invoiceNumber": "F2026809",
+    "issueDate": "2026-09-20",
+    "dueDate": "2026-10-20",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fine art print 40×50 cm",
+        "quantity": 1,
+        "unitPrice": 9515,
+        "amount": 9515
+      }
+    ],
+    "subtotal": 9515,
+    "tax": 1903,
+    "total": 11418
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "atelier-lumiere",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Invoice date",
+      "dueDate": "Due Date",
+      "subtotal": "Subtotal",
+      "tax": "VAT",
+      "total": "Total amount"
+    },
+    "scan": null
+  }
+}

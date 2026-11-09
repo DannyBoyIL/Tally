@@ -1,0 +1,63 @@
+{
+  "id": "doc-028",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Metro Hardware & Supply",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-05-20",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Wood screws (box)",
+        "quantity": 2,
+        "unitPrice": 905,
+        "amount": 1810
+      },
+      {
+        "description": "LED bulb 4-pack",
+        "quantity": 1,
+        "unitPrice": 1350,
+        "amount": 1350
+      },
+      {
+        "description": "Paint roller kit",
+        "quantity": 3,
+        "unitPrice": 1785,
+        "amount": 5355
+      },
+      {
+        "description": "Duct tape",
+        "quantity": 1,
+        "unitPrice": 710,
+        "amount": 710
+      }
+    ],
+    "subtotal": 9225,
+    "tax": 946,
+    "total": 10171
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "receipt",
+    "vendorId": "metro-hardware",
+    "moneyStyle": "symbol",
+    "dateStyle": "iso",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Date",
+      "dueDate": "Payment Due",
+      "subtotal": "Subtotal",
+      "tax": "Tax",
+      "total": "Total"
+    },
+    "scan": null
+  }
+}

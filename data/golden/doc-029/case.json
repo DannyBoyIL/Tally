@@ -1,0 +1,45 @@
+{
+  "id": "doc-029",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL91ABNA0417164300"
+    },
+    "invoiceNumber": "VDB709791",
+    "issueDate": "2026-02-17",
+    "dueDate": "2026-03-03",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 8,
+        "unitPrice": 5015,
+        "amount": 40120
+      }
+    ],
+    "subtotal": 40120,
+    "tax": 8425,
+    "total": 48545
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "van-der-berg",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Invoice date",
+      "dueDate": "Due",
+      "subtotal": "Net total",
+      "tax": "VAT",
+      "total": "Total"
+    },
+    "scan": null
+  }
+}

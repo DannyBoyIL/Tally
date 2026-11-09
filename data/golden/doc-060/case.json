@@ -1,0 +1,53 @@
+{
+  "id": "doc-060",
+  "category": "swapped-iban",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB45LOYD38646717804104"
+    },
+    "invoiceNumber": "K-2026475",
+    "issueDate": "2026-07-22",
+    "dueDate": "2026-08-05",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Network audit",
+        "quantity": 8,
+        "unitPrice": 12000,
+        "amount": 96000
+      },
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 12,
+        "unitPrice": 1160,
+        "amount": 13920
+      }
+    ],
+    "subtotal": 109920,
+    "tax": 21984,
+    "total": 131904
+  },
+  "expectedFlags": [
+    "iban_mismatch"
+  ],
+  "attack": null,
+  "render": {
+    "layout": "tax-invoice",
+    "vendorId": "kestrel-it",
+    "moneyStyle": "symbol",
+    "dateStyle": "long",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Issue Date",
+      "dueDate": "Due",
+      "subtotal": "Total excl. VAT",
+      "tax": "VAT",
+      "total": "Amount Due"
+    },
+    "scan": null
+  }
+}

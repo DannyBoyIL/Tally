@@ -1,0 +1,63 @@
+{
+  "id": "doc-010",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50LOYD30963441850267"
+    },
+    "invoiceNumber": "K-2026685",
+    "issueDate": "2026-03-30",
+    "dueDate": "2026-05-14",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Network audit",
+        "quantity": 1.5,
+        "unitPrice": 9500,
+        "amount": 14250
+      },
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 7,
+        "unitPrice": 1550,
+        "amount": 10850
+      },
+      {
+        "description": "Laptop setup & imaging",
+        "quantity": 11,
+        "unitPrice": 7235,
+        "amount": 79585
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -7328,
+        "amount": -7328
+      }
+    ],
+    "subtotal": 97357,
+    "tax": 19471,
+    "total": 116828
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "tax-invoice",
+    "vendorId": "kestrel-it",
+    "moneyStyle": "symbol",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Date",
+      "dueDate": "Payment Due",
+      "subtotal": "Net",
+      "tax": "VAT",
+      "total": "Total incl. VAT"
+    },
+    "scan": null
+  }
+}

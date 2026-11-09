@@ -1,0 +1,74 @@
+[
+  {
+    "id": "northwind",
+    "name": "Northwind Office Supply",
+    "taxId": "84-2917365",
+    "iban": null
+  },
+  {
+    "id": "brightline",
+    "name": "Brightline Cloud Services",
+    "taxId": "47-5530218",
+    "iban": null
+  },
+  {
+    "id": "harbor-finch",
+    "name": "Harbor & Finch Legal LLP",
+    "taxId": "93-1048826",
+    "iban": null
+  },
+  {
+    "id": "thames-print",
+    "name": "Thames Valley Print Co. Ltd",
+    "taxId": "GB284719356",
+    "iban": "GB31BARC20051773154421"
+  },
+  {
+    "id": "kestrel-it",
+    "name": "Kestrel IT Consulting Ltd",
+    "taxId": "GB603118274",
+    "iban": "GB50LOYD30963441850267"
+  },
+  {
+    "id": "rheinwerk",
+    "name": "Rheinwerk Industrietechnik GmbH",
+    "taxId": "DE287341926",
+    "iban": "DE44500105175407324931"
+  },
+  {
+    "id": "atelier-lumiere",
+    "name": "Atelier Lumière SARL",
+    "taxId": "FR40303265045",
+    "iban": "FR7630006000011234567890189"
+  },
+  {
+    "id": "van-der-berg",
+    "name": "Van der Berg Logistics B.V.",
+    "taxId": "NL853746219B01",
+    "iban": "NL91ABNA0417164300"
+  },
+  {
+    "id": "corner-cafe",
+    "name": "Corner Cafe",
+    "taxId": null,
+    "iban": null
+  },
+  {
+    "id": "metro-hardware",
+    "name": "Metro Hardware & Supply",
+    "taxId": null,
+    "iban": null
+  },
+  {
+    "id": "greenleaf",
+    "name": "Greenleaf Grocers",
+    "taxId": "GB771204583",
+    "iban": null
+  },
+  {
+    "id": "baeckerei-sonne",
+    "name": "Bäckerei Sonnenschein",
+    "taxId": "DE314927560",
+    "iban": null
+  }
+]

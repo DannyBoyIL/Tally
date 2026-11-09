@@ -1,0 +1,59 @@
+{
+  "id": "doc-045",
+  "category": "inconsistent",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Corner Cafe",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-08-18",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Croissant",
+        "quantity": 2,
+        "unitPrice": 400,
+        "amount": 800
+      },
+      {
+        "description": "Avocado toast",
+        "quantity": 3,
+        "unitPrice": 1030,
+        "amount": 3090
+      },
+      {
+        "description": "Blueberry muffin",
+        "quantity": 3,
+        "unitPrice": 425,
+        "amount": 1275
+      }
+    ],
+    "subtotal": 5165,
+    "tax": 426,
+    "total": 4015
+  },
+  "expectedFlags": [
+    "total_mismatch"
+  ],
+  "attack": null,
+  "render": {
+    "layout": "receipt",
+    "vendorId": "corner-cafe",
+    "moneyStyle": "symbol",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Issue Date",
+      "dueDate": "Due Date",
+      "subtotal": "Subtotal",
+      "tax": "Tax",
+      "total": "TOTAL"
+    },
+    "scan": null
+  }
+}

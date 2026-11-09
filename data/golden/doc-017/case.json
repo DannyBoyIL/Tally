@@ -1,0 +1,63 @@
+{
+  "id": "doc-017",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31BARC20051773154421"
+    },
+    "invoiceNumber": "TVP-68416",
+    "issueDate": "2026-09-12",
+    "dueDate": "2026-10-27",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Design proof revision",
+        "quantity": 14.5,
+        "unitPrice": 5000,
+        "amount": 72500
+      },
+      {
+        "description": "A1 poster print",
+        "quantity": 1,
+        "unitPrice": 1855,
+        "amount": 1855
+      },
+      {
+        "description": "Delivery",
+        "quantity": 5,
+        "unitPrice": 970,
+        "amount": 4850
+      },
+      {
+        "description": "Business cards (500)",
+        "quantity": 1,
+        "unitPrice": 3815,
+        "amount": 3815
+      }
+    ],
+    "subtotal": 83020,
+    "tax": 16604,
+    "total": 99624
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "modern",
+    "vendorId": "thames-print",
+    "moneyStyle": "symbol",
+    "dateStyle": "iso",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Date",
+      "dueDate": "Due Date",
+      "subtotal": "Subtotal",
+      "tax": "VAT",
+      "total": "Total Due"
+    },
+    "scan": null
+  }
+}

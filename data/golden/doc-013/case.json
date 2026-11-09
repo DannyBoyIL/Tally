@@ -1,0 +1,63 @@
+{
+  "id": "doc-013",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Greenleaf Grocers",
+      "taxId": "GB771204583",
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-09-10",
+    "dueDate": null,
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Coffee beans 250g",
+        "quantity": 3,
+        "unitPrice": 620,
+        "amount": 1860
+      },
+      {
+        "description": "Free range eggs (6)",
+        "quantity": 3,
+        "unitPrice": 215,
+        "amount": 645
+      },
+      {
+        "description": "Orange juice 1L",
+        "quantity": 3,
+        "unitPrice": 180,
+        "amount": 540
+      },
+      {
+        "description": "Sourdough loaf",
+        "quantity": 1,
+        "unitPrice": 345,
+        "amount": 345
+      }
+    ],
+    "subtotal": 3390,
+    "tax": 678,
+    "total": 4068
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "receipt",
+    "vendorId": "greenleaf",
+    "moneyStyle": "symbol",
+    "dateStyle": "iso",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Invoice Date",
+      "dueDate": "Due Date",
+      "subtotal": "SUBTOTAL",
+      "tax": "VAT",
+      "total": "AMOUNT PAID"
+    },
+    "scan": null
+  }
+}

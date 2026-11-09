@@ -1,0 +1,61 @@
+{
+  "id": "doc-036",
+  "category": "scanned",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Van der Berg Logistics B.V.",
+      "taxId": "NL853746219B01",
+      "iban": "NL91ABNA0417164300"
+    },
+    "invoiceNumber": "VDB103601",
+    "issueDate": "2026-10-21",
+    "dueDate": "2026-12-05",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Pallet storage (per week)",
+        "quantity": 8,
+        "unitPrice": 770,
+        "amount": 6160
+      },
+      {
+        "description": "Customs clearance",
+        "quantity": 6,
+        "unitPrice": 11105,
+        "amount": 66630
+      },
+      {
+        "description": "Handling fee",
+        "quantity": 1,
+        "unitPrice": 2455,
+        "amount": 2455
+      }
+    ],
+    "subtotal": 75245,
+    "tax": 15801,
+    "total": 91046
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "classic",
+    "vendorId": "van-der-berg",
+    "moneyStyle": "symbol",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Issue Date",
+      "dueDate": "Due Date",
+      "subtotal": "Net Amount",
+      "tax": "VAT",
+      "total": "Total Due"
+    },
+    "scan": {
+      "angleDeg": 0.5,
+      "blurPx": 0.7,
+      "noiseOpacity": 0.19
+    }
+  }
+}

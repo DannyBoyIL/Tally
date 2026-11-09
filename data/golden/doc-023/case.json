@@ -1,0 +1,57 @@
+{
+  "id": "doc-023",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Corner Cafe",
+      "taxId": null,
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-08-21",
+    "dueDate": null,
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Avocado toast",
+        "quantity": 1,
+        "unitPrice": 1100,
+        "amount": 1100
+      },
+      {
+        "description": "Cold brew",
+        "quantity": 2,
+        "unitPrice": 430,
+        "amount": 860
+      },
+      {
+        "description": "Latte",
+        "quantity": 1,
+        "unitPrice": 455,
+        "amount": 455
+      }
+    ],
+    "subtotal": 2415,
+    "tax": 199,
+    "total": 2614
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "receipt",
+    "vendorId": "corner-cafe",
+    "moneyStyle": "symbol",
+    "dateStyle": "iso",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Date",
+      "dueDate": "Payment Due",
+      "subtotal": "SUBTOTAL",
+      "tax": "Tax",
+      "total": "TOTAL"
+    },
+    "scan": null
+  }
+}

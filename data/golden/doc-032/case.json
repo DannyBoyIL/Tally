@@ -1,0 +1,49 @@
+{
+  "id": "doc-032",
+  "category": "scanned",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR7630006000011234567890189"
+    },
+    "invoiceNumber": "F2026822",
+    "issueDate": "2026-09-12",
+    "dueDate": "2026-09-26",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Photography session (half day)",
+        "quantity": 10,
+        "unitPrice": 69075,
+        "amount": 690750
+      }
+    ],
+    "subtotal": 690750,
+    "tax": 138150,
+    "total": 828900
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "modern",
+    "vendorId": "atelier-lumiere",
+    "moneyStyle": "code",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Issue Date",
+      "dueDate": "Due",
+      "subtotal": "Sub-total",
+      "tax": "VAT",
+      "total": "Amount Due"
+    },
+    "scan": {
+      "angleDeg": -1.3,
+      "blurPx": 0.6,
+      "noiseOpacity": 0.3
+    }
+  }
+}

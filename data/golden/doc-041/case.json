@@ -1,0 +1,49 @@
+{
+  "id": "doc-041",
+  "category": "scanned",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Northwind Office Supply",
+      "taxId": "84-2917365",
+      "iban": null
+    },
+    "invoiceNumber": "INV-2026-6561",
+    "issueDate": "2026-05-25",
+    "dueDate": "2026-06-08",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Ballpoint pens (box of 50)",
+        "quantity": 2,
+        "unitPrice": 1015,
+        "amount": 2030
+      }
+    ],
+    "subtotal": 2030,
+    "tax": 147,
+    "total": 2177
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "classic",
+    "vendorId": "northwind",
+    "moneyStyle": "code",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Issue Date",
+      "dueDate": "Due",
+      "subtotal": "Sub-total",
+      "tax": "Sales Tax",
+      "total": "Balance Due"
+    },
+    "scan": {
+      "angleDeg": -0.7,
+      "blurPx": 0.3,
+      "noiseOpacity": 0.26
+    }
+  }
+}

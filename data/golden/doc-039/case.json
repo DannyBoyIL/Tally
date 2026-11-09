@@ -1,0 +1,55 @@
+{
+  "id": "doc-039",
+  "category": "scanned",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR7630006000011234567890189"
+    },
+    "invoiceNumber": "F2026789",
+    "issueDate": "2026-05-07",
+    "dueDate": "2026-06-21",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fine art print 40×50 cm",
+        "quantity": 10,
+        "unitPrice": 6720,
+        "amount": 67200
+      },
+      {
+        "description": "Photo retouching",
+        "quantity": 14.5,
+        "unitPrice": 6000,
+        "amount": 87000
+      }
+    ],
+    "subtotal": 154200,
+    "tax": 30840,
+    "total": 185040
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "atelier-lumiere",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Invoice date",
+      "dueDate": "Due",
+      "subtotal": "Net total",
+      "tax": "VAT",
+      "total": "Gross total"
+    },
+    "scan": {
+      "angleDeg": -0.7,
+      "blurPx": 0.3,
+      "noiseOpacity": 0.26
+    }
+  }
+}

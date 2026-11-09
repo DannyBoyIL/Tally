@@ -1,0 +1,57 @@
+{
+  "id": "doc-019",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44500105175407324931"
+    },
+    "invoiceNumber": "RW-26/2927",
+    "issueDate": "2026-09-13",
+    "dueDate": "2026-09-27",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Hydraulic hose assembly",
+        "quantity": 3,
+        "unitPrice": 7015,
+        "amount": 21045
+      },
+      {
+        "description": "Maintenance visit",
+        "quantity": 5.5,
+        "unitPrice": 11000,
+        "amount": 60500
+      },
+      {
+        "description": "Pressure sensor PS-200",
+        "quantity": 2,
+        "unitPrice": 20380,
+        "amount": 40760
+      }
+    ],
+    "subtotal": 122305,
+    "tax": 23238,
+    "total": 145543
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "rheinwerk",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Invoice date",
+      "dueDate": "Due",
+      "subtotal": "Net total",
+      "tax": "VAT",
+      "total": "Total amount"
+    },
+    "scan": null
+  }
+}

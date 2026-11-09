@@ -1,0 +1,45 @@
+{
+  "id": "doc-007",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-793066",
+    "issueDate": "2026-02-22",
+    "dueDate": "2026-03-24",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Premium support",
+        "quantity": 8,
+        "unitPrice": 11500,
+        "amount": 92000
+      }
+    ],
+    "subtotal": 92000,
+    "tax": 0,
+    "total": 92000
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "modern",
+    "vendorId": "brightline",
+    "moneyStyle": "symbol",
+    "dateStyle": "iso",
+    "labels": {
+      "invoiceNumber": "Invoice Number",
+      "issueDate": "Date",
+      "dueDate": "Payment Due",
+      "subtotal": "Net Amount",
+      "tax": "Sales Tax",
+      "total": "Grand Total"
+    },
+    "scan": null
+  }
+}

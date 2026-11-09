@@ -1,0 +1,57 @@
+{
+  "id": "doc-012",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Harbor & Finch Legal LLP",
+      "taxId": "93-1048826",
+      "iban": null
+    },
+    "invoiceNumber": "22202",
+    "issueDate": "2026-04-24",
+    "dueDate": "2026-05-08",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Legal consultation",
+        "quantity": 10.5,
+        "unitPrice": 30500,
+        "amount": 320250
+      },
+      {
+        "description": "Courier service",
+        "quantity": 9,
+        "unitPrice": 4430,
+        "amount": 39870
+      },
+      {
+        "description": "Corporate filing fee",
+        "quantity": 5,
+        "unitPrice": 33340,
+        "amount": 166700
+      }
+    ],
+    "subtotal": 526820,
+    "tax": 0,
+    "total": 526820
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "modern",
+    "vendorId": "harbor-finch",
+    "moneyStyle": "code",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Invoice Date",
+      "dueDate": "Payment Due",
+      "subtotal": "Net Amount",
+      "tax": "Sales Tax",
+      "total": "Total Due"
+    },
+    "scan": null
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "seed": 2026,
+  "generatedBy": "@tally/datagen",
+  "count": 60,
+  "cases": [
+    {
+      "id": "doc-001",
+      "category": "clean",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-002",
+      "category": "clean",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-003",
+      "category": "clean",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-004",
+      "category": "clean",
+      "layout": "european"
+    },
+    {
+      "id": "doc-005",
+      "category": "clean",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-006",
+      "category": "clean",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-007",
+      "category": "clean",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-008",
+      "category": "clean",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-009",
+      "category": "clean",
+      "layout": "european"
+    },
+    {
+      "id": "doc-010",
+      "category": "clean",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-011",
+      "category": "clean",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-012",
+      "category": "clean",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-013",
+      "category": "clean",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-014",
+      "category": "clean",
+      "layout": "european"
+    },
+    {
+      "id": "doc-015",
+      "category": "clean",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-016",
+      "category": "clean",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-017",
+      "category": "clean",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-018",
+      "category": "clean",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-019",
+      "category": "clean",
+      "layout": "european"
+    },
+    {
+      "id": "doc-020",
+      "category": "clean",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-021",
+      "category": "clean",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-022",
+      "category": "clean",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-023",
+      "category": "clean",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-024",
+      "category": "clean",
+      "layout": "european"
+    },
+    {
+      "id": "doc-025",
+      "category": "clean",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-026",
+      "category": "clean",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-027",
+      "category": "clean",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-028",
+      "category": "clean",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-029",
+      "category": "clean",
+      "layout": "european"
+    },
+    {
+      "id": "doc-030",
+      "category": "clean",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-031",
+      "category": "scanned",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-032",
+      "category": "scanned",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-033",
+      "category": "scanned",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-034",
+      "category": "scanned",
+      "layout": "european"
+    },
+    {
+      "id": "doc-035",
+      "category": "scanned",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-036",
+      "category": "scanned",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-037",
+      "category": "scanned",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-038",
+      "category": "scanned",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-039",
+      "category": "scanned",
+      "layout": "european"
+    },
+    {
+      "id": "doc-040",
+      "category": "scanned",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-041",
+      "category": "scanned",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-042",
+      "category": "scanned",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-043",
+      "category": "inconsistent",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-044",
+      "category": "inconsistent",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-045",
+      "category": "inconsistent",
+      "layout": "receipt"
+    },
+    {
+      "id": "doc-046",
+      "category": "inconsistent",
+      "layout": "european"
+    },
+    {
+      "id": "doc-047",
+      "category": "inconsistent",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-048",
+      "category": "inconsistent",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-049",
+      "category": "injection",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-050",
+      "category": "injection",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-051",
+      "category": "injection",
+      "layout": "european"
+    },
+    {
+      "id": "doc-052",
+      "category": "injection",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-053",
+      "category": "injection",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-054",
+      "category": "injection",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-055",
+      "category": "injection",
+      "layout": "european"
+    },
+    {
+      "id": "doc-056",
+      "category": "injection",
+      "layout": "tax-invoice"
+    },
+    {
+      "id": "doc-057",
+      "category": "swapped-iban",
+      "layout": "classic"
+    },
+    {
+      "id": "doc-058",
+      "category": "swapped-iban",
+      "layout": "modern"
+    },
+    {
+      "id": "doc-059",
+      "category": "swapped-iban",
+      "layout": "european"
+    },
+    {
+      "id": "doc-060",
+      "category": "swapped-iban",
+      "layout": "tax-invoice"
+    }
+  ]
+}

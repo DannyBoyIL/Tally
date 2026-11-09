@@ -1,0 +1,47 @@
+{
+  "id": "doc-057",
+  "category": "swapped-iban",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Atelier Lumière SARL",
+      "taxId": "FR40303265045",
+      "iban": "FR0919751278870681411657064"
+    },
+    "invoiceNumber": "F2026479",
+    "issueDate": "2026-06-16",
+    "dueDate": "2026-07-16",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Fine art print 40×50 cm",
+        "quantity": 8,
+        "unitPrice": 9445,
+        "amount": 75560
+      }
+    ],
+    "subtotal": 75560,
+    "tax": 15112,
+    "total": 90672
+  },
+  "expectedFlags": [
+    "iban_mismatch"
+  ],
+  "attack": null,
+  "render": {
+    "layout": "classic",
+    "vendorId": "atelier-lumiere",
+    "moneyStyle": "code",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice No.",
+      "issueDate": "Invoice Date",
+      "dueDate": "Due Date",
+      "subtotal": "Subtotal",
+      "tax": "VAT",
+      "total": "Balance Due"
+    },
+    "scan": null
+  }
+}

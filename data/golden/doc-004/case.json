@@ -1,0 +1,69 @@
+{
+  "id": "doc-004",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44500105175407324931"
+    },
+    "invoiceNumber": "RW-26/9915",
+    "issueDate": "2026-10-16",
+    "dueDate": "2026-11-30",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Hydraulic hose assembly",
+        "quantity": 12,
+        "unitPrice": 9370,
+        "amount": 112440
+      },
+      {
+        "description": "Freight",
+        "quantity": 8,
+        "unitPrice": 8245,
+        "amount": 65960
+      },
+      {
+        "description": "Ball bearing 6204-2RS (pack of 10)",
+        "quantity": 2,
+        "unitPrice": 3185,
+        "amount": 6370
+      },
+      {
+        "description": "Maintenance visit",
+        "quantity": 10,
+        "unitPrice": 10500,
+        "amount": 105000
+      },
+      {
+        "description": "Pressure sensor PS-200",
+        "quantity": 8,
+        "unitPrice": 22610,
+        "amount": 180880
+      }
+    ],
+    "subtotal": 470650,
+    "tax": 89424,
+    "total": 560074
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "european",
+    "vendorId": "rheinwerk",
+    "moneyStyle": "eu",
+    "dateStyle": "dmy-dots",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Invoice date",
+      "dueDate": "Due Date",
+      "subtotal": "Net total",
+      "tax": "VAT",
+      "total": "Total amount"
+    },
+    "scan": null
+  }
+}

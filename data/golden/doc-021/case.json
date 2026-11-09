@@ -1,0 +1,57 @@
+{
+  "id": "doc-021",
+  "category": "clean",
+  "image": "page.jpg",
+  "truth": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50LOYD30963441850267"
+    },
+    "invoiceNumber": "K-2026892",
+    "issueDate": "2026-07-07",
+    "dueDate": "2026-08-06",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 10,
+        "unitPrice": 2105,
+        "amount": 21050
+      },
+      {
+        "description": "Laptop setup & imaging",
+        "quantity": 6,
+        "unitPrice": 7755,
+        "amount": 46530
+      },
+      {
+        "description": "Managed backup service",
+        "quantity": 9,
+        "unitPrice": 26975,
+        "amount": 242775
+      }
+    ],
+    "subtotal": 310355,
+    "tax": 62071,
+    "total": 372426
+  },
+  "expectedFlags": [],
+  "attack": null,
+  "render": {
+    "layout": "classic",
+    "vendorId": "kestrel-it",
+    "moneyStyle": "code",
+    "dateStyle": "d-mon-y",
+    "labels": {
+      "invoiceNumber": "Invoice #",
+      "issueDate": "Invoice Date",
+      "dueDate": "Due Date",
+      "subtotal": "Subtotal",
+      "tax": "VAT",
+      "total": "Grand Total"
+    },
+    "scan": null
+  }
+}

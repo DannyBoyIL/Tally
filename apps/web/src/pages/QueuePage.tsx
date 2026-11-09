@@ -2,6 +2,7 @@ import type { DocumentSummary } from '@tally/shared';
 import { useEffect, useState } from 'react';
 import { api } from '../api.ts';
 import { StatusBadge } from '../components/StatusBadge.tsx';
+import { useDemo } from '../demo.ts';
 import { formatMoney } from '../money.ts';
 import { navigate } from '../router.ts';
 
@@ -9,16 +10,18 @@ export function QueuePage() {
   const [documents, setDocuments] = useState<DocumentSummary[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
+  const [accessCode, setAccessCode] = useState('');
+  const demo = useDemo();
 
   useEffect(() => {
     api.list().then(setDocuments, (e: Error) => setError(e.message));
   }, []);
 
-  async function upload(file: File) {
+  async function upload(send: () => Promise<{ id: string }>) {
     setUploading(true);
     setError(null);
     try {
-      const view = await api.upload(file);
+      const view = await send();
       navigate(`/documents/${view.id}`);
     } catch (e) {
       setError((e as Error).message);
@@ -40,11 +43,40 @@ export function QueuePage() {
             disabled={uploading}
             onChange={(e) => {
               const file = e.target.files?.[0];
-              if (file) void upload(file);
+              if (file) void upload(() => api.upload(file, accessCode || undefined));
             }}
           />
         </label>
       </div>
+      {demo?.demo && (
+        <section className="samples" aria-labelledby="samples-title">
+          <h2 id="samples-title">Try a sample</h2>
+          <div className="sample-buttons">
+            {demo.samples.map((s) => (
+              <button
+                key={s.id}
+                type="button"
+                className="button"
+                disabled={uploading}
+                onClick={() => void upload(() => api.loadSample(s.id))}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+          {demo.liveEnabled && (
+            <label className="access-code">
+              Access code for your own images{' '}
+              <input
+                type="password"
+                autoComplete="off"
+                value={accessCode}
+                onChange={(e) => setAccessCode(e.target.value)}
+              />
+            </label>
+          )}
+        </section>
+      )}
       {error && (
         <p className="alert error" role="alert">
           {error}

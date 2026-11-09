@@ -119,3 +119,47 @@ jobs:
           name: eval-report
           path: eval/runs
           retention-days: 30
+
+  # The production image, built natively for the ARM server. Every PR proves it builds; on main
+  # it is pushed to GitHub's container registry.
+  image:
+    runs-on: ubuntu-24.04-arm
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build
+        run: docker build -t "ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/tally:${GITHUB_SHA}" .
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        name: Push to ghcr.io
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          image="ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/tally"
+          echo "$TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          docker tag "$image:$GITHUB_SHA" "$image:latest"
+          docker push "$image:$GITHUB_SHA"
+          docker push "$image:latest"
+
+  # Releases main to the demo server once everything passed. Skipped until the server exists
+  # (the DEPLOY_HOST repository variable is set); setup in docs/DEPLOY.md.
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.DEPLOY_HOST != ''
+    needs: [check, e2e, eval-gate, image]
+    runs-on: ubuntu-latest
+    concurrency: deploy
+    steps:
+      - uses: actions/checkout@v7
+      - name: Copy the compose files and restart the app on the new image
+        env:
+          HOST: ${{ vars.DEPLOY_HOST }}
+          SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/deploy && chmod 600 ~/.ssh/deploy
+          echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          scp -i ~/.ssh/deploy deploy/compose.yml deploy/Caddyfile "ubuntu@$HOST:tally/"
+          ssh -i ~/.ssh/deploy "ubuntu@$HOST" \
+            "cd tally && docker compose pull app && docker compose up -d --remove-orphans"

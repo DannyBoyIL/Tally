@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@fastify/multipart": "^10.1.8",
+    "@fastify/rate-limit": "^11.2.2",
+    "@fastify/static": "^10.1.10",
     "@tally/extractor": "workspace:*",
     "@tally/shared": "workspace:*",
     "@tally/validators": "workspace:*",

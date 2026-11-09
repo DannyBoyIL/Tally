@@ -25,11 +25,12 @@ export async function ensureDatabase(url: string): Promise<void> {
 
 /**
  * Throws away every table and re-migrates. Only for disposable databases: refuses any database
- * whose name doesn't end in _test or _e2e, so it can't wipe development or production data.
+ * whose name doesn't end in _test, _e2e or _demo (the public demo resets daily), so it can't wipe
+ * development data.
  */
 export async function resetDatabase(pool: pg.Pool, url: string): Promise<void> {
   const name = decodeURIComponent(new URL(url).pathname.slice(1));
-  if (!/_(test|e2e)$/.test(name)) throw new Error(`refusing to reset database "${name}"`);
+  if (!/_(test|e2e|demo)$/.test(name)) throw new Error(`refusing to reset database "${name}"`);
   await pool.query('drop schema public cascade; create schema public;');
   await migrate(pool);
 }

@@ -6,22 +6,31 @@ export interface Config {
   databaseUrl: string;
   host: string;
   port: number;
-  /** Where uploaded files are kept (local disk now, S3 in phase 6). */
+  /** Where uploaded files are kept, on local disk (a Docker volume in production). */
   filesDir: string;
   /** No login in the MVP: every review event is recorded under this name. */
   reviewer: string;
-  extractor:
-    | { mode: 'live'; model: string }
-    /** Recorded responses from an eval run, matched by image hash: free and deterministic. */
-    | { mode: 'replay'; goldenDir: string; outputsDir: string };
+  /** live: every upload goes to Claude. replay: recorded answers for golden-set images only. */
+  extractor: 'live' | 'replay';
+  model: string;
+  /** Recorded responses from an eval run, matched by image hash: free and deterministic. */
+  replay: { goldenDir: string; outputsDir: string };
+  /**
+   * Public demo: samples preloaded, golden images replayed, any other image read live only with
+   * the access code and under a daily cap. Null when not a demo.
+   */
+  demo: { accessCode: string | null; liveDailyCap: number } | null;
+  /** The built web app to serve at /, or null when Vite serves it (development). */
+  webDir: string | null;
+  trustProxy: boolean;
 }
 
 export function loadConfig(env: Record<string, string | undefined>): Config {
   const databaseUrl = env.DATABASE_URL;
   if (!databaseUrl) throw new Error('DATABASE_URL is not set (see .env.example)');
-  const mode = env.EXTRACTOR ?? 'replay';
-  if (mode !== 'live' && mode !== 'replay') {
-    throw new Error(`EXTRACTOR must be live or replay, got ${mode}`);
+  const extractor = env.EXTRACTOR ?? 'replay';
+  if (extractor !== 'live' && extractor !== 'replay') {
+    throw new Error(`EXTRACTOR must be live or replay, got ${extractor}`);
   }
   return {
     databaseUrl,
@@ -30,17 +39,23 @@ export function loadConfig(env: Record<string, string | undefined>): Config {
     port: Number(env.API_PORT ?? 3000),
     filesDir: resolve(env.FILES_DIR ?? resolve(repoRoot, 'var/files')),
     reviewer: env.REVIEWER ?? 'demo-reviewer',
-    extractor:
-      mode === 'live'
-        ? { mode, model: env.MODEL ?? 'claude-haiku-5-5' }
-        : {
-            mode,
-            goldenDir: resolve(env.REPLAY_GOLDEN_DIR ?? resolve(repoRoot, 'data/golden')),
-            outputsDir: resolve(
-              env.REPLAY_OUTPUTS_DIR ??
-                resolve(repoRoot, 'eval/baselines/claude-haiku-5-5/v2/outputs'),
-            ),
-          },
+    extractor,
+    model: env.MODEL ?? 'claude-haiku-5-5',
+    replay: {
+      goldenDir: resolve(env.REPLAY_GOLDEN_DIR ?? resolve(repoRoot, 'data/golden')),
+      outputsDir: resolve(
+        env.REPLAY_OUTPUTS_DIR ?? resolve(repoRoot, 'eval/baselines/claude-haiku-5-5/v2/outputs'),
+      ),
+    },
+    demo:
+      env.DEMO === 'true'
+        ? {
+            accessCode: env.DEMO_ACCESS_CODE || null,
+            liveDailyCap: Number(env.DEMO_LIVE_DAILY_CAP ?? 20),
+          }
+        : null,
+    webDir: env.WEB_DIR ? resolve(env.WEB_DIR) : null,
+    trustProxy: env.TRUST_PROXY === 'true',
   };
 }
 

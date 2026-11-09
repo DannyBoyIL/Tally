@@ -6,6 +6,7 @@ import type { DocumentSummary, DocumentView, EventInput } from '@tally/shared';
 import { validate, type VendorRecord } from '@tally/validators';
 import type pg from 'pg';
 import { listVendors } from './db/vendors.ts';
+import type { DemoPolicy } from './demo.ts';
 import type { FileStore } from './files.ts';
 import { sha256 } from './replay.ts';
 import {
@@ -23,6 +24,8 @@ export interface Deps {
   extractor: Extractor;
   files: FileStore;
   reviewer: string;
+  /** Set in demo mode: decides per upload between replay and (gated) live extraction. */
+  demo?: DemoPolicy;
 }
 
 export const MEDIA_TYPES = { 'image/jpeg': 'jpg', 'image/png': 'png' } as const;
@@ -119,13 +122,14 @@ async function inTransaction<T>(
 export async function uploadDocument(
   deps: Deps,
   upload: { filename: string; mediaType: MediaType; data: Buffer },
+  extractor: Extractor = deps.extractor,
 ): Promise<DocumentView> {
   const id = randomUUID();
   const storageKey = `${id}.${MEDIA_TYPES[upload.mediaType]}`;
   await deps.files.put(storageKey, upload.data);
 
   // Extraction runs outside the transaction: a 2-second model call shouldn't hold a connection.
-  const result = await deps.extractor.extract({ data: upload.data, mediaType: upload.mediaType });
+  const result = await extractor.extract({ data: upload.data, mediaType: upload.mediaType });
   const vendors = await listVendors(deps.pool);
   const findings = result.invoice
     ? validate({ invoice: result.invoice, vendors, notices: result.notices })

@@ -7,7 +7,7 @@ catch wrong totals and swapped bank details, a human approves every document, th
 output is never overwritten, and an accuracy eval against known ground truth gates every change
 in CI.
 
-> Status: phase 5 (CI eval gate). See [docs/PROJECT.md](docs/PROJECT.md) for the
+> Status: phase 6 (Docker + AWS demo). See [docs/PROJECT.md](docs/PROJECT.md) for the
 > problem, scope, architecture, evaluation method and build phases.
 
 ## Quick start
@@ -44,6 +44,18 @@ No API key is needed: the app **replays** the answers Claude really gave for the
 set `EXTRACTOR=live` and `ANTHROPIC_API_KEY` in `.env` and restart `pnpm dev`.
 
 Stop with Ctrl+C; `docker compose down` stops Postgres (your data is kept in a Docker volume).
+
+**Only Docker, no Node:** `docker compose up --build` runs the app as it is deployed, in demo mode,
+at **http://localhost:8080** (one container serving the API and the web app, with sample
+documents preloaded and a fresh database on every start).
+
+## Demo
+
+The public demo runs the same image on one AWS EC2 instance with Postgres and Caddy (HTTPS),
+deployed by CI on every merge to `main`. Sample invoices replay recorded Claude answers, so a visit
+costs nothing; reading your own image live needs an access code and has a daily cap. Everything
+resets daily. Setup and operations: [docs/DEPLOY.md](docs/DEPLOY.md); why one instance and not
+managed services: [docs/DECISIONS.md](docs/DECISIONS.md).
 
 ## Stack
 
@@ -191,7 +203,8 @@ packages/validators Deterministic checks + vendor master data → flags with rea
 apps/api           Fastify + Postgres: upload, extract, validate, append-only review events
 apps/web           React (Vite): review queue and review screen
 e2e/               Playwright: the review flow against the real API and database
+deploy/            Production compose (app, Postgres, Caddy), server setup script
 eval/              Golden-set eval CLI: scoring, reports, baselines, CI gate
 data/golden        The frozen golden set
-docs/              Project definition and decisions
+docs/              Project definition, decisions, deployment
 ```

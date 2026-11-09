@@ -5,6 +5,11 @@ import type { DocumentImage, ExtractionResult, Extractor } from '@tally/extracto
 
 export const sha256 = (data: Buffer): string => createHash('sha256').update(data).digest('hex');
 
+export interface ReplayExtractor extends Extractor {
+  /** Whether this image has a recorded answer (a golden-set document). */
+  knows(data: Buffer): boolean;
+}
+
 /**
  * Plays back recorded extractions from an eval run instead of calling the model: the same
  * golden-set image always gets the response the model really gave it. Used by E2E tests, local
@@ -14,7 +19,7 @@ export async function createReplayExtractor(options: {
   goldenDir: string;
   outputsDir: string;
   run?: number;
-}): Promise<Extractor> {
+}): Promise<ReplayExtractor> {
   const run = options.run ?? 1;
   const byHash = new Map<string, string>();
   const ids = (await readdir(options.goldenDir)).filter((name) => name.startsWith('doc-'));
@@ -30,6 +35,7 @@ export async function createReplayExtractor(options: {
   return {
     model,
     promptVersion,
+    knows: (data) => byHash.has(sha256(data)),
     async extract(image: DocumentImage): Promise<ExtractionResult> {
       const file = byHash.get(sha256(image.data));
       if (!file) {

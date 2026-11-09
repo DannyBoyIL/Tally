@@ -17,3 +17,4 @@ export {
   type ExtractionResult,
   type Extractor,
 } from './types.ts';
+export { resolveApiKey, type ApiKey } from './env.ts';

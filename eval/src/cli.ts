@@ -16,11 +16,11 @@ import {
   FatalExtractionError,
   LATEST_PROMPT_VERSION,
   PROMPT_VERSIONS,
+  resolveApiKey,
   type Effort,
   type PromptVersion,
 } from '@tally/extractor';
 import { flagsOf, validate } from '@tally/validators';
-import { resolveApiKey } from './env.ts';
 import { loadGoldenSet, loadVendors, type GoldenCase } from './golden.ts';
 import {
   buildReport,

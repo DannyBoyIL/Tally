@@ -86,8 +86,14 @@ pnpm monorepo
   code / rate limit, so a public demo is not an open API bill.
 
 **Data model**: `documents` · `extractions` (model, prompt_version, raw jsonb, tokens, latency) ·
-`validation_results` · `review_events` (field_path, old, new, reviewer, ts) · `vendors` ·
-view `final_fields`.
+`validation_results` · `review_events` (field_path, old, new, reviewer, ts) · `vendors`.
+Append-only tables are enforced by Postgres triggers. The final invoice is derived in code
+(`deriveFinal`: the extraction with edits replayed in order) rather than a SQL view: replaying JSON
+field edits is clearer and testable as a pure function. Database access is plain SQL with
+numbered migrations, no ORM.
+
+**Extractor modes**: `live` (Claude) or `replay` (recorded eval responses matched by image hash).
+Replay makes E2E and CI free and deterministic, and is the basis of the phase 6 demo mode.
 
 **Input**: every page is rendered to an image (JPEG) and sent to a vision model — one path for
 clean and "scanned" documents alike. PDF input is out of scope for the MVP.

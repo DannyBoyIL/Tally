@@ -1,11 +1,8 @@
-import type { Flag, Invoice } from '@tally/shared';
+import type { Finding, Flag, Invoice } from '@tally/shared';
 import { injectionReasons } from './injection.ts';
 import { findVendor, type VendorRecord } from './vendors.ts';
 
-export interface Finding {
-  flag: Flag;
-  reason: string;
-}
+export type { Finding };
 
 export interface ValidationInput {
   invoice: Invoice;
@@ -41,6 +38,7 @@ export function validate({ invoice, vendors, notices = [] }: ValidationInput): F
     if (Math.abs(expected - line.amount) > 1) {
       findings.push({
         flag: 'line_amount_mismatch',
+        field: `lineItems.${i}.amount`,
         reason: `line ${i + 1}: ${line.quantity} × ${cents(line.unitPrice)} = ${cents(expected)}, printed ${cents(line.amount)}`,
       });
     }
@@ -50,6 +48,7 @@ export function validate({ invoice, vendors, notices = [] }: ValidationInput): F
   if (lineSum !== invoice.subtotal) {
     findings.push({
       flag: 'subtotal_mismatch',
+      field: 'subtotal',
       reason: `lines add up to ${cents(lineSum)}, subtotal is ${cents(invoice.subtotal)}`,
     });
   }
@@ -57,6 +56,7 @@ export function validate({ invoice, vendors, notices = [] }: ValidationInput): F
   if (invoice.subtotal + invoice.tax !== invoice.total) {
     findings.push({
       flag: 'total_mismatch',
+      field: 'total',
       reason: `${cents(invoice.subtotal)} + ${cents(invoice.tax)} tax = ${cents(invoice.subtotal + invoice.tax)}, total is ${cents(invoice.total)}`,
     });
   }
@@ -64,6 +64,7 @@ export function validate({ invoice, vendors, notices = [] }: ValidationInput): F
   if (invoice.dueDate !== null && invoice.dueDate < invoice.issueDate) {
     findings.push({
       flag: 'due_before_issue',
+      field: 'dueDate',
       reason: `due ${invoice.dueDate} is before issue ${invoice.issueDate}`,
     });
   }
@@ -71,24 +72,31 @@ export function validate({ invoice, vendors, notices = [] }: ValidationInput): F
   if (!ISO_CURRENCIES.has(invoice.currency)) {
     findings.push({
       flag: 'currency_unknown',
+      field: 'currency',
       reason: `${invoice.currency} is not an ISO 4217 code`,
     });
   }
 
   const { iban } = invoice.vendor;
   if (iban !== null && !isValidIban(iban)) {
-    findings.push({ flag: 'iban_invalid', reason: `${iban} fails the IBAN checksum` });
+    findings.push({
+      flag: 'iban_invalid',
+      field: 'vendor.iban',
+      reason: `${iban} fails the IBAN checksum`,
+    });
   }
 
   const vendor = findVendor(vendors, invoice.vendor);
   if (!vendor) {
     findings.push({
       flag: 'vendor_unknown',
+      field: 'vendor.name',
       reason: `"${invoice.vendor.name}" is not in vendor master data`,
     });
   } else if (iban !== null && iban !== vendor.iban) {
     findings.push({
       flag: 'iban_mismatch',
+      field: 'vendor.iban',
       reason: vendor.iban
         ? `${vendor.name} is paid to ${vendor.iban}, this document says ${iban}`
         : `${vendor.name} has no IBAN on file, this document says ${iban}`,

@@ -7,3 +7,6 @@ coverage/
 .idea/
 .vscode/
 eval/runs/
+var/
+test-results/
+playwright-report/

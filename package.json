@@ -7,16 +7,20 @@
     "node": ">=24"
   },
   "scripts": {
+    "dev": "pnpm --parallel --filter @tally/api --filter @tally/web dev",
+    "db:setup": "pnpm --filter @tally/api migrate && pnpm --filter @tally/api seed",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
-    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test"
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
+    "e2e": "pnpm --filter @tally/e2e e2e"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "prettier": "^3.9.10",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.1"

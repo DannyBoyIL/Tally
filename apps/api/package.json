@@ -1,0 +1,27 @@
+{
+  "name": "@tally/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=../../.env --watch src/server.ts",
+    "start": "node --env-file-if-exists=../../.env src/server.ts",
+    "migrate": "node --env-file-if-exists=../../.env src/db/cli.ts migrate",
+    "seed": "node --env-file-if-exists=../../.env src/db/cli.ts seed",
+    "typecheck": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fastify/multipart": "^10.1.8",
+    "@tally/extractor": "workspace:*",
+    "@tally/shared": "workspace:*",
+    "@tally/validators": "workspace:*",
+    "fastify": "^5.12.8",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/pg": "^8.23.1",
+    "vitest": "^5.1.0"
+  }
+}

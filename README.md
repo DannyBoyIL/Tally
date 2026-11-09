@@ -7,7 +7,7 @@ catch wrong totals and swapped bank details, a human approves every document, th
 output is never overwritten, and an accuracy eval against known ground truth gates every change
 in CI.
 
-> Status: phase 4 (API, review UI, E2E). See [docs/PROJECT.md](docs/PROJECT.md) for the
+> Status: phase 5 (CI eval gate). See [docs/PROJECT.md](docs/PROJECT.md) for the
 > problem, scope, architecture, evaluation method and build phases.
 
 ## Quick start
@@ -142,8 +142,44 @@ can't be pinned to temperature 0; the report shows the range across runs.
 The key is read from `.env`, which wins over a key exported in your shell (the CLI prints which
 source it used). Defaults: `claude-haiku-5-5`, effort `low`. Use `--model` to compare others and
 `--prompt v1` to rerun the prompt without the injection defense.
-`--save-baseline` copies a run to `eval/baselines/<model>/<prompt>/` (committed; the CI gate in phase 5 and
-the UI fixtures in phase 4 use it). Live runs cost money and never run on ordinary CI.
+`--save-baseline` copies a run to `eval/baselines/<model>/<prompt>/` (committed; the CI gate and
+the app's replay mode use it).
+
+## CI gate
+
+A change that makes extraction or the review checks worse fails CI. The baseline the gate compares
+against is named in [`eval/gate.json`](eval/gate.json) (now `claude-haiku-5-5/v2`).
+
+| Job         | When                                                                                        | Cost   | What                                                                                                                                                              |
+| ----------- | ------------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `check`     | every push and PR                                                                           | free   | format, lint, typecheck, unit + API integration tests, then the **replay gate**: Claude's recorded answers re-scored with the current validators and scoring code |
+| `e2e`       | every push and PR                                                                           | free   | Playwright, the review flow in a real browser                                                                                                                     |
+| `eval-gate` | PRs touching the extractor, invoice schema, validators, golden set or eval code; or by hand | ~$0.12 | the **live gate**: the golden set through Claude 3 times, compared with the baseline                                                                              |
+
+```bash
+pnpm eval:replay                   # the replay gate, as CI runs it (no API key)
+pnpm eval --repeat 3 --gate        # the live gate (costs money)
+pnpm eval --replay --recorded baselines/claude-haiku-5-5/v1 --gate   # replay another run
+```
+
+The gate fails when, against the baseline:
+
+- document accuracy, field accuracy or needs-review recall falls by more than the tolerance,
+- extraction failures rise by more than the tolerance,
+- **any** single run lets an attack through (no tolerance).
+
+Cost per document only warns, if it rises by more than 25%. The tolerance is the larger of the
+baseline's run-to-run spread and one document of that metric's denominator: the current baseline
+scored 100% in every run, and a spread of zero would fail a run on a single noisy miss.
+
+Checked by breaking things on purpose: replaying the v1 prompt's answers fails (accuracy 97.5%,
+review recall 37.5%, an attack through); removing the total check fails (review recall 92.3%).
+A $1 rounding tolerance in the total check passes the gate (the planted totals are off by
+$15+) and is caught by the validators' unit tests instead. Each layer guards something different.
+
+To accept a change that moves the numbers (a new prompt or model), merge it, run
+`pnpm eval --repeat 3 --save-baseline`, and point `eval/gate.json` at the new baseline.
+The live gate needs an `ANTHROPIC_API_KEY` repository secret.
 
 ## Repository layout
 
@@ -155,7 +191,7 @@ packages/validators Deterministic checks + vendor master data → flags with rea
 apps/api           Fastify + Postgres: upload, extract, validate, append-only review events
 apps/web           React (Vite): review queue and review screen
 e2e/               Playwright: the review flow against the real API and database
-eval/              Golden-set eval CLI: scoring, reports, baselines
+eval/              Golden-set eval CLI: scoring, reports, baselines, CI gate
 data/golden        The frozen golden set
 docs/              Project definition and decisions
 ```

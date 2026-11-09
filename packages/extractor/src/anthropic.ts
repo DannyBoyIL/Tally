@@ -15,6 +15,8 @@ export interface AnthropicExtractorOptions {
   /** Any current Claude model ID; Haiku for iteration, Sonnet/Opus for the final numbers. */
   model: string;
   effort?: Effort;
+  /** Passed explicitly so the caller decides where the key comes from (never read implicitly). */
+  apiKey?: string;
   /** Injected in tests. */
   client?: Pick<Anthropic, 'messages'>;
 }
@@ -25,7 +27,8 @@ const FATAL_STATUSES = new Set([401, 403, 404]);
 export function createAnthropicExtractor({
   model,
   effort = 'low',
-  client = new Anthropic(),
+  apiKey,
+  client = new Anthropic({ apiKey }),
 }: AnthropicExtractorOptions): Extractor {
   return {
     model,

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "eval": "node --env-file-if-exists=../.env src/cli.ts",
+    "eval": "node src/cli.ts",
     "typecheck": "tsc",
     "test": "vitest run"
   },

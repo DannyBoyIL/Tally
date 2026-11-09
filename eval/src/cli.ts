@@ -11,6 +11,7 @@ import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { parseArgs } from 'node:util';
 import { createAnthropicExtractor, FatalExtractionError, type Effort } from '@tally/extractor';
+import { resolveApiKey } from './env.ts';
 import { loadGoldenSet, type GoldenCase } from './golden.ts';
 import {
   buildReport,
@@ -50,7 +51,13 @@ let cases = await loadGoldenSet(values.golden);
 if (values.category) cases = cases.filter((c) => c.category === values.category);
 if (values.limit) cases = cases.slice(0, Number(values.limit));
 
-const extractor = createAnthropicExtractor({ model, effort });
+const key = await resolveApiKey(resolve(evalRoot, '../.env'), process.env);
+if (!key) {
+  console.error('No ANTHROPIC_API_KEY: set it in .env at the repository root.');
+  process.exit(2);
+}
+console.log(`API key from ${key.source}`);
+const extractor = createAnthropicExtractor({ model, effort, apiKey: key.value });
 await mkdir(join(outDir, 'outputs'), { recursive: true });
 
 /** Runs `worker` over `items` with at most `limit` in flight. */

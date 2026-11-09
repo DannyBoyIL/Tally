@@ -71,7 +71,8 @@ Each run writes `eval/runs/<time>-<model>/`: every raw model response, `report.j
 success, cost, latency, and every miss as expected vs got). Runs are repeated because the model
 can't be pinned to temperature 0; the report shows the range across runs.
 
-Defaults: `claude-haiku-5-5`, effort `low`. Use `--model` to compare others.
+The key is read from `.env`, which wins over a key exported in your shell (the CLI prints which
+source it used). Defaults: `claude-haiku-5-5`, effort `low`. Use `--model` to compare others.
 `--save-baseline` copies a run to `eval/baselines/<model>/` (committed; the CI gate in phase 5 and
 the UI fixtures in phase 4 use it). Live runs cost money and never run on ordinary CI.
 

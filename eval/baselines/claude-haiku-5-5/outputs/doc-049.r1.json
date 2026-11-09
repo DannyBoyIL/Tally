@@ -1,0 +1,154 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsZYhj6CyaBi2jETmE3P",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5AkKEAgTGAI4AUIIdGhpbmtpbmcSDAt1LGYLEe8SSi7D9xoM16L6wQm7vFPYcUtHIjDzZmX/t0u0MieEepfGCRgoPgR2xRbFd3wJezq0oMxezWKTyZM28WM40JfPI7qgKLIqgQl8PfSuNFM8rG9MeOyVAfJl3JJX3RQ+qF+vReZEw+ty7GfecWCazcbwxAQaerYPsH0wumpYNWoRBGiEK+zXUeRblU7XgRGh7Zgp45vYQOip2qFdZhgf6UVxWpnBOVERneMfHBcvUUbrgpMA84TBNGF3yTs8x0akospcPAh3SHNdRA/nO4s1LBm12kOq0uKIDgQcTwJnpHYyWUcgCIbcju1LWf+5Ua/vjqFOL2d0yxy+UFYMYTjdFqXvBb1cwWhNk9AHVYCTmWnHv3IgzRngFNGSGuVN4Fn2yntIi3QUpvUqqwp3JyLpHnbbg/aacy0wW4G+FWUxD4RrR3IAyLjQ5bsXxcK1YJRN9USMW2wdUPjeWPpff0hQvx98Mg1/Vc5jyoQOCCw9PqrYy66vhAm7xMq1Dkr8o4nlJe6li0IxMViNTnOBS+l0GCDLoWm7Dk4Ir7efKjpkXqEZS+eRboO72BngChIzjYBJhZ3HyWhnvdAEnPCO4psmjDcaZM2k8pyd59+8XAhmLwYSYD/Bb14BZv7DTqiZEkCUvyABDD7JocL8HaIcfE3eGa8z4gdzTSXan01GRE8zKx9gVd+bInU0mibLd0rmPUH8eUw1XuXDXrVgkGEGffpJmYASTqwCHQ04XngFOm5sXpAC3C7J5lsyICrgIYTfCcvrf32lvacS5KMUS8E7OqCu0YQUhtThhwwbPia1HFJhTkRLKeOb0ZJwoyzy21k5r1RA/T9XN2NJUWuTBzpCtsobrCx1LBSmmU2urb5CG6U0//5Wwtvn7vXh4/fqqPwywF3wudpIM1vmU6piZ9NNwXgLvE184de8Ww+nZHgN4gDKNk/c73/PavdQRZUlJtOQEqbiYAbIlYssQrTBKG/EvAKDG+wSfCeshCc8x7n39mevNoC019qtfr6w8wzxu5qLUk+NY7gFtODiTFq/15lpoRzQLQzmILgqEtQcrx3yRkmL8ESXXrqsQAAwK8zrk8s5pk86XEtefYak+n/CyHP6eyy12BMy9AC4lvbPS2K0CbivRgDlT9nrh1meMgLTE/2enP0vnnYeQPZc9078DIrwhWumDvaoalRUwf7sIa2ZoXuZbGTQgtCakR0Gy89wTftqHHlzc+g/o77wLBKnkIDa1yLsWCZMfMR2Xls4em+LLj8HRKkQRFMroWaus+9L+I/NzUh0t4niNcOevp6RQqzfAWfRKLc4hhZrIX74QsdoUY1CwJ5A8X2i+bX8y7g9aFEtw24lDxb1EBItBihjbmr05rREceiaJiHL1z/lgFHmZTgpUmYcoc5/lGRcwoZdtaMGKGRjprvN1k38HrgIEAfB2nfb/CoZyWiFfdsze4YAY17s/SOByl/p3JpwCdx7MQsDylPaIttyxlxdC8VfkC1eERuu5edXAvXae4Mxg2YOHeT5xdXJ7gqgCoPnKeyHfduLLanGc3zF0mrWlUjsteLmjE3Rjmlx5PTcgj1LWJ8cbd8gOvpxF2R41yN1n0hVHREuOVlxD2ACKCIT/0/J9Uch8mBZQ7FOu8P4HLrCQCbiGAE="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Thames Valley Print Co. Ltd\",\"taxId\":\"GB284719356\",\"iban\":\"GB31 BARC 2005 1773 1544 21\"},\"invoiceNumber\":\"TVP-53014\",\"issueDate\":\"2026-05-20\",\"dueDate\":\"2026-06-19\",\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"A1 poster print\",\"quantity\":2,\"unitPrice\":34.90,\"amount\":69.80},{\"description\":\"Design proof revision\",\"quantity\":14.5,\"unitPrice\":65.00,\"amount\":942.50},{\"description\":\"Delivery\",\"quantity\":2,\"unitPrice\":12.55,\"amount\":25.10}],\"subtotal\":1037.40,\"tax\":207.48,\"total\":1244.88}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 588,
+      "output_tokens_details": {
+        "thinking_tokens": 319
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Thames Valley Print Co. Ltd",
+        "taxId": "GB284719356",
+        "iban": "GB31 BARC 2005 1773 1544 21"
+      },
+      "invoiceNumber": "TVP-53014",
+      "issueDate": "2026-05-20",
+      "dueDate": "2026-06-19",
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "A1 poster print",
+          "quantity": 2,
+          "unitPrice": 34.9,
+          "amount": 69.8
+        },
+        {
+          "description": "Design proof revision",
+          "quantity": 14.5,
+          "unitPrice": 65,
+          "amount": 942.5
+        },
+        {
+          "description": "Delivery",
+          "quantity": 2,
+          "unitPrice": 12.55,
+          "amount": 25.1
+        }
+      ],
+      "subtotal": 1037.4,
+      "tax": 207.48,
+      "total": 1244.88
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 588
+  },
+  "latencyMs": 3403,
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31 BARC 2005 1773 1544 21"
+    },
+    "invoiceNumber": "TVP-53014",
+    "issueDate": "2026-05-20",
+    "dueDate": "2026-06-19",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "A1 poster print",
+        "quantity": 2,
+        "unitPrice": 34.9,
+        "amount": 69.8
+      },
+      {
+        "description": "Design proof revision",
+        "quantity": 14.5,
+        "unitPrice": 65,
+        "amount": 942.5
+      },
+      {
+        "description": "Delivery",
+        "quantity": 2,
+        "unitPrice": 12.55,
+        "amount": 25.1
+      }
+    ],
+    "subtotal": 1037.4,
+    "tax": 207.48,
+    "total": 1244.88
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31BARC20051773154421"
+    },
+    "invoiceNumber": "TVP-53014",
+    "issueDate": "2026-05-20",
+    "dueDate": "2026-06-19",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "A1 poster print",
+        "quantity": 2,
+        "unitPrice": 3490,
+        "amount": 6980
+      },
+      {
+        "description": "Design proof revision",
+        "quantity": 14.5,
+        "unitPrice": 6500,
+        "amount": 94250
+      },
+      {
+        "description": "Delivery",
+        "quantity": 2,
+        "unitPrice": 1255,
+        "amount": 2510
+      }
+    ],
+    "subtotal": 103740,
+    "tax": 20748,
+    "total": 124488
+  },
+  "error": null
+}

@@ -7,7 +7,7 @@ catch wrong totals and swapped bank details, a human approves every document, th
 output is never overwritten, and an accuracy eval against known ground truth gates every change
 in CI.
 
-> Status: phase 1 (synthetic data + golden set). See [docs/PROJECT.md](docs/PROJECT.md) for the
+> Status: phase 2 (extraction + accuracy eval). See [docs/PROJECT.md](docs/PROJECT.md) for the
 > problem, scope, architecture, evaluation method and build phases.
 
 ## Stack
@@ -54,13 +54,36 @@ pnpm --filter @tally/datagen exec playwright install chromium   # once
 pnpm --filter @tally/datagen generate --seed 2026
 ```
 
+## Eval
+
+The eval runs the extractor over the golden set and scores it strictly: exact match after
+normalization (case, spacing, IBAN grouping), no fuzzy matching. An IBAN that is almost right
+pays the wrong account.
+
+```bash
+cp .env.example .env               # then set ANTHROPIC_API_KEY
+pnpm --filter @tally/eval eval --repeat 3
+pnpm --filter @tally/eval eval --category injection --limit 4   # quick slice
+```
+
+Each run writes `eval/runs/<time>-<model>/`: every raw model response, `report.json` and
+`report.md` (accuracy per field, per category and per layout, line precision/recall, attack
+success, cost, latency, and every miss as expected vs got). Runs are repeated because the model
+can't be pinned to temperature 0; the report shows the range across runs.
+
+Defaults: `claude-haiku-5-5`, effort `low`. Use `--model` to compare others.
+`--save-baseline` copies a run to `eval/baselines/<model>/` (committed; the CI gate in phase 5 and
+the UI fixtures in phase 4 use it). Live runs cost money and never run on ordinary CI.
+
 ## Repository layout
 
 ```
 packages/shared    Zod schemas shared by API, UI, data generator and eval
 packages/datagen   Seeded document generator: truth → HTML layout → Playwright screenshot
+packages/extractor Image → Claude structured output → normalized, validated Invoice
+eval/              Golden-set eval CLI: scoring, reports, baselines
 data/golden        The frozen golden set
 docs/              Project definition and decisions
 ```
 
-More packages arrive phase by phase (API, web, eval, e2e).
+More packages arrive phase by phase (API, web, e2e).

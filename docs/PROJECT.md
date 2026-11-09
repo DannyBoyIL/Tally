@@ -56,7 +56,7 @@ change ships if it makes things worse.
 | Auto-approve | Every document goes to a human. Validator precision is measured so auto-approve can later be justified by data |
 | LLM-based injection classifier | Structural defenses are stronger (see below) |
 | Queues, microservices, multi-tenancy, roles, ERP integration, fine-tuning, own OCR | Not needed for the MVP |
-| Multi-model comparison | Good follow-up (cost/accuracy table); the provider is picked in phase 2 behind a thin adapter |
+| Multi-provider comparison | One provider (Anthropic) behind a thin adapter. Iteration runs on Claude Haiku 5.5 (cheap); before the final results the eval is rerun on Sonnet/Opus and reported as a cost/accuracy table |
 | Non-English documents | Spanish templates with PEN are a stretch goal |
 
 ## Architecture
@@ -64,7 +64,8 @@ change ships if it makes things worse.
 ```
 pnpm monorepo
 ├── packages/shared     Zod schemas (Invoice, LineItem) shared by server and client
-├── packages/datagen    HTML templates → PDF/PNG via Playwright + ground-truth JSON
+├── packages/datagen    HTML templates → JPEG via Playwright + ground-truth JSON
+├── packages/extractor  Image → one structured-output call → normalized Invoice (provider adapter)
 ├── apps/api            Node + TypeScript (Fastify), Postgres
 │     extract  → one LLM call → raw output stored (immutable)
 │     validate → deterministic rules + vendor master data
@@ -86,8 +87,12 @@ pnpm monorepo
 `validation_results` · `review_events` (field_path, old, new, reviewer, ts) · `vendors` ·
 view `final_fields`.
 
-**Input**: every page is rendered to an image and sent to a vision model — one path for clean
-and "scanned" documents alike.
+**Input**: every page is rendered to an image (JPEG) and sent to a vision model — one path for
+clean and "scanned" documents alike. PDF input is out of scope for the MVP.
+
+**The model reads, code normalizes**: the model returns amounts as printed decimals and dates as
+ISO strings through structured outputs; code converts to cents, compacts IBANs and runs the strict
+shared schema. A schema failure is an extraction failure, never silently patched.
 
 ## Evaluation
 
@@ -111,8 +116,9 @@ and "scanned" documents alike.
 - **Every PR — deterministic, free**: lint, typecheck, unit tests for validators, API tests,
   Playwright against recorded model responses.
 - **Live eval gate** — only when prompt / schema / extraction code changes (paths filter), on the
-  full golden set, temperature 0. Fails if accuracy drops below baseline minus a tolerance:
-  run-to-run noise is real, so the gate compares against a baseline instead of a hard number.
+  full golden set. Current Claude models reject sampling parameters (no temperature 0), so
+  run-to-run noise is measured, not assumed away: the baseline is several repeated runs, and the
+  gate fails if accuracy drops below the baseline minus a tolerance derived from that spread.
   The report is uploaded as an artifact.
 
 ## Phases

@@ -1,0 +1,118 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsZYkqrqsk8xBFhh1JxN",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5QgKEAgTGAI4AUIIdGhpbmtpbmcSDP29/hQvOMXdgrZMrBoMk3RBkIiLmME1/cb2IjCN7owdtq02qLg2Sow5I61Bd3L7ef7uLo0w0hNkqtb2jCJNDXG3tlyy7TpSy4hhdFUqggjcot9vGolGzJEZEEIzlkxuEC2/uutqm6ZuNfW5vBbIsWAHzdc3QURnKu2TcYcUOJEhmf4qalFIhWJX53tjzu0KFaFbqD0TgpRmeR4utFsg57fW5/UDsm3IoSb8C4TXcLBeN+n3EqN+tUetmNMfqtz15RHn0bkzRYqpfjcPIdug0ANB+MZerwaWq4EajknipYBm4N3Mpipb+rAvi9QBCw81gfK95qICb3Xi2ZKJ+XsCgpuKpCI/YJTQDajPloaetkr8Xjla/xpUXtnn/8wzdCeLJv07I2h+A7V3Wu+fMP0TBC3ZWhKd6cEGuJVLaGSo6fpoN4D76nq3dUrE6rBN95REjVuZpkTbpPC7PBy3BB41saEBeESauZ1HeVXo6UULRwp5s+gZuG0aRSYJ7vVNcTDX62hMSqmm6KEPSiWg8pk/Wms+tArie10M/gEPsDvt+0NxoBboUTdyaGLtglZ8HBNNdxF9dsq0JZE23PohwvcoeLD1FIFJNYhMHl8eI808zzKUHGK5guEc3WMZ300yPWi2nqRH97ZQiu4UOdHE0q05sR7JOpipQYb4cNue7W+T50nIlo7RGXEYgarzjzUQJhLDMlQByGBhLCYQKT0AMEXsBSGrUo4nLAd82DwB7j+0+AseiehGSvII/adt1HqriZIYeN2YPEl7N1Q9IHGPsq3k6VUkQ+jHMa2YvzPuFFQ6oLa2oMU5l/0gRZulLCaLnPOHCJkDbnlM4MxRcVhUHs5tova1xjsF5CqwhIln4h4SdcdFKWLNWL9u1NCQIXvk03O2tXqUQ0bJ7ubH+xWOQL1Lgm9pAbgncw1sTtJcbp5UmteehmClxVyHTL+RO3XwU21W0sof6mmW4FU41oAX1Wui3deqkTPj0AFrU/hKoNupAseu5rTKZqDD8QYbfowFCyfsrfSf/hUb0PTFDM2zIZrC6V0ENMHh3iHOsal2w6w3KVBDAAUqm5hvznTz5FjyQRj/sX3b48AB9ywVgJS8aqTOUgUnmIgSnX9FhwbAegWOCfpidnJFGHH/ghaHsA9i3pIpSiS+CtzDXu+yZhdGfE74/cRFv9DqDF6kHtwz8P0OrPVabrosoKU/CZHianRdpt/fcrHPAv8W7/mA4kZ/mOZnUJO8g6fyJpR9Ql+cJKlZr6Pz+1GgumWajvz4IBFS0+RepaK/5+X9V1Rqmq5T9tMVyiAfmJ4DaVszfMfCKy0cjKfP4jJl7uYWnJPuytajgT3fIS+gopXUhtKQZ+k536B0FHwmg8q+yR7HZH7ugU7oClyF/ModCqm858SeHEVn62X1Splg0/HpV1SfYDwXy9F/6JMmw+Sx7rbz/Bfa0RzsLANSJ9Qc1YO1byMQBPbRSRFdS78YAQ=="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Rheinwerk Industrietechnik GmbH\",\"taxId\":\"DE287341926\",\"iban\":\"DE44 5001 0517 5407 3249 31\"},\"invoiceNumber\":\"RW-26/2293\",\"issueDate\":\"2026-06-24\",\"dueDate\":\"2026-08-08\",\"currency\":\"EUR\",\"lineItems\":[{\"description\":\"Ball bearing 6204-2RS (pack of 10)\",\"quantity\":12,\"unitPrice\":46.15,\"amount\":553.8}],\"subtotal\":553.8,\"tax\":105.22,\"total\":659.02}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 484,
+      "output_tokens_details": {
+        "thinking_tokens": 274
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Rheinwerk Industrietechnik GmbH",
+        "taxId": "DE287341926",
+        "iban": "DE44 5001 0517 5407 3249 31"
+      },
+      "invoiceNumber": "RW-26/2293",
+      "issueDate": "2026-06-24",
+      "dueDate": "2026-08-08",
+      "currency": "EUR",
+      "lineItems": [
+        {
+          "description": "Ball bearing 6204-2RS (pack of 10)",
+          "quantity": 12,
+          "unitPrice": 46.15,
+          "amount": 553.8
+        }
+      ],
+      "subtotal": 553.8,
+      "tax": 105.22,
+      "total": 659.02
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 484
+  },
+  "latencyMs": 3658,
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44 5001 0517 5407 3249 31"
+    },
+    "invoiceNumber": "RW-26/2293",
+    "issueDate": "2026-06-24",
+    "dueDate": "2026-08-08",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Ball bearing 6204-2RS (pack of 10)",
+        "quantity": 12,
+        "unitPrice": 46.15,
+        "amount": 553.8
+      }
+    ],
+    "subtotal": 553.8,
+    "tax": 105.22,
+    "total": 659.02
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Rheinwerk Industrietechnik GmbH",
+      "taxId": "DE287341926",
+      "iban": "DE44500105175407324931"
+    },
+    "invoiceNumber": "RW-26/2293",
+    "issueDate": "2026-06-24",
+    "dueDate": "2026-08-08",
+    "currency": "EUR",
+    "lineItems": [
+      {
+        "description": "Ball bearing 6204-2RS (pack of 10)",
+        "quantity": 12,
+        "unitPrice": 4615,
+        "amount": 55380
+      }
+    ],
+    "subtotal": 55380,
+    "tax": 10522,
+    "total": 65902
+  },
+  "error": null
+}

@@ -1,0 +1,154 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsZYnseUKBjLx1nUsPbp",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS0QkKEAgTGAI4AUIIdGhpbmtpbmcSDK+fm1OlGLYM0zo1WxoMsnZOaE5oMY1l2p0VIjBXt/txrNjcP1cshFSbkTIbtuz/zsK+cZa4DChmQXjeb26/FimgglW/uN8C9JsgioMq7giCig+vLgOrrkwFXggIfhAtbqyUvEjRbYj9rQA6VqPgbmlkBa+y9Pmrtj69NAMbo4m1VCJMDPo3u/3dbyOK/QoC3HKpFUsNSEWxS5z7NtgPs6GdJIuShQ2qRkKeH5wDWZ59dDz0GLEl+ybfA4m2Cb/fPBJfXAhVRTyAlRxl5GCJeXdm7H5tgMLOODH9boqVzqrSsn+M54hvaBSpriMvUQfbBZ/rrCeb89yoLe7UOdYGY8WFv9eraTRXcY59q1eO4a8qOimLEP20pW/TN6YiDrMgcgfw19KXUnzXD58l7Q6LyIomADZptWWMYfTLM56wxfcxPx4e2dHdEV73SrxUs02plY+YDNWxL441q3oMznh1AXixKikE5LYEKDbCrW6Ld7YCtjetwtrxZDsrKdH5jBqwFms0rrgvyChJiJbBXTQXsYFZffoRCPrRvTDcOuJ/WVUFNapXdU72yECSPbhddtOX4qYI652kS5DNryyqS5YPFs+7Pf7iWa32edMYvsX2ItXZjbe8NIkI8ncxDG7Dwa0mo5wvcTi9aNOR1hgcj+eqBPJUkyDOerJa7GT4/BqCPZYGrHk8bw7Ml5VeCi0UNFSg9ImZfsbH/XcrTWh8BNFKCV2H6NVoBwf+NWUNK/n/3GKjo2jXk5b+PQdagzUM3bKonFYVqzBqvL1wnDf9QyJqQdRJTHthC9oP3WX7oimrWeQli+pE5haTwmrZdQlsG8VBEUD483R1HjPmgZZYOIEH2i9gxIricK3TBCQQqRETSInG9ufeU9RO4oYEKRVrnBXIvJWkXpPcvBZQTOcY2cGyDAmq5beoOhW+M2KrHQmR2iSdhqXcGObLBAOFtEnHQPx1ZYfTjdgXcKsU8LiSM1UMUmC1ofz9dIC0EvtoVVn1RuzGnP1Jdkwfc27NuhUQ1yZzIj6TleHc0ep4USUhonmtOW9PPP3A77brUbB5aEAYUXrD05HMrNG55H5jwuBBkdqMO8x4TqtFijdPZOdDsKnwMbX58jaNlWpSI0iBPYUQXs4QOjpodVimUdLY+3luOKpEOoLjTAFm7woyp1UFFbHix6r8J/5kaHw7iZvd4dVVVeP1a05Gkpv5Uo09XT/2IrpD6A48vV8CfmUTvbv4T+SSktQ4PSeELVXMWovu+1juaWwXb3jaCYq+czm3SrU3KavE+bViZRMVTTYtFaEybkAk/eGGV7TKmJYoQuv8tTNmIO18oLqTuxwdl/iYqB2vnmf/EUewIMyrFwQAEza9xHlrApiZl0nheEx5rD7uS4daHkrVASLiKzIsV0OzFRYm0fqPV+GCGgAzNZazizgxY4p/WD1gX0tryFCx+B0aUCkO0cJ4dDwjO7Dt/+eTWVhsdh/vOX38857/5YvlPNi8iofPyWJxkh14whO8N17gLmkyFM+XjGwKdk051PsfUIeprCL8zY3uuv5uSEvIbQD/YIz7dpfo0FGG6iLAKWUL0triPMAxpqRFPJWjsdw6ARzr9uUHsr7Sh6S/QzF27gP5o/0YAQ=="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Kestrel IT Consulting Ltd\",\"taxId\":\"GB603118274\",\"iban\":\"GB50 LOYD 3096 3441 8502 67\"},\"invoiceNumber\":\"K-2026256\",\"issueDate\":\"2026-07-06\",\"dueDate\":\"2026-08-20\",\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"Microsoft 365 licence (monthly)\",\"quantity\":12,\"unitPrice\":15.65,\"amount\":187.80},{\"description\":\"Managed backup service\",\"quantity\":2,\"unitPrice\":191.55,\"amount\":383.10},{\"description\":\"Laptop setup & imaging\",\"quantity\":9,\"unitPrice\":79.10,\"amount\":711.90}],\"subtotal\":1282.80,\"tax\":256.56,\"total\":1539.36}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 585,
+      "output_tokens_details": {
+        "thinking_tokens": 303
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Kestrel IT Consulting Ltd",
+        "taxId": "GB603118274",
+        "iban": "GB50 LOYD 3096 3441 8502 67"
+      },
+      "invoiceNumber": "K-2026256",
+      "issueDate": "2026-07-06",
+      "dueDate": "2026-08-20",
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "Microsoft 365 licence (monthly)",
+          "quantity": 12,
+          "unitPrice": 15.65,
+          "amount": 187.8
+        },
+        {
+          "description": "Managed backup service",
+          "quantity": 2,
+          "unitPrice": 191.55,
+          "amount": 383.1
+        },
+        {
+          "description": "Laptop setup & imaging",
+          "quantity": 9,
+          "unitPrice": 79.1,
+          "amount": 711.9
+        }
+      ],
+      "subtotal": 1282.8,
+      "tax": 256.56,
+      "total": 1539.36
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 585
+  },
+  "latencyMs": 3719,
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50 LOYD 3096 3441 8502 67"
+    },
+    "invoiceNumber": "K-2026256",
+    "issueDate": "2026-07-06",
+    "dueDate": "2026-08-20",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 12,
+        "unitPrice": 15.65,
+        "amount": 187.8
+      },
+      {
+        "description": "Managed backup service",
+        "quantity": 2,
+        "unitPrice": 191.55,
+        "amount": 383.1
+      },
+      {
+        "description": "Laptop setup & imaging",
+        "quantity": 9,
+        "unitPrice": 79.1,
+        "amount": 711.9
+      }
+    ],
+    "subtotal": 1282.8,
+    "tax": 256.56,
+    "total": 1539.36
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50LOYD30963441850267"
+    },
+    "invoiceNumber": "K-2026256",
+    "issueDate": "2026-07-06",
+    "dueDate": "2026-08-20",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Microsoft 365 licence (monthly)",
+        "quantity": 12,
+        "unitPrice": 1565,
+        "amount": 18780
+      },
+      {
+        "description": "Managed backup service",
+        "quantity": 2,
+        "unitPrice": 19155,
+        "amount": 38310
+      },
+      {
+        "description": "Laptop setup & imaging",
+        "quantity": 9,
+        "unitPrice": 7910,
+        "amount": 71190
+      }
+    ],
+    "subtotal": 128280,
+    "tax": 25656,
+    "total": 153936
+  },
+  "error": null
+}

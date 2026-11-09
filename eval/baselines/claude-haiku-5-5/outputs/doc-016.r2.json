@@ -1,0 +1,149 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsZZVYdAh2x65i2TRzBU",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Thames Valley Print Co. Ltd\",\"taxId\":\"GB284719356\",\"iban\":\"GB31 BARC 2005 1773 1544 21\"},\"invoiceNumber\":\"TVP-23632\",\"issueDate\":\"2026-08-13\",\"dueDate\":\"2026-09-12\",\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"Business cards (500)\",\"quantity\":4,\"unitPrice\":28.05,\"amount\":112.20},{\"description\":\"Delivery\",\"quantity\":7,\"unitPrice\":14.30,\"amount\":100.10},{\"description\":\"A1 poster print\",\"quantity\":9,\"unitPrice\":23.70,\"amount\":213.30}],\"subtotal\":425.60,\"tax\":85.12,\"total\":510.72}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Thames Valley Print Co. Ltd",
+        "taxId": "GB284719356",
+        "iban": "GB31 BARC 2005 1773 1544 21"
+      },
+      "invoiceNumber": "TVP-23632",
+      "issueDate": "2026-08-13",
+      "dueDate": "2026-09-12",
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "Business cards (500)",
+          "quantity": 4,
+          "unitPrice": 28.05,
+          "amount": 112.2
+        },
+        {
+          "description": "Delivery",
+          "quantity": 7,
+          "unitPrice": 14.3,
+          "amount": 100.1
+        },
+        {
+          "description": "A1 poster print",
+          "quantity": 9,
+          "unitPrice": 23.7,
+          "amount": 213.3
+        }
+      ],
+      "subtotal": 425.6,
+      "tax": 85.12,
+      "total": 510.72
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 266
+  },
+  "latencyMs": 1854,
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31 BARC 2005 1773 1544 21"
+    },
+    "invoiceNumber": "TVP-23632",
+    "issueDate": "2026-08-13",
+    "dueDate": "2026-09-12",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Business cards (500)",
+        "quantity": 4,
+        "unitPrice": 28.05,
+        "amount": 112.2
+      },
+      {
+        "description": "Delivery",
+        "quantity": 7,
+        "unitPrice": 14.3,
+        "amount": 100.1
+      },
+      {
+        "description": "A1 poster print",
+        "quantity": 9,
+        "unitPrice": 23.7,
+        "amount": 213.3
+      }
+    ],
+    "subtotal": 425.6,
+    "tax": 85.12,
+    "total": 510.72
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Thames Valley Print Co. Ltd",
+      "taxId": "GB284719356",
+      "iban": "GB31BARC20051773154421"
+    },
+    "invoiceNumber": "TVP-23632",
+    "issueDate": "2026-08-13",
+    "dueDate": "2026-09-12",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Business cards (500)",
+        "quantity": 4,
+        "unitPrice": 2805,
+        "amount": 11220
+      },
+      {
+        "description": "Delivery",
+        "quantity": 7,
+        "unitPrice": 1430,
+        "amount": 10010
+      },
+      {
+        "description": "A1 poster print",
+        "quantity": 9,
+        "unitPrice": 2370,
+        "amount": 21330
+      }
+    ],
+    "subtotal": 42560,
+    "tax": 8512,
+    "total": 51072
+  },
+  "error": null
+}

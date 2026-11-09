@@ -1,0 +1,118 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsZaTRR6VQrzDH7zmVSG",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5AkKEAgTGAI4AUIIdGhpbmtpbmcSDMwX7y+oH/eC8/OQOhoM2C1NrM0372Iitc5jIjC27xcuRLAZ6QlGHB2+0Jyze1qY1FIOu3Y5d22UNeCvsd4Bxpk9Bl36cKoL/SMYaNEqgQkZUFR4WFcPNzcLQffa/o4mZk1HUTu3mIL8+lb7RAVCfYAjtW1JLG/I2NgzeM8JrR7v+4tUtGR3YR3Z2JP+mot/0qA+7dzQuhcBE5WmVYhYb6dzqCA104EvQaxrM2OSQSWSxbuFqlGPUMRMAazLxj6Se7Iei02i+Nsxo5QdF08/IrqabjZdTLTiKfcnYafoWXA8sOhm3tqs7NJfGxqIgS8G/SrolaqzNmgeuILnVuVBxVY3jG7xZbGqR0ku/DqfLQHpeDjuo++Hk8xQcqzoubS4r6KvnILJPhh4Iw8vEvPLo12WgHLJCHnHv3ipgcY8p1B61W4MBnmP2J8i+odA+NK266VwdCfDOnzelm7n59GfjyVDzcA/EtWjGKwEQQygjZg2AfC4ftz1Vv00TszLO+79K/QCexVAAFsKRFj3x5u31Qp3i+xoSe+9atvc6zufnGiu/hSDWY1hSPxaWsUKxnFyGQ98ux3nVtongHpsYHzgQ6uoePzV1coqt+wDuf/haouQHdgXutIyL7I6cSyaZITES4PZwA0vGcQ8MmSQr28twM43PVerKmkshpAPAFz9qkqo9wnl1cKC71z6WqEqI6dHcE9sRoByHVx8RcIpluyO/2ZObUy52pkQCk+gJB8CZ/hvzJb9vKzKcrmvcPCl480bQjxE2qyVgVBoUHZlIw8YVRD4dyLwU6AXbRCMF62cJFm557CbLYFHRDQq/clTObA8DgeNCuDF69pu15p+w9N+CGIIeCF3ACC191l5ZbWAkCoq91BfcQJkjq2bqDum2nIohl+4vqM+K5WcfwmfOFGcxw9mMMKoyR/I4Bvh3KzYBZV4fl/AQe1ZaSDbmZJ/Vcaqnz5Aez6iIoA3aKcM7DYDRgaLRfTB8aYDWzQDubkQYKyeAVwWB+4HUgGR/n1WLGTwSE0PrinTZJTiyS3pCVCWn46UVPtsmPwgZk3PQYC30TKmcthv0IXL9L67h9GwfmaAagWL59vkNGnPgGzPJkD0G3xA5QvV7aymy9A3mNuIEofs+eMLxeWGkGUnZnQvCI7BYwW1wr2u6ppz0wpefYI5rAhSNwVslEI+KBs+ra6kPXICWIY+0DjUPNvlsyc0Qkh7cD6V6dOEjxKHSjBUY0rx/jdHPh2xOhUE1J4cqP53yMQCCkx9HtUgwMfxvsmYnonMVAUOGZvYQU9j5/4/LyVyi9RRBxYBvu8t+g5IRj5a3DxiQL4hXWm+iab16MAb7XvPcNPUjzJChJ+X9V6TEWVpwbVIEnYeyBlSF5Kn/ARGe2Tr5XT0vViS+JD+6tjVZZ/e/Yw/r2ZavW4zea3cliknWPW7T0+XtKajX/Cb95HwqnKma6Sj38tnxNSQLC7XD8oxGgqZ3sIi1rNX3LokyZIVUF/8GZDRwS/ITzflJpZhccaxzPlaSRqSKtESxQvM6YTRrElFBKdIU5zJE48YsQ0d75siPcRPBSO4BmcsYksOSvxcq/BKff0XC2fG8jcs4YTMtdfmGLkGQ5AF37myXZbkO17402S/C5zJ5gSsbP1KwlI7GAE="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Kestrel IT Consulting Ltd\",\"taxId\":\"GB603118274\",\"iban\":\"GB50 LOYD 3096 3441 8502 67\"},\"invoiceNumber\":\"K-2026349\",\"issueDate\":\"2026-06-29\",\"dueDate\":\"2026-07-29\",\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"Network audit\",\"quantity\":12.5,\"unitPrice\":95.00,\"amount\":1187.50}],\"subtotal\":1187.50,\"tax\":237.50,\"total\":1425.00}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 495,
+      "output_tokens_details": {
+        "thinking_tokens": 299
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Kestrel IT Consulting Ltd",
+        "taxId": "GB603118274",
+        "iban": "GB50 LOYD 3096 3441 8502 67"
+      },
+      "invoiceNumber": "K-2026349",
+      "issueDate": "2026-06-29",
+      "dueDate": "2026-07-29",
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "Network audit",
+          "quantity": 12.5,
+          "unitPrice": 95,
+          "amount": 1187.5
+        }
+      ],
+      "subtotal": 1187.5,
+      "tax": 237.5,
+      "total": 1425
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 495
+  },
+  "latencyMs": 2552,
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50 LOYD 3096 3441 8502 67"
+    },
+    "invoiceNumber": "K-2026349",
+    "issueDate": "2026-06-29",
+    "dueDate": "2026-07-29",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Network audit",
+        "quantity": 12.5,
+        "unitPrice": 95,
+        "amount": 1187.5
+      }
+    ],
+    "subtotal": 1187.5,
+    "tax": 237.5,
+    "total": 1425
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Kestrel IT Consulting Ltd",
+      "taxId": "GB603118274",
+      "iban": "GB50LOYD30963441850267"
+    },
+    "invoiceNumber": "K-2026349",
+    "issueDate": "2026-06-29",
+    "dueDate": "2026-07-29",
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Network audit",
+        "quantity": 12.5,
+        "unitPrice": 9500,
+        "amount": 118750
+      }
+    ],
+    "subtotal": 118750,
+    "tax": 23750,
+    "total": 142500
+  },
+  "error": null
+}

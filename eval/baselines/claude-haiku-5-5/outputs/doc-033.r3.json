@@ -1,0 +1,190 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsZbWWjEUKbfCMJiYPsJ",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSmAgKEAgTGAI4AUIIdGhpbmtpbmcSDDtq0vsevJP+koRv1BoMC+rY9LrPXkZJB/smIjBf0e1m4vwkIMV+NJ2wp+PNO9B7SL7QQMEksKglvAGalYxXUzuPJBQIuPHfOABY8XgqtQdUYskovqvU7OS6wvmXF7DM7Ur6Da5qNXfpj/O+xdqrd9gBM0LNRRfBxKYXB6hZ9ioQjXnPHrwJIq+xS9XYZxFmCmpyYlwlGY9WIUKMWsOL23FqWWhxTL92kEgAqg8v76CN4z2zNTHQ3dVoNowiXhdXRGHXyBhmhe+ysz8ZwHfdG80uFHU5LpzVSq122rtDZJshjV290WNFC2dlEoF8Q4UU5+UPTn/te4XYKBnW69vQEKigJaTSI65s66XYEq4+0ahZJHOMy3Gh+CR+8hVeGZOLRp4X/W1hib6FTLOqOwVOAdORprZq0+7q55eqoOojoaEXC9l478ULKuOL+zud9bxtIIFoXb5OORxIrtoc+Rh8J3ItbqDFIiGsR+MB+AyLpivVtgHQTFWq2k728Fa5jewzeh6XLkInurbypoXCsOqdA49T3HEZJ7R6/QYWfeRXkxl1QCTzgBz4ThJ7/SSmdDO27ga3ZNtX7q283NXnmFebjK+nicDYD1ryg191SiBJ1n5c6/iLhfhhxcXo6NRil49j25O+iiIBeFE1KnPWxkMxMC9UnEK4sl76w2rbRoDGlt5H4DKeCAvDijMsYTJX/Qjn7GKLXiy/z2chQ7J+qDQPI4U2zqrtGYZYhQrEukp6tjJKzrupC+ZgqKJ/Kr54yI6lCwVINi6L13v0BmO0uOsDOe0OL2I8Uh2P48iz811fE/BDBUBdCJU4NmmaYXp7hJksnkB5ZyOa51Ju9syhek/69mRGutzlBD7in8uPOl4r4bq+6Zt2uOvhwP+aH2VAS9EnbU1aPsd4c4Q/4MdHgqQ2ZKVH1iNWkc5jJaRXdq7aLgdl0S0f/uEWR6Ne+3MX+XkxKnold4mHhdxLrfS6bSuw2L2i2e1hoCIh4Pus20G/ED3l4fVRWGxy2dLNDdOaHppAFD1CU5MwO4zU99H+pEROhQZbedSGHh5oNgfkrovXI3xYghqOXnyz0zYZmespj1OMhFbGH8H4pPyFFDyvXATzFtmb2MkjcU0/LTiADLBcSzPKgyTOfMsD2l0cNjwPPA3pB47WYDTYaI5i0oMbTccpp1u1kbc6+wXtOC4Ol+uVoNo78CxilLfYKXw8KgYmNXf3spnSsCoTGAO96zuiQzGy+woAWY0z2dlYgn94lMG9PHnOlS+TdNqxbOhHxoS9sEm4VZ4Zg+kmVFq9Fn4XSwaIgg86O3jkWILu1VY/iUP6ZuyQQZUBeNaxYFX4GkjDjVWjQJRE3v9bpiuH5MIAgmr7zWErc0/nGAE="
+      },
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"receipt\",\"vendor\":{\"name\":\"Greenleaf Grocers\",\"taxId\":\"GB771204583\",\"iban\":null},\"invoiceNumber\":null,\"issueDate\":\"2026-07-20\",\"dueDate\":null,\"currency\":\"GBP\",\"lineItems\":[{\"description\":\"Orange juice 1L\",\"quantity\":3,\"unitPrice\":2.55,\"amount\":7.65},{\"description\":\"Coffee beans 250g\",\"quantity\":1,\"unitPrice\":7.00,\"amount\":7.00},{\"description\":\"Cheddar, mature 400g\",\"quantity\":3,\"unitPrice\":4.65,\"amount\":13.95},{\"description\":\"Free range eggs (6)\",\"quantity\":3,\"unitPrice\":2.25,\"amount\":6.75},{\"description\":\"Sourdough loaf\",\"quantity\":3,\"unitPrice\":4.00,\"amount\":12.00}],\"subtotal\":47.35,\"tax\":9.47,\"total\":56.82}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 2054,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 583,
+      "output_tokens_details": {
+        "thinking_tokens": 261
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "receipt",
+      "vendor": {
+        "name": "Greenleaf Grocers",
+        "taxId": "GB771204583",
+        "iban": null
+      },
+      "invoiceNumber": null,
+      "issueDate": "2026-07-20",
+      "dueDate": null,
+      "currency": "GBP",
+      "lineItems": [
+        {
+          "description": "Orange juice 1L",
+          "quantity": 3,
+          "unitPrice": 2.55,
+          "amount": 7.65
+        },
+        {
+          "description": "Coffee beans 250g",
+          "quantity": 1,
+          "unitPrice": 7,
+          "amount": 7
+        },
+        {
+          "description": "Cheddar, mature 400g",
+          "quantity": 3,
+          "unitPrice": 4.65,
+          "amount": 13.95
+        },
+        {
+          "description": "Free range eggs (6)",
+          "quantity": 3,
+          "unitPrice": 2.25,
+          "amount": 6.75
+        },
+        {
+          "description": "Sourdough loaf",
+          "quantity": 3,
+          "unitPrice": 4,
+          "amount": 12
+        }
+      ],
+      "subtotal": 47.35,
+      "tax": 9.47,
+      "total": 56.82
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 2054,
+    "outputTokens": 583
+  },
+  "latencyMs": 2779,
+  "output": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Greenleaf Grocers",
+      "taxId": "GB771204583",
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-07-20",
+    "dueDate": null,
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Orange juice 1L",
+        "quantity": 3,
+        "unitPrice": 2.55,
+        "amount": 7.65
+      },
+      {
+        "description": "Coffee beans 250g",
+        "quantity": 1,
+        "unitPrice": 7,
+        "amount": 7
+      },
+      {
+        "description": "Cheddar, mature 400g",
+        "quantity": 3,
+        "unitPrice": 4.65,
+        "amount": 13.95
+      },
+      {
+        "description": "Free range eggs (6)",
+        "quantity": 3,
+        "unitPrice": 2.25,
+        "amount": 6.75
+      },
+      {
+        "description": "Sourdough loaf",
+        "quantity": 3,
+        "unitPrice": 4,
+        "amount": 12
+      }
+    ],
+    "subtotal": 47.35,
+    "tax": 9.47,
+    "total": 56.82
+  },
+  "invoice": {
+    "documentType": "receipt",
+    "vendor": {
+      "name": "Greenleaf Grocers",
+      "taxId": "GB771204583",
+      "iban": null
+    },
+    "invoiceNumber": null,
+    "issueDate": "2026-07-20",
+    "dueDate": null,
+    "currency": "GBP",
+    "lineItems": [
+      {
+        "description": "Orange juice 1L",
+        "quantity": 3,
+        "unitPrice": 255,
+        "amount": 765
+      },
+      {
+        "description": "Coffee beans 250g",
+        "quantity": 1,
+        "unitPrice": 700,
+        "amount": 700
+      },
+      {
+        "description": "Cheddar, mature 400g",
+        "quantity": 3,
+        "unitPrice": 465,
+        "amount": 1395
+      },
+      {
+        "description": "Free range eggs (6)",
+        "quantity": 3,
+        "unitPrice": 225,
+        "amount": 675
+      },
+      {
+        "description": "Sourdough loaf",
+        "quantity": 3,
+        "unitPrice": 400,
+        "amount": 1200
+      }
+    ],
+    "subtotal": 4735,
+    "tax": 947,
+    "total": 5682
+  },
+  "error": null
+}

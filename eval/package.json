@@ -1,0 +1,19 @@
+{
+  "name": "@tally/eval",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "eval": "node --env-file-if-exists=../.env src/cli.ts",
+    "typecheck": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tally/extractor": "workspace:*",
+    "@tally/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "vitest": "^5.1.0"
+  }
+}

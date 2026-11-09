@@ -1,0 +1,185 @@
+{
+  "model": "claude-haiku-5-5",
+  "promptVersion": "v1",
+  "raw": {
+    "model": "claude-haiku-5-5",
+    "id": "msg_011CgsZYaH7HcXNQjWjbwzwe",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"documentType\":\"invoice\",\"vendor\":{\"name\":\"Brightline Cloud Services\",\"taxId\":\"47-5530218\",\"iban\":null},\"invoiceNumber\":\"BL-725750\",\"issueDate\":\"2026-03-18\",\"dueDate\":\"2026-05-02\",\"currency\":\"USD\",\"lineItems\":[{\"description\":\"Additional storage (100 GB)\",\"quantity\":10,\"unitPrice\":11.15,\"amount\":111.5},{\"description\":\"Cloud hosting, Standard plan (monthly)\",\"quantity\":1,\"unitPrice\":204.7,\"amount\":204.7},{\"description\":\"API overage (per 10k calls)\",\"quantity\":6,\"unitPrice\":4.8,\"amount\":28.8},{\"description\":\"Onboarding workshop\",\"quantity\":5,\"unitPrice\":1408.05,\"amount\":7040.25},{\"description\":\"Loyalty discount\",\"quantity\":1,\"unitPrice\":-664.67,\"amount\":-664.67}],\"subtotal\":6755.6,\"tax\":0,\"total\":6755.6}"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 3973,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 344,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null,
+    "parsed_output": {
+      "documentType": "invoice",
+      "vendor": {
+        "name": "Brightline Cloud Services",
+        "taxId": "47-5530218",
+        "iban": null
+      },
+      "invoiceNumber": "BL-725750",
+      "issueDate": "2026-03-18",
+      "dueDate": "2026-05-02",
+      "currency": "USD",
+      "lineItems": [
+        {
+          "description": "Additional storage (100 GB)",
+          "quantity": 10,
+          "unitPrice": 11.15,
+          "amount": 111.5
+        },
+        {
+          "description": "Cloud hosting, Standard plan (monthly)",
+          "quantity": 1,
+          "unitPrice": 204.7,
+          "amount": 204.7
+        },
+        {
+          "description": "API overage (per 10k calls)",
+          "quantity": 6,
+          "unitPrice": 4.8,
+          "amount": 28.8
+        },
+        {
+          "description": "Onboarding workshop",
+          "quantity": 5,
+          "unitPrice": 1408.05,
+          "amount": 7040.25
+        },
+        {
+          "description": "Loyalty discount",
+          "quantity": 1,
+          "unitPrice": -664.67,
+          "amount": -664.67
+        }
+      ],
+      "subtotal": 6755.6,
+      "tax": 0,
+      "total": 6755.6
+    }
+  },
+  "stopReason": "end_turn",
+  "usage": {
+    "inputTokens": 3973,
+    "outputTokens": 344
+  },
+  "latencyMs": 1721,
+  "output": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-725750",
+    "issueDate": "2026-03-18",
+    "dueDate": "2026-05-02",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Additional storage (100 GB)",
+        "quantity": 10,
+        "unitPrice": 11.15,
+        "amount": 111.5
+      },
+      {
+        "description": "Cloud hosting, Standard plan (monthly)",
+        "quantity": 1,
+        "unitPrice": 204.7,
+        "amount": 204.7
+      },
+      {
+        "description": "API overage (per 10k calls)",
+        "quantity": 6,
+        "unitPrice": 4.8,
+        "amount": 28.8
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 5,
+        "unitPrice": 1408.05,
+        "amount": 7040.25
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -664.67,
+        "amount": -664.67
+      }
+    ],
+    "subtotal": 6755.6,
+    "tax": 0,
+    "total": 6755.6
+  },
+  "invoice": {
+    "documentType": "invoice",
+    "vendor": {
+      "name": "Brightline Cloud Services",
+      "taxId": "47-5530218",
+      "iban": null
+    },
+    "invoiceNumber": "BL-725750",
+    "issueDate": "2026-03-18",
+    "dueDate": "2026-05-02",
+    "currency": "USD",
+    "lineItems": [
+      {
+        "description": "Additional storage (100 GB)",
+        "quantity": 10,
+        "unitPrice": 1115,
+        "amount": 11150
+      },
+      {
+        "description": "Cloud hosting, Standard plan (monthly)",
+        "quantity": 1,
+        "unitPrice": 20470,
+        "amount": 20470
+      },
+      {
+        "description": "API overage (per 10k calls)",
+        "quantity": 6,
+        "unitPrice": 480,
+        "amount": 2880
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 5,
+        "unitPrice": 140805,
+        "amount": 704025
+      },
+      {
+        "description": "Loyalty discount",
+        "quantity": 1,
+        "unitPrice": -66467,
+        "amount": -66467
+      }
+    ],
+    "subtotal": 675560,
+    "tax": 0,
+    "total": 675560
+  },
+  "error": null
+}

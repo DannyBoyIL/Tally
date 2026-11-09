@@ -1,6 +1,6 @@
 // pnpm --filter @tally/api migrate   apply pending migrations
 // pnpm --filter @tally/api seed      load vendor master data from data/golden/vendors.json
-// node src/db/cli.ts reset           drop and re-migrate a disposable (_test / _e2e) database
+// node src/db/cli.ts reset           drop and re-migrate a disposable (_test / _e2e / _demo) database
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import type { VendorRecord } from '@tally/validators';

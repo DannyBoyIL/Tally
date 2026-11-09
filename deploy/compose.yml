@@ -1,0 +1,58 @@
+# Production, on the EC2 instance: the app image from GHCR, Postgres, and Caddy for HTTPS.
+# Lives in ~/tally on the server next to Caddyfile and .env (see docs/DEPLOY.md); the deploy job
+# in CI copies this file and the Caddyfile there on every release.
+services:
+  db:
+    image: postgres:18-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tally
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: tally
+    volumes:
+      - db-data:/var/lib/postgresql
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U tally -d tally']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    # latest is the newest main; TAG=<commit sha> rolls back to an earlier release.
+    image: ghcr.io/dannyboyil/tally:${TAG:-latest}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://tally:${POSTGRES_PASSWORD}@db:5432/tally_demo
+      DEMO: 'true'
+      DEMO_ACCESS_CODE: ${DEMO_ACCESS_CODE:-}
+      DEMO_LIVE_DAILY_CAP: ${DEMO_LIVE_DAILY_CAP:-20}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      REVIEWER: demo-visitor
+      TRUST_PROXY: 'true'
+    # A clean demo on every start; the daily cron recreates the container (docs/DEPLOY.md).
+    command:
+      - sh
+      - -c
+      - node apps/api/src/db/cli.ts reset && node apps/api/src/db/cli.ts seed && exec node apps/api/src/server.ts
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on: [app]
+    ports:
+      - '80:80'
+      - '443:443'
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  db-data:
+  caddy-data:
+  caddy-config:

@@ -16,5 +16,25 @@ services:
       timeout: 3s
       retries: 10
 
+  # The whole app in one container, as deployed, in demo mode: `docker compose up --build`, then
+  # http://localhost:8080. Development uses `pnpm dev` and only the db service.
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-tally}:${POSTGRES_PASSWORD:-tally}@db:5432/tally_demo
+      DEMO: 'true'
+      DEMO_ACCESS_CODE: ${DEMO_ACCESS_CODE:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    ports:
+      - '8080:3000'
+    # The demo starts from a clean database with the samples every time it starts.
+    command:
+      - sh
+      - -c
+      - node apps/api/src/db/cli.ts reset && node apps/api/src/db/cli.ts seed && exec node apps/api/src/server.ts
+
 volumes:
   db-data:

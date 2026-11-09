@@ -81,9 +81,11 @@ pnpm monorepo
 - **One Zod schema** drives the LLM's structured output, API validation and React types.
 - **Money is integer minor units** (cents) everywhere, so validation arithmetic is exact.
 - **Postgres**; processing is synchronous or an in-process job with polling — no queue.
-- **AWS**: one container, managed Postgres, S3 for files. Exact service chosen in phase 6 by cost.
+- **AWS**: one EC2 instance running Docker Compose (the app image, Postgres, Caddy for HTTPS),
+  chosen in phase 6 over ECS + RDS + S3 by cost; reasoning in [DECISIONS.md](DECISIONS.md),
+  setup in [DEPLOY.md](DEPLOY.md).
 - **Demo mode**: preloaded documents with precomputed results; live extraction behind an access
-  code / rate limit, so a public demo is not an open API bill.
+  code and a daily cap, writes rate-limited, so a public demo is not an open API bill.
 
 **Data model**: `documents` · `extractions` (model, prompt_version, raw jsonb, tokens, latency) ·
 `validation_results` · `review_events` (field_path, old, new, reviewer, ts) · `vendors`.

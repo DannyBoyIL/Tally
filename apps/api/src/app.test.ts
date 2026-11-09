@@ -1,12 +1,14 @@
 // The API end to end against a real Postgres, with the replay extractor (no model calls).
-import { mkdtemp, readFile } from 'node:fs/promises';
+import { mkdtemp, readFile, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
+import type { Extractor } from '@tally/extractor';
 import type { DocumentSummary, DocumentView } from '@tally/shared';
 import type { FastifyInstance } from 'fastify';
 import type pg from 'pg';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { buildApp } from './app.ts';
+import { createDemoPolicy } from './demo.ts';
 import { localFileStore } from './files.ts';
 import { createReplayExtractor } from './replay.ts';
 import { freshDatabase } from './test/db.ts';
@@ -190,5 +192,116 @@ describe('the database keeps history', () => {
 
   it('refuses truncate', async () => {
     await expect(pool.query('truncate review_events')).rejects.toThrow(/append-only/);
+  });
+});
+
+describe('demo mode', () => {
+  let demoApp: FastifyInstance;
+  const fakeLive: Extractor = {
+    model: 'fake-live',
+    promptVersion: 'v2',
+    extract: () =>
+      Promise.resolve({
+        model: 'fake-live',
+        promptVersion: 'v2',
+        raw: null,
+        output: null,
+        notices: [],
+        invoice: null,
+        error: 'fake live extraction',
+        stopReason: null,
+        usage: { inputTokens: 0, outputTokens: 0 },
+        latencyMs: 0,
+      }),
+  };
+
+  beforeAll(async () => {
+    const replay = await createReplayExtractor({
+      goldenDir: golden,
+      outputsDir: join(repo, 'eval/baselines/claude-haiku-5-5/v2/outputs'),
+    });
+    const files = localFileStore(await mkdtemp(join(tmpdir(), 'tally-demo-')));
+    const demo = createDemoPolicy({
+      replay,
+      live: fakeLive,
+      accessCode: 'letmein',
+      liveDailyCap: 5,
+      goldenDir: golden,
+    });
+    demoApp = await buildApp({ pool, extractor: replay, files, reviewer: 'visitor', demo });
+  });
+
+  afterAll(() => demoApp.close());
+
+  const uploadTo = (code?: string) => {
+    const form = new FormData();
+    form.append('file', new Blob([new Uint8Array([1, 2, 3])], { type: 'image/png' }), 'mine.png');
+    return demoApp.inject({
+      method: 'POST',
+      url: '/api/documents',
+      body: form,
+      headers: code ? { 'x-access-code': code } : {},
+    });
+  };
+
+  it('says whether it is a demo and lists the samples', async () => {
+    expect((await app.inject({ url: '/api/demo' })).json()).toEqual({ demo: false });
+    const info = (await demoApp.inject({ url: '/api/demo' })).json<{
+      liveEnabled: boolean;
+      samples: unknown[];
+    }>();
+    expect(info).toMatchObject({ demo: true, liveEnabled: true });
+    expect(info.samples).toHaveLength(4);
+  });
+
+  it('loads a sample from the recorded answers', async () => {
+    const response = await demoApp.inject({ method: 'POST', url: '/api/demo/samples/doc-062' });
+    expect(response.statusCode).toBe(201);
+    expect(response.json<DocumentView>().findings[0]?.flag).toBe('injection_suspected');
+    const unknown = await demoApp.inject({ method: 'POST', url: '/api/demo/samples/doc-002' });
+    expect(unknown.statusCode).toBe(404);
+  });
+
+  it('reads your own image live only with the access code', async () => {
+    const refused = await uploadTo();
+    expect(refused.statusCode).toBe(403);
+    expect(refused.json<{ error: string }>().error).toMatch(/access code/);
+    expect((await uploadTo('wrong')).statusCode).toBe(403);
+    const accepted = await uploadTo('letmein');
+    expect(accepted.statusCode).toBe(201);
+    expect(accepted.json<DocumentView>().extraction.model).toBe('fake-live');
+  });
+
+  it('limits how fast one visitor can write', async () => {
+    const statuses: number[] = [];
+    for (let i = 0; i < 25; i++) {
+      statuses.push(
+        (await demoApp.inject({ method: 'POST', url: '/api/demo/samples/none' })).statusCode,
+      );
+    }
+    expect(statuses).toContain(429);
+  });
+});
+
+describe('serving the web app', () => {
+  it('serves index.html for client routes and keeps /api 404s as JSON', async () => {
+    const webDir = await mkdtemp(join(tmpdir(), 'tally-web-'));
+    await writeFile(join(webDir, 'index.html'), '<!doctype html><title>Tally</title>');
+    const web = await buildApp(
+      {
+        pool,
+        extractor: await createReplayExtractor({ goldenDir: golden, outputsDir: golden }),
+        files: localFileStore(webDir),
+        reviewer: 'x',
+      },
+      { webDir },
+    );
+    const page = await web.inject({ url: '/documents/123' });
+    expect(page.statusCode).toBe(200);
+    expect(page.body).toContain('<title>Tally</title>');
+    const api = await web.inject({ url: '/api/nothing' });
+    expect(api.statusCode).toBe(404);
+    expect(api.json()).toEqual({ error: 'not found' });
+    await web.close();
   });
 });
